@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "sass": "^1.89.2",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-html-inject": "^1.1.2"
   }
 }
