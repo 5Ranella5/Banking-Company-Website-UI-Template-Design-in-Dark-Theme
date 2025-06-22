@@ -1,0 +1,77 @@
+@use '../constructor/variables.scss' as *;
+
+.modal-login {
+  padding-top: 30px;
+  width: 358px;
+  margin: 0 auto;
+}
+
+.container-login-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+}
+
+.title-login {
+  color: var(--Green-60, #caff33);
+  text-align: center;
+  font-family: Lexend;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-login {
+  color: var(--Grey-75, #bfbfbf);
+  text-align: center;
+  font-family: Lexend;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.container-form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.email {
+  border-radius: 88px;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+}
+
+.password {
+}
+
+.login-button {
+}
+
+.sign-up-button {
+}
+
+.additional-text {
+}
+
+.list-soc-media {
+}
+
+.item-soc-media {
+}
+
+.google-img {
+}
+
+.facebook-img {
+}
+
+.apple-img {
+}
