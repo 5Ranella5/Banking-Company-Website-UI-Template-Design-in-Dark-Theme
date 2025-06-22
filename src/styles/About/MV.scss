@@ -1,0 +1,26 @@
+@import "../constructor/variables.scss";
+
+.mission-vision {
+  &__container {
+    max-width: 357px;
+    margin: 0 auto;
+    .mission-vision__wrapper-title {
+      .mission-vision__title {
+        color: var(--Green-60);
+        font-family: $font-family-lexend;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+      }
+      .mission-vision__subtitle {
+        color: var(--Grey-70);
+        font-family: $font-family-lexend;
+        font-weight: 300;
+        font-size: $font-size-sm;
+        line-height: 150%;
+        text-align: center;
+      }
+    }
+  }
+}
