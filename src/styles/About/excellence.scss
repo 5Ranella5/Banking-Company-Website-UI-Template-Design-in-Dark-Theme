@@ -1,3 +1,44 @@
-.excellence{
-    background-color: aqua;
+@import "../constructor/variables.scss";
+
+.excellence__container {
+  max-width: 329px;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 20px;
+    
+  background-color: var(--Grey-11);
+
+  .excellence__wrapper-info {
+    padding: 24px;
+    background-color: var(--Grey-10);
+    border-radius: 20px;
+    .excellence__subtitle {
+      font-family: $font-family-lexend;
+      font-weight: 400;
+      font-size: $font-size-sm;
+      line-height: 150%;
+      text-align: center;
+      color: var(--white);
+    }
+    .excellence__title {
+      font-family: $font-family-lexend;
+      text-align: center;
+      color: var(--white);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 130%;
+      span {
+        color: var(--Green-60);
+      }
+    }
+    .excellence__text {
+      margin-top: 14px;
+      color: var(--Grey-70);
+      font-family: $font-family-lexend;
+      font-weight: 300;
+      font-size: $font-size-sm;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
 }
