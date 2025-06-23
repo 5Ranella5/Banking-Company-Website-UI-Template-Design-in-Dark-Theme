@@ -1,0 +1,64 @@
+@import "../constructor/variables.scss";
+
+.mission-vision {
+  &__container {
+    max-width: 357px;
+    margin: 0 auto;
+    .mission-vision__wrapper-title {
+      .mission-vision__title {
+        color: var(--Green-60);
+        font-family: $font-family-lexend;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+      }
+      .mission-vision__subtitle {
+        color: var(--Grey-70);
+        font-family: $font-family-lexend;
+        font-weight: 300;
+        font-size: $font-size-sm;
+        line-height: 150%;
+        text-align: center;
+      }
+    }
+
+    .mission-vision__block {
+      .mission-vision__text-wrapper {
+        .mission-vision__block-title {
+          color: $white;
+          font-family: $font-family-lexend;
+          font-weight: 500;
+          font-size: 26px;
+          line-height: 150%;
+          text-align: center;
+        }
+        .mission-vision__text {
+          color: var(--Grey-70);
+          font-family: $font-family-lexend;
+          font-weight: 300;
+          font-size: $font-size-sm;
+          line-height: 150%;
+          text-align: center;
+        }
+      }
+      .mission-vision__image-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 20px 20px 0 20px;
+        background-color: var(--Grey-15);
+        background-image: url("../img/abstract-img/abstract-img-MV.png");
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom: 1px solid var(--Green-60);
+        picture {
+          img {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+          }
+        }
+      }
+    }
+
+  }
+}
