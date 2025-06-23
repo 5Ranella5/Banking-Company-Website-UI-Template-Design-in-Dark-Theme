@@ -1,10 +1,12 @@
 @import "../constructor/variables.scss";
 
 .mission-vision {
+  margin-bottom: 80px;
   &__container {
     max-width: 357px;
     margin: 0 auto;
     .mission-vision__wrapper-title {
+      margin-bottom: 60px;
       .mission-vision__title {
         color: var(--Green-60);
         font-family: $font-family-lexend;
@@ -22,7 +24,13 @@
         text-align: center;
       }
     }
-
+     .mission{
+      margin-bottom: 50px;
+     }
+     .vision{
+      display: flex;
+      flex-direction: column-reverse;
+     }
     .mission-vision__block {
       .mission-vision__text-wrapper {
         .mission-vision__block-title {
@@ -46,6 +54,7 @@
         display: flex;
         justify-content: center;
         padding: 20px 20px 0 20px;
+        margin-bottom: 30px;
         background-color: var(--Grey-15);
         background-image: url("../img/abstract-img/abstract-img-MV.png");
         border-top-left-radius: 50px;
