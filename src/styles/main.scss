@@ -1,5 +1,6 @@
 @use './About/excellence.scss';
 @use './About/MV.scss';
+@use './About/PR.scss';
 
 @use './constructor/reset.scss';
 @use './constructor/variables.scss';
@@ -10,4 +11,5 @@
 
 body {
   background: var(--Grey-10, #1a1a1a);
+  font-family: $font-family-base;
 }
