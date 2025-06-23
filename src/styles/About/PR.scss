@@ -4,6 +4,7 @@
   &__container {
     max-width: 357px;
     margin: 0 auto;
+
     .press-releases__wrapper-title {
       .press-releases__title {
         color: var(--Green-60);
@@ -20,6 +21,12 @@
         font-size: $font-size-sm;
         line-height: 150%;
         text-align: center;
+      }
+    }
+    .press-releases__list{
+      .press-releases__list-item{
+        display: flex;
+        flex-direction: column;
       }
     }
   }
