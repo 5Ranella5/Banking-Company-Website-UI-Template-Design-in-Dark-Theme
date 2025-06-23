@@ -1,0 +1,26 @@
+@import "../constructor/variables.scss";
+
+.press-releases {
+  &__container {
+    max-width: 357px;
+    margin: 0 auto;
+    .press-releases__wrapper-title {
+      .press-releases__title {
+        color: var(--Green-60);
+        font-family: $font-family-lexend;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 150%;
+        text-align: center;
+      }
+      .press-releases__subtitle {
+        color: var(--Grey-70);
+        font-family: $font-family-lexend;
+        font-weight: 400;
+        font-size: $font-size-sm;
+        line-height: 150%;
+        text-align: center;
+      }
+    }
+  }
+}
