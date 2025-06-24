@@ -1,31 +1,123 @@
-.testimonials {}
+@use '../constructor/variables.scss' as *;
 
-.container-testimonial-header {}
+.testimonials {
+  padding-top: 80px;
+}
 
-.titile-testimonials-header {}
+.container-testimonial {
+  display: flex;
+  max-width: 358px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
 
-.text-testimonials-header {}
+.container-testimonial-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-.button-testimonial-header {}
+.container-testimonial-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-.individuals-button {}
+.titile-testimonials-header {
+  color: var(--Green-60, #caff33);
+  font-size: $font-size-lg;
+  font-weight: 500;
+  line-height: 42px;
+}
 
-.businesses-button {}
+.titile-testimonials-header-span {
+  color: var(--Absolute-White, #fff);
+  font-size: $font-size-lg;
+  font-weight: 500;
+  line-height: 42px;
+}
 
-.container-testimonial-reviews {}
+.text-testimonials-header {
+  color: var(--Grey-70, #b3b3b3);
+  text-align: center;
+  font-size: $spacing-md-2;
+  font-weight: 300;
+  line-height: 21px;
+}
 
-.line1-img {}
+.button-testimonial-header {
+  display: flex;
+  padding: 12px;
+  align-items: flex-start;
+  border-radius: 82px;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-11, #1c1c1c);
+}
 
-.quotes-img {}
+.individuals-button {
+  padding: 10px 18px;
+  border-radius: 140px;
+  background: var(--Green-60, #caff33);
+  color: var(--Grey-11, #1c1c1c);
+  font-size: $spacing-md-2;
+  line-height: 21px;
+}
 
-.line2-img {}
+.businesses-button {
+  padding: 10px 18px;
+  background: var(--Grey-11, #1c1c1c);
+  color: var(--Absolute-White, #fff);
+  font-size: $spacing-md-2;
+  line-height: 21px;
+}
 
-.text-testimonial-reviews {}
+.container-testimonial-reviews {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 
-.name-testimonial-reviews {}
+.container-testimonial-reviews-quotes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-.button-testimonial-reviews {}
+.line-testimonial {
+  width: 121px;
+  height: 1px;
+  background: #262626;
+}
 
-.left-button {}
+.quotes-img {
+  width: 44px;
+  height: 44px;
+}
 
-.right-button {}
+.text-testimonial-reviews {
+  color: var(--Absolute-White, #fff);
+  font-size: $spacing-md-2;
+  line-height: 21px;
+}
+
+.name-testimonial-reviews {
+  color: var(--Green-60, #caff33);
+  font-size: $spacing-md;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.button-testimonial-reviews {
+}
+
+.left-button {
+}
+
+.right-button {
+}

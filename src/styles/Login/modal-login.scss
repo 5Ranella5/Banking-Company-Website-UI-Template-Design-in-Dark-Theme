@@ -1,12 +1,15 @@
 @use '../constructor/variables.scss' as *;
 
 .modal-login {
-  max-width: 358px;
   padding-top: 30px;
-  margin: 0 auto;
 }
 
 .container-modal-login {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 358px;
+  margin: 0 auto;
   border-radius: 16px;
   border: 1px solid var(--Grey-15, #262626);
   background: url(#{$bg-img-modal-login}) center / cover no-repeat, #1c1c1c;
@@ -15,13 +18,11 @@
 }
 
 .container-login-header {
-  max-width: 298px;
-  margin-bottom: 40px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  // gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .title-login {
@@ -29,8 +30,6 @@
   text-align: center;
   font-size: $font-size-lg;
   font-weight: 500;
-  line-height: normal;
-  margin-bottom: 10px;
 }
 
 .text-login {
@@ -66,7 +65,7 @@
 //   align-self: stretch;
 // }
 
-.input-email-password {
+.input-date-login {
   padding: 16px;
   align-self: stretch;
   border-radius: 88px;
@@ -104,13 +103,29 @@
   background: var(--Grey-15, #262626);
 }
 
+.container-additional {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.line-header {
+  width: 75px;
+  height: 1px;
+  background: #b3b3b3;
+}
+
 .additional-text {
   color: var(--Grey-70, #b3b3b3);
-  font-size: $font-size-sm;
-  line-height: 150%;
+  text-align: center;
+  font-size: $spacing-md-2;
+  line-height: 150%; /* 21px */
 }
 
 .list-soc-media {
+  // width: 298px;
+  // height: 113px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,10 +134,32 @@
 }
 
 .item-soc-media {
-  width: 20px;
-  height: 20px;
+  // width: 68px;
+  // height: 68px;
 }
 
+.container-img-modal-login {
+  padding: 8px;
+  border-radius: 70px;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 0.05) 0%,
+    rgba(202, 255, 51, 0) 100%
+  );
+}
+
+.img-modal-login {
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  border-radius: 50px;
+  border: 1px solid #caff33;
+  background: linear-gradient(
+    180deg,
+    rgba(202, 255, 51, 0.1) -66.22%,
+    rgba(202, 255, 51, 0) 85.46%
+  );
+}
 .google-img {
 }
 
