@@ -25,13 +25,13 @@
       }
     }
 
-     .mission{
+    .mission {
       margin-bottom: 50px;
-     }
-     .vision{
+    }
+    .vision {
       display: flex;
       flex-direction: column-reverse;
-     }
+    }
 
     .mission-vision__block {
       .mission-vision__text-wrapper {
@@ -60,7 +60,7 @@
         margin-bottom: 30px;
 
         background-color: var(--Grey-15);
-        background-image: url("../img/abstract-img/abstract-img-MV.png");
+        background-image: url("../img/About/abstract-img/abstract-img-MV.png");
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         border-bottom: 1px solid var(--Green-60);
@@ -72,6 +72,5 @@
         }
       }
     }
-
   }
 }
