@@ -9,18 +9,19 @@ $text-color: #333;
 $white: #ffffff;
 
 :root {
+  --Grey-70: #b3b3b3;
+  --Grey-75: #bfbfbf;
   --Grey-10: #{$bg-body};
   --Green-60: #caff33;
   --Grey-75: #bfbfbf;
   --Grey-11: #1c1c1c;
+  --white: #{$white};
+  --Grey-15: #262626;
 }
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
-$font-size-base: 16px;
-$font-size-sm: 14px;
-$font-size-lg: 28px;
-
+ 
 // === SPACING ===
 $spacing-xs: 4px;
 $spacing-sm: 8px;
