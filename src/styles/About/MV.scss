@@ -63,6 +63,7 @@
         background-image: url("../img/About/abstract-img/abstract-img-MV.png");
         background-repeat: no-repeat;
         width: 100%;
+
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         border-bottom: 1px solid var(--Green-60);
@@ -81,53 +82,71 @@
   .mission-vision {
     .mission-vision__container {
       max-width: 1279px;
+
+      .mission-vision__wrapper-title {
+        padding-right: 250px;
+
+        .mission-vision__title {
+          font-size: 38px; 
+          text-align: start;
+        }
+
+        .mission-vision__subtitle {
+          font-size: $font-size-base;
+          text-align: start;
+        }
+      }
+
       .vision {
         flex-direction: row;
         margin-top: -84px;
+
         .mission-vision__text-wrapper {
           padding-right: 40px;
           border-right: 1px var(--Green-60) solid;
         }
       }
+
       .mission {
         .mission-vision__text-wrapper {
           padding-left: 40px;
           border-left: 1px var(--Green-60) solid;
         }
       }
+
       .mission-vision__block {
         display: flex;
         align-items: center;
+
         .mission-vision__text-wrapper {
           .mission-vision__block-title {
             text-align: start;
-            font-size: 32px;
+            font-size: 32px; 
             margin-bottom: 10px;
           }
+
           .mission-vision__text {
             text-align: start;
-            font-size: 16px;
+            font-size: $font-size-base; 
           }
         }
+
         .mission-vision__image-wrapper {
           margin: 0;
           padding: 60px 60px 0 60px;
-          border: none;
+          box-sizing: content-box;
+          border: 1px solid var(--Grey-15, #262626);
           background: linear-gradient(
               106deg,
               rgba(202, 255, 51, 0.05) -29.45%,
               rgba(202, 255, 51, 0) 27.86%
             ),
-            linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%);
-            background-image: url("../img/About/abstract-img/abstract-img-MV-1440.png");
-          background-blend-mode: normal, normal, screen;
+            linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
+            url("../img/About/abstract-img/abstract-img-MV-1440.png");
+          background-repeat: no-repeat, no-repeat, no-repeat;
+          background-size: auto, auto, contain;
+          background-position: top left, top left, center center;
           border-radius: 50px 50px 20px 20px;
-          
-          picture {
-            img {
-              width: 100%;
-            }
-          }
         }
       }
     }
