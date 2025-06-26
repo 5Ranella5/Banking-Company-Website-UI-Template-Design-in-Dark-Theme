@@ -87,7 +87,7 @@
         padding-right: 250px;
 
         .mission-vision__title {
-          font-size: 38px; 
+          font-size: 38px;
           text-align: start;
         }
 
@@ -121,13 +121,13 @@
         .mission-vision__text-wrapper {
           .mission-vision__block-title {
             text-align: start;
-            font-size: 32px; 
+            font-size: 32px;
             margin-bottom: 10px;
           }
 
           .mission-vision__text {
             text-align: start;
-            font-size: $font-size-base; 
+            font-size: $font-size-base;
           }
         }
 
@@ -147,6 +147,62 @@
           background-size: auto, auto, contain;
           background-position: top left, top left, center center;
           border-radius: 50px 50px 20px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .mission-vision {
+    .mission-vision__container {
+      max-width: 1599px;
+      .mission-vision__wrapper-title {
+        padding-right: 300px;
+        margin-bottom: 80px;
+        .mission-vision__title {
+          font-size: 48px;
+        }
+        .mission-vision__subtitle {
+          font-size: 18px;
+        }
+      }
+      .mission {
+        .mission-vision__text-wrapper {
+          padding-left: 50px;
+        }
+      }
+      .vision {
+        margin-top: -100px;
+        .mission-vision__text-wrapper {
+          padding-right: 50px;
+        }
+      }
+      .mission-vision__block {
+        .mission-vision__text-wrapper {
+          .mission-vision__block-title {
+            font-size: 38px;
+            margin-bottom: 14px;
+          }
+          .mission-vision__text {
+            font-size: 18px;
+          }
+          .mission-vision__image-wrapper {
+            background: linear-gradient(
+                106deg,
+                rgba(202, 255, 51, 0.05) -29.45%,
+                rgba(202, 255, 51, 0) 27.86%
+              ),
+              linear-gradient(
+                267deg,
+                #1c1c1c 40.67%,
+                rgba(28, 28, 28, 0) 99.81%
+              ),
+              url("../img/About/abstract-img/abstract-img-MV-1920.png");
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: auto, auto, contain;
+            background-position: top left, top left, center center;
+          }
         }
       }
     }
