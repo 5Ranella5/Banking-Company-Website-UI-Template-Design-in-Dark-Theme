@@ -22,6 +22,7 @@ $white: #ffffff;
 
 :root {
   --Grey-70: #b3b3b3;
+  --Absolute-White: #fff;
   --Grey-75: #bfbfbf;
   --Grey-10: #{$bg-body};
   --Green-60: #caff33;
@@ -33,7 +34,7 @@ $white: #ffffff;
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
- 
+
 // === SPACING ===
 $spacing-xs: 4px;
 $spacing-sm: 8px;
@@ -41,6 +42,7 @@ $spacing-md-2: 14px;
 $spacing-md: 16px;
 $spacing-lg-2: 18px;
 $spacing-lg: 24px;
+$spacing-xl-2: 28px;
 $spacing-xl: 32px;
 
 $bg-img-modal-login: '../../img/Login/modal-login/modal-login.png';
