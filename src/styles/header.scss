@@ -1,4 +1,4 @@
-@use './constructor/variables.scss' as *;
+@import './constructor/variables.scss';
 
 .header {
   padding-top: 40px;
@@ -84,7 +84,7 @@
   .header-buttons {
     color: var(--Absolute-White, #fff);
     font-family: Lexend;
-    font-size: $font-family-lexend;
+    font-size: $font-family-base;
     line-height: 150%;
   }
 
