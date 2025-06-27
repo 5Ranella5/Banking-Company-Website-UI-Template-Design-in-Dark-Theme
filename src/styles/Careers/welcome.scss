@@ -1,7 +1,7 @@
 @use "../constructor/variables.scss" as *;
 
 .welcome {
-  margin-bottom: 80px;
+  margin-bottom: 94px;
 
   &__container {
     max-width: 357px;
@@ -79,6 +79,7 @@
 
 @media (min-width: 1920px) {
   .welcome {
+    margin-bottom: 150px;
     &__container {
       max-width: 1599px;
       padding: 50px 758px 271px 50px;
