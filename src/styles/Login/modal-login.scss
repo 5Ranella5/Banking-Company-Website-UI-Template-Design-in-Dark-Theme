@@ -1,6 +1,7 @@
 @use '../constructor/variables.scss' as *;
 
 .modal-login {
+  max-width: 358px;
   padding-top: 30px;
 }
 
@@ -9,12 +10,6 @@
   flex-direction: column;
   gap: 40px;
   max-width: 358px;
-  margin: 0 auto;
-  border-radius: 16px;
-  border: 1px solid var(--Grey-15, #262626);
-  background: url(#{$bg-img-modal-login}) center / cover no-repeat, #1c1c1c;
-  background-blend-mode: multiply, normal;
-  padding: 30px;
 }
 
 .container-login-header {
@@ -117,12 +112,10 @@
   color: var(--Grey-70, #b3b3b3);
   text-align: center;
   font-size: $spacing-md-2;
-  line-height: 150%; /* 21px */
+  line-height: 150%;
 }
 
 .list-soc-media {
-  // width: 298px;
-  // height: 113px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,6 +304,7 @@
   .img-modal-login {
     padding: 20px;
   }
+
   .google-img {
   }
 

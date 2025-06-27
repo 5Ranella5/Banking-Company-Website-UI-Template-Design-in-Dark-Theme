@@ -7,18 +7,27 @@
     margin: 0 auto;
     padding: 212px 14px 14px 14px;
     border-radius: 20px;
+
+    background: url("../img/About/grey-people/grey-people.png") 15px 15px /
+        328px no-repeat,
+      url("../img/About/abstract-img/abstract-img.png") top right / auto
+        no-repeat,
+      var(--Grey-11);
+
     background: url('../img/About/grey-people/grey-people.png') 15px 15px /
         328px no-repeat,
       url('../img/About/abstract-img/abstract-img.png') top right / auto
         no-repeat;
     background-color: var(--Grey-11);
 
+
+
     .excellence__wrapper-info {
       padding: 24px;
       background-color: var(--Grey-10);
       border-radius: 20px;
       .excellence__subtitle {
-        font-family: $font-family-lexend;
+        font-family: $font-family-base;
         font-weight: 400;
         font-size: $spacing-md-2;
         line-height: 150%;
@@ -26,25 +35,88 @@
         color: var(--white);
       }
       .excellence__title {
-        font-family: $font-family-lexend;
+        font-family: $font-family-base;
         text-align: center;
         color: var(--white);
         font-weight: 500;
         font-size: 28px;
         line-height: 130%;
+        margin-bottom: 14px;
         span {
           color: var(--Green-60);
         }
       }
       .excellence__text {
-        margin-top: 14px;
         color: var(--Grey-70);
-        font-family: $font-family-lexend;
+        font-family: $font-family-base;
         font-weight: 300;
         font-size: $spacing-md-2;
         line-height: 150%;
         text-align: center;
       }
     }
+}
+
+@media (min-width: 1440px) {
+  .excellence {
+    margin-bottom: 120px;
+    &__container {
+      max-width: 1279px;
+      padding: 40px 581px 101px 40px;
+      background: url("../img/About/grey-people/grey-people-1440.png") 520px
+          42px / auto no-repeat,
+        url("../img/About/abstract-img/abstract-img-1440.png") top right / auto
+          no-repeat,
+        var(--Grey-11);
+
+      .excellence__wrapper-info {
+        padding: 60px;
+        border-radius: 20px 0px 60px 20px;
+        .excellence__subtitle {
+          font-size: 18px;
+          text-align: start;
+        }
+        .excellence__title {
+          font-size: 48px;
+          text-align: start;
+          margin-bottom: 20px;
+        }
+        .excellence__text {
+          font-size: 16px;
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .excellence {
+    &__container {
+      max-width: 1599px;
+      padding: 50px 758px 187px 50px;
+      background: url("../img/About/grey-people/grey-people-1920.png") 581px
+          50px / auto no-repeat,
+        url("../img/About/abstract-img/abstract-img-1920.png") top right / auto
+          no-repeat,
+        var(--Grey-11);
+      .excellence__wrapper-info {
+        padding: 80px;
+        border-radius: 20px 0px 80px 20px;
+        .excellence__subtitle {
+          font-size: 20px;
+        }
+        .excellence__title {
+          font-size: 58px;
+          margin-bottom: 23px;
+        }
+        .excellence__text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
   }
 }
