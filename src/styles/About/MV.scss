@@ -1,21 +1,58 @@
 @use '../constructor/variables.scss' as *;
 
+@use '../constructor/variables.scss' as *;
+
 .mission-vision {
   margin-bottom: 80px;
+
   &__container {
     max-width: 357px;
     margin: 0 auto;
-    .mission-vision__wrapper-title {
-      margin-bottom: 60px;
-      .mission-vision__title {
-        color: var(--Green-60);
+  }
+
+  &__wrapper-title {
+    margin-bottom: 60px;
+
+    .mission-vision__title {
+      color: var(--Green-60);
+      font-family: $font-family-base;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 150%;
+      text-align: center;
+    }
+
+    .mission-vision__subtitle {
+      color: var(--Grey-70);
+      font-family: $font-family-base;
+      font-weight: 300;
+      font-size: $font-size-sm;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+
+  .mission {
+    margin-bottom: 50px;
+  }
+
+  .vision {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__block {
+    .mission-vision__text-wrapper {
+      .mission-vision__block-title {
+        color: $white;
         font-family: $font-family-base;
-        font-weight: 400;
-        font-size: 28px;
+        font-weight: 500;
+        font-size: 26px;
         line-height: 150%;
         text-align: center;
       }
-      .mission-vision__subtitle {
+
+      .mission-vision__text {
         color: var(--Grey-70);
         font-family: $font-family-base;
         font-weight: 300;
@@ -25,195 +62,152 @@
       }
     }
 
-    .mission {
-      margin-bottom: 50px;
-    }
-    .vision {
+    .mission-vision__image-wrapper {
       display: flex;
-      flex-direction: column-reverse;
-    }
+      justify-content: center;
+      padding: 20px 20px 0;
+      margin-bottom: 30px;
 
-    .mission-vision__block {
-      .mission-vision__text-wrapper {
-        .mission-vision__block-title {
-          color: $white;
-          font-family: $font-family-base;
-          font-weight: 500;
-          font-size: 26px;
-          line-height: 150%;
-          text-align: center;
-        }
-        .mission-vision__text {
-          color: var(--Grey-70);
-          font-family: $font-family-base;
-          font-weight: 300;
-          font-size: $font-size-sm;
-          line-height: 150%;
-          text-align: center;
-        }
-      }
-      .mission-vision__image-wrapper {
-        display: flex;
-        justify-content: center;
-        padding: 20px 20px 0 20px;
+      background-color: var(--Grey-15);
+      background-image: url("../img/About/abstract-img/abstract-img-MV.png");
+      background-repeat: no-repeat;
+      width: 100%;
 
-        margin-bottom: 30px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      border-bottom: 1px solid var(--Green-60);
 
-        background-color: var(--Grey-15);
-
-        background-image: url("../img/About/abstract-img/abstract-img-MV.png");
-        background-repeat: no-repeat;
-        width: 100%;
-
-
-        background-image: url('../img/About/abstract-img/abstract-img-MV.png');
-
+      picture img {
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        border-bottom: 1px solid var(--Green-60);
-        picture {
-          img {
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-          }
-        }
       }
     }
-
   }
 }
-
 @media (min-width: 1440px) {
   .mission-vision {
-    .mission-vision__container {
+    &__container {
       max-width: 1279px;
+    }
 
-      .mission-vision__wrapper-title {
-        padding-right: 250px;
+    &__wrapper-title {
+      padding-right: 250px;
 
-        .mission-vision__title {
-          font-size: 38px; 
+      .mission-vision__title {
+        font-size: 38px;
+        text-align: start;
+      }
+
+      .mission-vision__subtitle {
+        font-size: $font-size-base;
+        text-align: start;
+      }
+    }
+
+    .vision {
+      flex-direction: row;
+      margin-top: -84px;
+
+      .mission-vision__text-wrapper {
+        padding-right: 40px;
+        border-right: 1px solid var(--Green-60);
+      }
+    }
+
+    .mission {
+      .mission-vision__text-wrapper {
+        padding-left: 40px;
+        border-left: 1px solid var(--Green-60);
+      }
+    }
+
+    &__block {
+      display: flex;
+      align-items: center;
+
+      .mission-vision__text-wrapper {
+        .mission-vision__block-title {
           text-align: start;
+          font-size: 32px;
+          margin-bottom: 10px;
         }
 
-        .mission-vision__subtitle {
+        .mission-vision__text {
+          text-align: start;
           font-size: $font-size-base;
-          text-align: start;
         }
       }
 
-      .vision {
-        flex-direction: row;
-        margin-top: -84px;
+      .mission-vision__image-wrapper {
+        margin: 0;
+        padding: 60px 60px 0;
+        box-sizing: content-box;
+        border: 1px solid var(--Grey-15, #262626);
+        border-radius: 50px 50px 20px 20px;
 
-        .mission-vision__text-wrapper {
-          padding-right: 40px;
-          border-right: 1px var(--Green-60) solid;
-        }
-      }
-
-      .mission {
-        .mission-vision__text-wrapper {
-          padding-left: 40px;
-          border-left: 1px var(--Green-60) solid;
-        }
-      }
-
-      .mission-vision__block {
-        display: flex;
-        align-items: center;
-
-        .mission-vision__text-wrapper {
-          .mission-vision__block-title {
-            text-align: start;
-            font-size: 32px; 
-            margin-bottom: 10px;
-          }
-
-          .mission-vision__text {
-            text-align: start;
-            font-size: $font-size-base; 
-          }
-        }
-
-        .mission-vision__image-wrapper {
-          margin: 0;
-          padding: 60px 60px 0 60px;
-          box-sizing: content-box;
-          border: 1px solid var(--Grey-15, #262626);
-          background: linear-gradient(
-              106deg,
-              rgba(202, 255, 51, 0.05) -29.45%,
-              rgba(202, 255, 51, 0) 27.86%
-            ),
-            linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
-            url("../img/About/abstract-img/abstract-img-MV-1440.png");
-          background-repeat: no-repeat, no-repeat, no-repeat;
-          background-size: auto, auto, contain;
-          background-position: top left, top left, center center;
-          border-radius: 50px 50px 20px 20px;
-        }
+        background: 
+          linear-gradient(106deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%),
+          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
+          url("../img/About/abstract-img/abstract-img-MV-1440.png");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: auto, auto, contain;
+        background-position: top left, top left, center center;
       }
     }
   }
 }
-<<<<<<< HEAD
-
 @media (min-width: 1920px) {
   .mission-vision {
-    .mission-vision__container {
+    &__container {
       max-width: 1599px;
-      .mission-vision__wrapper-title {
-        padding-right: 300px;
-        margin-bottom: 80px;
-        .mission-vision__title {
-          font-size: 48px;
+    }
+
+    &__wrapper-title {
+      padding-right: 300px;
+      margin-bottom: 80px;
+
+      .mission-vision__title {
+        font-size: 48px;
+      }
+
+      .mission-vision__subtitle {
+        font-size: 18px;
+      }
+    }
+
+    .mission .mission-vision__text-wrapper {
+      padding-left: 50px;
+    }
+
+    .vision {
+      margin-top: -100px;
+
+      .mission-vision__text-wrapper {
+        padding-right: 50px;
+      }
+    }
+
+    &__block {
+      .mission-vision__text-wrapper {
+        .mission-vision__block-title {
+          font-size: 38px;
+          margin-bottom: 14px;
         }
-        .mission-vision__subtitle {
+
+        .mission-vision__text {
           font-size: 18px;
         }
       }
-      .mission {
-        .mission-vision__text-wrapper {
-          padding-left: 50px;
-        }
-      }
-      .vision {
-        margin-top: -100px;
-        .mission-vision__text-wrapper {
-          padding-right: 50px;
-        }
-      }
-      .mission-vision__block {
-        .mission-vision__text-wrapper {
-          .mission-vision__block-title {
-            font-size: 38px;
-            margin-bottom: 14px;
-          }
-          .mission-vision__text {
-            font-size: 18px;
-          }
-          .mission-vision__image-wrapper {
-            background: linear-gradient(
-                106deg,
-                rgba(202, 255, 51, 0.05) -29.45%,
-                rgba(202, 255, 51, 0) 27.86%
-              ),
-              linear-gradient(
-                267deg,
-                #1c1c1c 40.67%,
-                rgba(28, 28, 28, 0) 99.81%
-              ),
-              url("../img/About/abstract-img/abstract-img-MV-1920.png");
-            background-repeat: no-repeat, no-repeat, no-repeat;
-            background-size: auto, auto, contain;
-            background-position: top left, top left, center center;
-          }
-        }
+
+      .mission-vision__image-wrapper {
+        background: 
+          linear-gradient(106deg, rgba(202, 255, 51, 0.05) -29.45%, rgba(202, 255, 51, 0) 27.86%),
+          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
+          url("../img/About/abstract-img/abstract-img-MV-1920.png");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-size: auto, auto, contain;
+        background-position: top left, top left, center center;
       }
     }
-
   }
 }
-=======
->>>>>>> parent of 570c9ed (полностю доделаний about з scss html)
