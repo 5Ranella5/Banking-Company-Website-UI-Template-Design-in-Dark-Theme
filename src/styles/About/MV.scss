@@ -92,7 +92,7 @@
         padding-right: 250px;
 
         .mission-vision__title {
-          font-size: 38px;
+          font-size: 38px; 
           text-align: start;
         }
 
@@ -126,13 +126,13 @@
         .mission-vision__text-wrapper {
           .mission-vision__block-title {
             text-align: start;
-            font-size: 32px;
+            font-size: 32px; 
             margin-bottom: 10px;
           }
 
           .mission-vision__text {
             text-align: start;
-            font-size: $font-size-base;
+            font-size: $font-size-base; 
           }
         }
 
@@ -157,6 +157,7 @@
     }
   }
 }
+<<<<<<< HEAD
 
 @media (min-width: 1920px) {
   .mission-vision {
@@ -214,3 +215,5 @@
 
   }
 }
+=======
+>>>>>>> parent of 570c9ed (полностю доделаний about з scss html)
