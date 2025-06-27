@@ -1,0 +1,64 @@
+@use "../constructor/variables.scss" as *;
+
+.our-values {
+    margin-bottom: 80px;
+  &__container {
+    max-width: 358px;
+    margin: 0 auto;
+  }
+  &__wrapper-title {
+    margin-bottom: 50px;
+    .our-values__title {
+      color: var(--white, #fff);
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 10px;
+      span {
+        color: var(--Green-60, #caff33);
+      }
+    }
+    .our-values__subtitle {
+      color: var(--Grey-70, #b3b3b3);
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: $font-size-sm;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    &-item {
+        padding-left: 20px;
+        position: relative;
+      .our-values__item-title {
+        color: var(--Grey-30, #4c4c4d);
+        font-family: $font-family-base;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 150%;
+        margin-bottom: 14px;
+      }
+      .our-values__item-text {
+        color: var(--Grey-70, #b3b3b3);
+        font-family: $font-family-base;
+        font-size: $font-size-sm;
+        font-weight: 300;
+        line-height: 150%;
+      }
+    }
+    &-item::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        background-color: var(--Green-60, #CAFF33);
+    }
+  }
+}

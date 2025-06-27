@@ -1,0 +1,8 @@
+@use "../constructor/variables.scss" as *;
+
+.our-benefits {
+  &__container {
+    max-width: 358px;
+    margin: 0 auto;
+  }
+}
