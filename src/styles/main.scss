@@ -1,15 +1,23 @@
+
 @use './About/excellence.scss';
 @use './About/MV.scss';
 @use './About/PR.scss';
 
-@use './constructor/reset.scss';
-@use './constructor/variables.scss';
 
+@use './constructor/reset.scss';
+@use './constructor/variables.scss' as vars;
 @use './Login/modal-login.scss';
 @use './Login/testimonials.scss';
+@use './header.scss';
+
 @use './Home/hero.scss';
 
 body {
+
   background: var(--Grey-10, #1a1a1a);
+
+
+  background: var(--Grey-10, vars.$bg-body);
+  font-family: vars.$font-family-lexend;
 
 }
