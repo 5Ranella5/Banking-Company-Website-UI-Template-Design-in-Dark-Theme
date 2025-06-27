@@ -1,6 +1,4 @@
-
-
-@import '../constructor/variables.scss' ;
+@use '../constructor/variables.scss' as *;
 
 
 .press-releases {
@@ -35,12 +33,11 @@
         color: var(--Grey-70);
         font-family: $font-family-base;
         font-weight: 400;
-        font-size: $font-size-sm;
+        font-size: $spacing-md-2;
         line-height: 150%;
         text-align: center;
       }
     }
-
 
     .press-releases__list {
       display: flex;
@@ -158,7 +155,6 @@
     }
   }
 }
-<<<<<<< HEAD
 
 @media (min-width: 1920px) {
   .press-releases{
@@ -213,5 +209,3 @@
   }
 }
 
-=======
->>>>>>> parent of 570c9ed (полностю доделаний about з scss html)

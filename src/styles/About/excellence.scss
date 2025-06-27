@@ -21,6 +21,7 @@
     background-color: var(--Grey-11);
 
 
+
     .excellence__wrapper-info {
       padding: 24px;
       background-color: var(--Grey-10);
@@ -28,7 +29,7 @@
       .excellence__subtitle {
         font-family: $font-family-base;
         font-weight: 400;
-        font-size: $font-size-sm;
+        font-size: $spacing-md-2;
         line-height: 150%;
         text-align: center;
         color: var(--white);
@@ -49,14 +50,12 @@
         color: var(--Grey-70);
         font-family: $font-family-base;
         font-weight: 300;
-        font-size: $font-size-sm;
+        font-size: $spacing-md-2;
         line-height: 150%;
         text-align: center;
       }
     }
-  }
 }
-
 
 @media (min-width: 1440px) {
   .excellence {
@@ -90,6 +89,7 @@
     }
   }
 }
+
 @media (min-width: 1920px) {
   .excellence {
     &__container {
@@ -118,3 +118,5 @@
   }
 }
 
+  }
+}

@@ -1,4 +1,4 @@
-@import './constructor/variables.scss';
+@use './constructor/variables.scss' as *;
 
 .header {
   padding-top: 40px;
@@ -31,7 +31,7 @@
 .header-logo-text {
   color: var(--Absolute-White, #fff);
   text-align: center;
-  font-size: $font-size-sm;
+  font-size: $spacing-md-2;
 }
 
 .header-buttons-container {
@@ -52,11 +52,11 @@
 }
 
 .burger-button {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 
-@media screen and (min-width: 1440px) {
+@include respond(md) {
   .header {
     padding-top: 30px;
   }
@@ -64,6 +64,7 @@
   .header__container {
     max-width: 1280px;
     padding: 14px 24px;
+    position: relative;
   }
 
   .header-logo-svg {
@@ -72,28 +73,90 @@
   }
 
   .header-logo-text {
-    font-size: $font-size-base;
+    font-size: $spacing-md;
   }
 
   .header-buttons-container {
     display: flex;
     align-items: center;
     gap: 26px;
+    position: absolute;
+    left: 505px;
+    top: 26px;
   }
 
   .header-buttons {
     color: var(--Absolute-White, #fff);
-    font-family: Lexend;
-    font-size: $font-family-base;
+    font-size: $spacing-md-2;
     line-height: 150%;
   }
 
   .header-buttons-pc {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .header__menu {
     display: none;
+  }
+
+  .login-button-header {
+    color: var(--Grey-11, #1c1c1c);
+    font-size: $spacing-md-2;
+    line-height: 150%;
+    border-radius: 82px;
+    background: var(--Green-60, #caff33);
+    padding: 12px 24px;
+  }
+
+  .sign-up-button-header {
+    color: var(--Absolute-White, #fff);
+    font-size: $spacing-md-2;
+    line-height: 150%;
+    background: var(--Grey-11, #1c1c1c);
+  }
+}
+
+@include respond(lg) {
+  .header {
+    padding-top: 50px;
+  }
+
+  .header__container {
+    max-width: 1596px;
+    padding: 20px 34px;
+  }
+
+  .header-logo-svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-logo-text {
+    font-size: $spacing-lg-2;
+  }
+
+  .header-buttons-container {
+    left: 636px;
+    top: 34px;
+  }
+
+  .header-buttons {
+    font-size: $spacing-lg-2;
+  }
+
+  .header-buttons-pc {
+    gap: 30px;
+  }
+
+  .login-button-header {
+    font-size: $spacing-lg-2;
+    padding: 14px 30px;
+  }
+
+  .sign-up-button-header {
+    font-size: $spacing-lg-2;
   }
 
   .burger-button {

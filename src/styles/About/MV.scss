@@ -19,7 +19,7 @@
         color: var(--Grey-70);
         font-family: $font-family-base;
         font-weight: 300;
-        font-size: $font-size-sm;
+        font-size: $spacing-md-2;
         line-height: 150%;
         text-align: center;
       }
@@ -47,7 +47,7 @@
           color: var(--Grey-70);
           font-family: $font-family-base;
           font-weight: 300;
-          font-size: $font-size-sm;
+          font-size: $spacing-md-2;
           line-height: 150%;
           text-align: center;
         }
@@ -60,14 +60,12 @@
         margin-bottom: 30px;
 
         background-color: var(--Grey-15);
-
         background-image: url("../img/About/abstract-img/abstract-img-MV.png");
         background-repeat: no-repeat;
         width: 100%;
 
 
         background-image: url('../img/About/abstract-img/abstract-img-MV.png');
-
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         border-bottom: 1px solid var(--Green-60);
@@ -79,7 +77,6 @@
         }
       }
     }
-
   }
 }
 
@@ -157,8 +154,6 @@
     }
   }
 }
-<<<<<<< HEAD
-
 @media (min-width: 1920px) {
   .mission-vision {
     .mission-vision__container {
@@ -215,5 +210,3 @@
 
   }
 }
-=======
->>>>>>> parent of 570c9ed (полностю доделаний about з scss html)
