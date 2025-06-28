@@ -1,0 +1,26 @@
+@use "../constructor/variables.scss" as *;
+
+.job-openings {
+  &__container {
+    max-width: 358px;
+    margin: 0 auto;
+  }
+  &__wrapper-title {
+    .job-openings__title {
+      color: var(--Green-60, #caff33);
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+    .job-openings__subtitle {
+      color: var(--Grey-70, #b3b3b3);
+      text-align: center;
+      font-family: $font-family-base;
+      font-size: $font-size-sm;
+      font-weight: 300;
+      line-height: 150%; 
+    }
+  }
+}
