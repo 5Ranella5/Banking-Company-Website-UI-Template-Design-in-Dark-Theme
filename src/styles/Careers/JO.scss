@@ -6,6 +6,7 @@
     margin: 0 auto;
   }
   &__wrapper-title {
+    margin-bottom: 60px;
     .job-openings__title {
       color: var(--Green-60, #caff33);
       text-align: center;
@@ -71,8 +72,43 @@
         font-family: $font-family-base;
         font-size: $font-size-sm;
         font-weight: 300;
-        line-height: 150%; 
+        line-height: 150%;
         margin-bottom: 30px;
+      }
+
+      .job-openings__item-list {
+        margin-bottom: 30px;
+
+        &-item {
+          position: relative;
+          padding-left: 28px;
+
+          .job-openings__item-text {
+            margin-bottom: 14px;
+          }
+
+          &:last-child .job-openings__item-text {
+            margin-bottom: 0;
+          }
+        }
+
+        &-item::before {
+          content: url("../img/Careers/briefcase.svg");
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .job-openings__item-btn {
+        border-radius: 82px;
+        background: var(--Green-60, #caff33);
+        padding: 12px 20px;
+        color: var(--Grey-11, #1c1c1c);
+        font-family: $font-family-base;
+        font-size: $font-size-sm;
+        font-weight: 500;
+        line-height: 150%;
       }
     }
   }
