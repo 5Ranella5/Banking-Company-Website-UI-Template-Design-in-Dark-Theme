@@ -31,7 +31,7 @@
 .header-logo-text {
   color: var(--Absolute-White, #fff);
   text-align: center;
-  font-size: $font-size-sm;
+  font-size: 14px;
 }
 
 .header-buttons-container {
@@ -72,7 +72,7 @@
   }
 
   .header-logo-text {
-    font-size: $font-size-base;
+    font-size: 14px;
   }
 
   .header-buttons-container {
@@ -84,7 +84,7 @@
   .header-buttons {
     color: var(--Absolute-White, #fff);
     font-family: Lexend;
-    font-size: $font-family-lexend;
+    font-size: 14px;
     line-height: 150%;
   }
 
