@@ -7,6 +7,8 @@
 @use './About/MV.scss';
 @use './About/PR.scss';
 @use './Home/hero.scss';
+@use './Home/products.scss';
+
 
 body {
   background: var(--Grey-10, vars.$bg-body);
