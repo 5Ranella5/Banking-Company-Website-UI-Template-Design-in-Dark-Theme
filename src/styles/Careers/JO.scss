@@ -113,3 +113,12 @@
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .job-openings {
+    &__container{
+      max-width: 1280px;
+    }
+    
+  }
+}

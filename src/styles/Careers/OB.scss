@@ -35,7 +35,7 @@ svg {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    .our-benefits__list-item:not(:last-child)::after{
+    .our-benefits__list-item:not(:last-child)::after {
       content: "";
       position: absolute;
       bottom: -24px;
@@ -44,7 +44,7 @@ svg {
       height: 1px;
       background-image: url("../img/Careers/line/line-390.png");
     }
-    .our-benefits__list-item {
+    &-item {
       position: relative;
       padding: 24px;
       border-radius: 40px 40px 14px 14px;
@@ -99,23 +99,62 @@ svg {
     }
   }
 }
-@media (min-width: 1440px) {  
-  .our-benefits{
-    &__container{
+@media (min-width: 1440px) {
+  .our-benefits {
+    margin-bottom: 120px;
+    &__container {
       max-width: 1280px;
     }
-    &__wrapper-title{
-      .our-benefits__title{
+    &__wrapper-title {
+      .our-benefits__title {
         text-align: start;
         font-size: 38px;
       }
-      .our-benefits__subtitle{
+      .our-benefits__subtitle {
         text-align: start;
         font-size: $font-size-base;
       }
     }
-    &__list{
-      
+    &__list::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background-image: url("../img/Careers/line/line-1440-horizontal.png");
+    }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+
+      .our-benefits__list-item:nth-of-type(1)::after,
+      .our-benefits__list-item:nth-of-type(3)::after {
+        content: none;
+      }
+      .our-benefits__list-item:nth-of-type(2)::after,
+      .our-benefits__list-item:last-child::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -25px;
+        width: 1px;
+        height: 100%;
+        background-image: url("../img/Careers/line/line-1440.png");
+      }
+      &-item {
+        width: calc(50% - 25px);
+        padding: 40px;
+        .our-benefits__item-wrapper-title {
+          margin-bottom: 24px;
+          .our-benefits__item-title {
+            font-size: 20px;
+          }
+          .our-benefits__item-text {
+            font-size: 16px;
+          }
+        }
+      }
     }
   }
 }
