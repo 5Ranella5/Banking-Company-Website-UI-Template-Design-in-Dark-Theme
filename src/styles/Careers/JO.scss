@@ -91,7 +91,6 @@
             margin-bottom: 0;
           }
         }
-
         &-item::before {
           content: url("../img/Careers/briefcase.svg");
           position: absolute;
@@ -116,9 +115,55 @@
 
 @media (min-width: 1440px) {
   .job-openings {
-    &__container{
+    margin-bottom: 120px;
+    &__container {
       max-width: 1280px;
     }
-    
+    &__wrapper-title {
+      padding-right: 250px;
+      .job-openings__title {
+        font-size: 38px;
+        text-align: start;
+      }
+      .job-openings__subtitle{
+        font-size: $font-size-base;
+        text-align: start;
+      }
+    }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      &-item {
+        width: calc(50% - 10px);
+        padding: 40px;
+        .job-openings__item-title{
+          font-size: 24px;
+        }
+        .job-openings__sub-wrapper{
+          flex-direction: row;
+          margin-bottom: 40px;
+          p{
+            font-size: $font-size-base;
+          }
+        }
+        .job-openings__item-block-title{
+          font-size: $font-size-lg;
+          margin-bottom: 16px;
+        }
+        .job-openings__item-text{
+          font-size: $font-size-base;
+          margin-bottom: 40px;
+        }
+        .job-openings__item-list{
+          margin-bottom: 40px;
+          &-item{
+            .job-openings__item-text{
+              font-size:  $font-size-base;
+            }
+          }
+        }
+      }
+    }
   }
 }

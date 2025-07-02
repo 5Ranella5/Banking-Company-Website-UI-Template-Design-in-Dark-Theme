@@ -1,7 +1,7 @@
 @use "../constructor/variables.scss" as *;
 svg {
-  width: 24px;
-  height: 24px;
+  width: 72px;
+  height: 72px;
 }
 .our-benefits {
   margin-bottom: 80px;
@@ -61,26 +61,6 @@ svg {
         align-items: center;
         gap: 10px;
         margin-bottom: 20px;
-        .icon-wrapper {
-          padding: 8px;
-          border-radius: 70px;
-          background: linear-gradient(
-            180deg,
-            rgba(202, 255, 51, 0.05) 0%,
-            rgba(202, 255, 51, 0) 100%
-          );
-
-          .icon-sub-wrapper {
-            padding: 16px;
-            border-radius: 50px;
-            border: 1px solid #caff33;
-            background: linear-gradient(
-              180deg,
-              rgba(202, 255, 51, 0.1) -66.22%,
-              rgba(202, 255, 51, 0) 85.46%
-            );
-          }
-        }
         .our-benefits__item-title {
           color: var(--White, #fff);
           font-family: $font-family-base;
