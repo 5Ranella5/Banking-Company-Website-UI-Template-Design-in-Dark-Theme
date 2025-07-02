@@ -8,8 +8,7 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
-      padding: 0 80px;
-
+  padding: 0 80px;
 }
 
 .products__enter {
@@ -54,7 +53,19 @@
     color: #fff;
     font-size: 14px;
     line-height: 1.5;
+    transition: all 0.5s ease;
   }
+}
+
+.btn:hover {
+  opacity: 90%;
+  color: #1c1c1c;
+  background: #caff33;
+}
+
+.btn:focus {
+  color: #1c1c1c;
+  background: #caff33;
 }
 
 .products__box {
@@ -126,8 +137,13 @@
   .products__box {
     .products__list {
       flex-direction: row;
-      gap: 80px;
+      gap: 40px;
+      .products__item:last-child {
+        border-right: none;
+      }
       .products__item {
+        padding-right: 40px;
+        border-right: 1px solid #262626;
         .svg {
         }
         .box {

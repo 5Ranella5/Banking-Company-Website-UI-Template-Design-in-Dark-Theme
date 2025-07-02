@@ -47,6 +47,18 @@ button {
   line-height: 1.5;
   border-radius: 82px;
   background: #caff33;
+  transition: all 0.5s ease;
+}
+
+.hero__btn:hover {
+  color: #caff33;
+  border: 1px solid #caff33;
+  background-color: #1c1c1c;
+}
+
+.hero__btn:focus {
+  color: #caff33;
+  background-color: #1c1c1c;
 }
 
 .quick {
@@ -252,6 +264,7 @@ button {
     font-size: 9px;
     line-height: 1.5;
     width: 100%;
+    transition: all 0.4s ease;
   }
 }
 
