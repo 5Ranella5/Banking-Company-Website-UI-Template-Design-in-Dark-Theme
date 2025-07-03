@@ -106,6 +106,7 @@ svg {
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
+      gap: 60px;
       position: relative;
 
       .our-benefits__list-item:nth-of-type(1)::after,
@@ -117,22 +118,63 @@ svg {
         content: "";
         position: absolute;
         top: 0;
-        left: -25px;
+        left: -30px;
         width: 1px;
         height: 100%;
         background-image: url("../img/Careers/line/line-1440.png");
       }
       &-item {
-        width: calc(50% - 25px);
+        width: calc(50% - 30px);
         padding: 40px;
         .our-benefits__item-wrapper-title {
           margin-bottom: 24px;
           .our-benefits__item-title {
-            font-size: 20px;
+            font-size: $font-size-lg;
           }
           .our-benefits__item-text {
-            font-size: 16px;
+            font-size: $font-size-base;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .our-benefits {
+    margin-bottom: 150px;
+    &__container {
+      max-width: 1596px;
+    }
+    &__wrapper-title {
+      margin-bottom: 80px;
+      padding-right: 300px;
+      .our-benefits__title {
+        margin-bottom: 14px;
+        font-size: 48px;
+      }
+      .our-benefits__subtitle {
+        font-size: 18px;
+      }
+    }
+    &__list {
+      gap: 100px;
+      .our-benefits__list-item:nth-of-type(2)::after,
+      .our-benefits__list-item:last-child::after {
+        left: -50px;
+      }
+      &-item {
+        width: calc(50% - 50px);
+        padding: 50px;
+        .our-benefits__item-wrapper-title {
+          margin-bottom: 30px;
+          gap: 20px;
+          .our-benefits__item-title {
+            font-size: 24px;
+          }
+        }
+        .our-benefits__item-text {
+          font-size: 18px;
         }
       }
     }
