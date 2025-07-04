@@ -1,6 +1,7 @@
 @use "../constructor/variables.scss" as *;
 
 .job-openings {
+  margin-bottom: 80px;
   &__container {
     max-width: 358px;
     margin: 0 auto;
