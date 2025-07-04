@@ -1,16 +1,34 @@
 @use './constructor/reset.scss';
 @use './constructor/variables.scss' as vars;
-@use './Login/modal-login.scss';
-@use './SignUp/modal-sign-up.scss';
-@use './Login/testimonials.scss';
+@use './Login/login.scss';
+@use './SignUp/signup.scss';
+@use './Login/testimonial.scss';
 @use './header.scss';
 @use './footer.scss';
 @use './About/excellence.scss';
 @use './About/MV.scss';
 @use './About/PR.scss';
 @use './Home/hero.scss';
+@use './Careers/JO.scss';
+@use './Careers/OB.scss';
+@use './Careers/OV.scss';
+@use './Careers/welcome.scss';
+@use './modal-burger.scss';
+
+html,
+body {
+  overflow-x: hidden;
+}
 
 body {
   background: var(--Grey-10, vars.$bg-body);
   font-family: vars.$font-family-lexend;
+}
+
+main {
+  padding-top: 143px; // або скільки у тебе висота .header (наприклад 64px + 8px відступ)
+}
+
+.hidden {
+  display: none;
 }

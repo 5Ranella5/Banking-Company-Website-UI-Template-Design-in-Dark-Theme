@@ -1,0 +1,82 @@
+/* Оверлей — затемнення + розмиття */
+.modal-burger {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-right: 25px;
+  background-color: rgba(28, 28, 28, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 11;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Контейнер меню */
+.burger__container {
+  height: auto;
+  max-height: 90vh; // обмеження на всяк випадок
+  display: flex;
+  width: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: var(--Grey-11, #1c1c1c);
+  border-radius: 20px;
+  border-left: 1px solid var(--Grey-15, #262626);
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.burger-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.burger-buttons {
+  color: var(--Absolute-White, #fff);
+  font-family: Lexend;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+.line-burger {
+  width: 100px;
+  height: 10px;
+  background: var(--Grey-10, #1a1a1a);
+}
+
+.burger-buttons-pc {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sign-up-button-burger {
+  border-radius: 63px;
+  background: var(--Green-60, #caff33);
+  padding: 10px 20px;
+  color: var(--Grey-15, #262626);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.login-button-burger {
+  padding: 10px 20px;
+  border-radius: 63px;
+  border: 1px solid var(--Grey-20, #333);
+  background: var(--Grey-15, #262626);
+  color: var(--Absolute-White, #fff);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}

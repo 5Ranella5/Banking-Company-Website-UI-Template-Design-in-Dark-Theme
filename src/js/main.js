@@ -1,19 +1,37 @@
 import '../styles/main.scss';
 
+//свайпер//
 const ref = {
-  slide_1: document.querySelector('.swiper-slide-1'),
-  slide_2: document.querySelector('.swiper-slide-2'),
   swiper_container: document.querySelector('.swiper-wrapper'),
   slides: document.querySelector('.swiper-testimonial-reviews'),
   button_next: document.querySelector('.swiper-button-next'),
   button_prev: document.querySelector('.swiper-button-prev'),
+  modal_registration: document.querySelector('.modal-registration'),
+  burger_button: document.querySelector('.burger-button-work'),
+  modal_burger: document.querySelector('.modal-burger'),
 };
 
 // Створення нового слайду з текстом
 const CreateSlide = (text) => {
   if (!ref.swiper_container) return;
 
-  const newSlide = `<div class="swiper-slide"><p>${text}</p></div>`;
+  const newSlide = `
+  <div class="swiper-slide swiper-slide-2">
+  <div class="container-testimonial-reviews-quotes">
+  <div class="line-testimonial"></div>
+            <svg class="quotes-img">
+              <use href="../../img/Login/modal-login/quotes.svg#quotes"></use>
+            </svg>
+            <div class="line-testimonial"></div>
+          </div>
+          <p class="text-testimonial-reviews">
+            I recently started my own business, and YourBank has been
+            instrumental in helping me set up my business accounts and secure
+            the financing I needed. Their expert guidance and tailored solutions
+            have been invaluable.
+          </p>
+          <p class="name-testimonial-reviews">John D</p>
+        </div>`;
   ref.swiper_container.insertAdjacentHTML('beforeend', newSlide);
 };
 
@@ -112,4 +130,31 @@ document.addEventListener('DOMContentLoaded', () => {
       swiper.slidePrev();
     });
   }
+});
+
+///вход и реестация///
+
+// import LoadPosts from './js/LoadPosts.js'
+// import {ref} from './js/Settings.js';
+// let currentPostId = null;
+
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll('.nav__link');
+
+console.log(currentPath);
+
+navLinks.forEach((link) => {
+  console.log(link.getAttribute('href'));
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('active');
+  }
+});
+
+const closeModal = (modal) => {
+  modal.classList.remove('hidden');
+};
+
+ref.burger_button.addEventListener('click', () => {
+  console.log('Тикаю');
+  closeModal(ref.modal_burger);
 });

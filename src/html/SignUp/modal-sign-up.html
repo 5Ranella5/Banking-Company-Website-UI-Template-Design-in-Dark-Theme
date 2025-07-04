@@ -1,69 +1,82 @@
-<section class="modal-sign-up">
-  <div class="container-modal-sign-up">
-    <div class="container-modal-sign-up-header">
-      <h2 class="title-sign-up">Sign Up</h2>
-      <p class="text-sign-up">
+<section class="signup">
+  <div class="signup__container">
+    <div class="signup__header">
+      <h2 class="signup__title">Sign Up</h2>
+      <p class="signup__text">
         Join our community today! Create an account to unlock exclusive features
         and personalized experiences.
       </p>
     </div>
-    <form class="container-form-sign-up">
-      <div class="container-button-sign-up">
-        <input
-          type="text"
-          placeholder="Enter First Name"
-          class="input-date-sign-up"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Enter Last Name"
-          class="input-date-sign-up"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Enter your Email"
-          class="input-date-sign-up"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Enter your Password"
-          class="input-date-sign-up"
-          required
-        />
+    <form class="signup__form">
+      <div class="signup__fields">
+        <div class="signup__field-group">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="Enter First Name"
+            class="first__name signup__input"
+            required
+          />
+          <input
+            type="text"
+            name="secondName"
+            placeholder="Enter Second Name"
+            class="second__name signup__input"
+            required
+          />
+        </div>
+        <div class="signup__field-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your Email"
+            class="email signup__input"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your Password"
+            class="password signup__input"
+            required
+            minlength="6"
+          />
+        </div>
       </div>
-      <button type="button" class="login-button">Login</button>
-      <button type="button" class="sign-up-button">Sign up</button>
-      <div class="container-additional">
-        <div class="line-header"></div>
-        <p class="additional-text">Or Continue with</p>
-        <div class="line-header"></div>
-      </div>
-      <ul class="list-soc-media">
-        <li class="item-soc-media">
-          <div class="container-img-modal-login">
-            <svg class="img-modal-login google-img">
+      <div class="signup__actions">
+        <button type="button" class="signup__button signup__button--login">
+          Login
+        </button>
+        <button type="submit" class="signup__button signup__button--signup">
+          Sign up
+        </button>
+
+        <div class="signup__divider">
+          <div class="signup__line"></div>
+          <p class="signup__divider-text">Or Continue with</p>
+          <div class="signup__line"></div>
+        </div>
+
+        <ul class="signup__social">
+          <li class="signup__social-item">
+            <svg class="signup__icon" aria-label="Sign up with Google">
               <use href="../../img/Login/modal-login/google.svg#google"></use>
             </svg>
-          </div>
-        </li>
-        <li class="item-soc-media">
-          <div class="container-img-modal-login">
-            <svg class="img-modal-login facebook-img">
-              <use href="../img/Login/modal-login/facebook.svg#facebook"></use>
+          </li>
+          <li class="signup__social-item">
+            <svg class="signup__icon" aria-label="Sign up with Facebook">
+              <use
+                href="../../img/Login/modal-login/facebook.svg#facebook"
+              ></use>
             </svg>
-          </div>
-        </li>
-        <li class="item-soc-media">
-          <div class="container-img-modal-login">
-            <svg class="img-modal-login apple-img">
-              <use href="./img/Login/modal-login/apple.svg#apple"></use>
+          </li>
+          <li class="signup__social-item">
+            <svg class="signup__icon" aria-label="Sign up with Apple">
+              <use href="../../img/Login/modal-login/apple.svg#apple"></use>
             </svg>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </form>
   </div>
 </section>

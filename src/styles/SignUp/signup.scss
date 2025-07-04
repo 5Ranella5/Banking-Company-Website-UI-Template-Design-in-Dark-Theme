@@ -1,0 +1,279 @@
+@use '../constructor/variables.scss' as *;
+
+.signup {
+  padding-top: 30px;
+}
+
+.signup__container {
+  display: flex;
+  max-width: 358px;
+  margin: 0 auto;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--Grey-15, #262626);
+  background: url('../../img/Login/modal-login/modal-login.png') 50% / cover
+    no-repeat;
+  background-blend-mode: overlay, normal;
+  align-items: center;
+}
+
+.signup__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup__title {
+  color: var(--Green-60, #caff33);
+  text-align: center;
+  font-size: $font-x2l;
+  font-weight: 500;
+}
+
+.signup__text {
+  color: var(--Grey-75, #bfbfbf);
+  text-align: center;
+  font-size: $font-xs;
+  font-weight: 300;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.signup__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup__field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup__input {
+  padding: 16px;
+  align-self: stretch;
+  border-radius: 88px;
+  border: 1px solid var(--Grey-15, #262626);
+  background: var(--Grey-10, #1a1a1a);
+}
+
+.signup__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.signup__button {
+  padding: 14px 24px;
+  align-self: stretch;
+  border-radius: 63px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.signup__button--login {
+  background: var(--Green-60, #caff33);
+  color: var(--Grey-15, #262626);
+}
+
+.signup__button--signup {
+  border: 1px solid var(--Grey-20, #333);
+  background: var(--Grey-15, #262626);
+  color: var(--Absolute-White, #fff);
+}
+
+.signup__divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.signup__line {
+  width: 75px;
+  height: 1px;
+  background: #b3b3b3;
+}
+
+.signup__divider-text {
+  color: var(--Grey-70, #b3b3b3);
+  text-align: center;
+  font-size: $font-xs;
+  line-height: 150%; /* 21px */
+}
+
+.signup__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.signup__icon {
+  width: 68px;
+  height: 68px;
+}
+
+@include respond(md) {
+  .signup {
+    padding-top: 50px;
+  }
+
+  .signup__container {
+    max-width: 1064px;
+    padding: 80px 200px;
+    gap: 60px;
+  }
+
+  .signup__header {
+    gap: 16px;
+  }
+
+  .signup__title {
+    font-size: 38px;
+  }
+
+  .signup__text {
+    font-size: 16px;
+  }
+
+  .signup__form {
+    gap: 30px;
+  }
+
+  .signup__fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  .signup__field-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .signup__input {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px;
+    flex: 1 0 0;
+  }
+
+  .signup__actions {
+    padding: 0px 130px;
+    align-self: stretch;
+  }
+
+  .signup__line {
+    width: 128px;
+  }
+}
+
+@include respond(lg) {
+  .signup {
+    padding-top: 53px;
+  }
+
+  .signup__container {
+    max-width: 1326px;
+    padding: 100px 150px;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .signup__header {
+    gap: 20px;
+  }
+
+  .signup__title {
+    font-size: 48px;
+  }
+
+  .signup__text {
+    font-size: 18px;
+  }
+
+  .signup__form {
+    gap: 40px;
+  }
+
+  .signup__fields {
+  }
+
+  .signup__field-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    align-self: stretch;
+  }
+
+  .signup__input {
+    padding: 24px;
+    font-size: 18px;
+  }
+
+  .signup__actions {
+    padding: 0px 254px;
+  }
+
+  .signup__button {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .signup__divider {
+    gap: 20px;
+  }
+
+  .signup__line {
+    width: 164px;
+  }
+
+  .signup__divider-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .signup__social {
+    margin-top: 6px;
+  }
+
+  .signup__social-item {
+  }
+
+  .signup__icon {
+    width: 94px;
+    height: 94px;
+  }
+
+  .sdfgfg {
+  }
+
+  .tredcf {
+  }
+
+  .container-form-sign-up {
+  }
+
+  .input-date-sign-up {
+  }
+}

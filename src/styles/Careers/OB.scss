@@ -1,0 +1,178 @@
+@use '../constructor/variables.scss' as *;
+svg {
+  width: 72px;
+  height: 72px;
+}
+.our-benefits {
+  margin-bottom: 80px;
+  &__container {
+    max-width: 358px;
+    margin: 0 auto;
+  }
+  &__wrapper-title {
+    margin-bottom: 60px;
+    .our-benefits__title {
+      color: var(--White, #fff);
+      text-align: center;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 150%;
+      span {
+        color: var(--Green-60);
+      }
+    }
+    .our-benefits__subtitle {
+      color: var(--Grey-70, #b3b3b3);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    .our-benefits__list-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/Careers/line/line-390.png');
+    }
+    &-item {
+      position: relative;
+      padding: 24px;
+      border-radius: 40px 40px 14px 14px;
+      border: 1px solid rgba(202, 255, 51, 0.1);
+      background: linear-gradient(
+          106deg,
+          rgba(202, 255, 51, 0.05) -29.45%,
+          rgba(202, 255, 51, 0) 27.86%
+        ),
+        linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%);
+
+      .our-benefits__item-wrapper-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        .our-benefits__item-title {
+          color: var(--White, #fff);
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+      .our-benefits__item-text {
+        color: var(--Grey-70, #b3b3b3);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 150%;
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .our-benefits {
+    margin-bottom: 120px;
+    &__container {
+      max-width: 1280px;
+    }
+    &__wrapper-title {
+      .our-benefits__title {
+        text-align: start;
+        font-size: 38px;
+      }
+      .our-benefits__subtitle {
+        text-align: start;
+        font-size: 16px;
+      }
+    }
+    &__list::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/Careers/line/line-1440-horizontal.png');
+    }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+      position: relative;
+
+      .our-benefits__list-item:nth-of-type(1)::after,
+      .our-benefits__list-item:nth-of-type(3)::after {
+        content: none;
+      }
+      .our-benefits__list-item:nth-of-type(2)::after,
+      .our-benefits__list-item:last-child::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: 1px;
+        height: 100%;
+        background-image: url('../img/Careers/line/line-1440.png');
+      }
+      &-item {
+        width: calc(50% - 30px);
+        padding: 40px;
+        .our-benefits__item-wrapper-title {
+          margin-bottom: 24px;
+          .our-benefits__item-title {
+            font-size: 20px;
+          }
+          .our-benefits__item-text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .our-benefits {
+    margin-bottom: 150px;
+    &__container {
+      max-width: 1596px;
+    }
+    &__wrapper-title {
+      margin-bottom: 80px;
+      padding-right: 300px;
+      .our-benefits__title {
+        margin-bottom: 14px;
+        font-size: 48px;
+      }
+      .our-benefits__subtitle {
+        font-size: 18px;
+      }
+    }
+    &__list {
+      gap: 100px;
+      .our-benefits__list-item:nth-of-type(2)::after,
+      .our-benefits__list-item:last-child::after {
+        left: -50px;
+      }
+      &-item {
+        width: calc(50% - 50px);
+        padding: 50px;
+        .our-benefits__item-wrapper-title {
+          margin-bottom: 30px;
+          gap: 20px;
+          .our-benefits__item-title {
+            font-size: 24px;
+          }
+        }
+        .our-benefits__item-text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
