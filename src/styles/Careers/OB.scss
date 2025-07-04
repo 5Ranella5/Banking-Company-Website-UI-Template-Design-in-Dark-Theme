@@ -47,7 +47,7 @@ svg {
     &-item {
       position: relative;
       padding: 24px;
-      border-radius: 40px 40px 14px 14px;
+      border-radius: 40px 14px;
       border: 1px solid rgba(202, 255, 51, 0.1);
       background: linear-gradient(
           106deg,
@@ -123,6 +123,12 @@ svg {
         height: 100%;
         background-image: url("../img/Careers/line/line-1440.png");
       }
+      .our-benefits__list-item:nth-of-type(1), .our-benefits__list-item:nth-of-type(4){
+        border-radius: 40px 14px;
+      }
+      .our-benefits__list-item:nth-of-type(3), .our-benefits__list-item:nth-of-type(2){
+        border-radius: 14px 40px;
+      }
       &-item {
         width: calc(50% - 30px);
         padding: 40px;
@@ -162,6 +168,12 @@ svg {
       .our-benefits__list-item:nth-of-type(2)::after,
       .our-benefits__list-item:last-child::after {
         left: -50px;
+      }
+      .our-benefits__list-item:nth-of-type(1), .our-benefits__list-item:nth-of-type(4){
+        border-radius: 50px 20px;
+      }
+      .our-benefits__list-item:nth-of-type(3), .our-benefits__list-item:nth-of-type(2){
+        border-radius: 20px 50px;
       }
       &-item {
         width: calc(50% - 50px);
