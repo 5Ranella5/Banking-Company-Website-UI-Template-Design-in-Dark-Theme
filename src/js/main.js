@@ -4,6 +4,7 @@ import { paste } from "./careersJS/getFaq.js";
 import { createFaq } from "./careersJS/createFaq.js";
 import { refs } from "./careersJS/refs.js";
 import { deleteFaq } from "./careersJS/deleteFaq.js";
+import { hideButtonsIfNotAuthorized } from "./careersJS/hideButtonsIfNotAuthorized.js";
 //свайпер//
 const ref = {
   swiper_container: document.querySelector(".swiper-wrapper"),
@@ -163,28 +164,8 @@ ref.burger_button.addEventListener("click", () => {
   closeModal(ref.modal_burger);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // faqs
+
 if (refs.page === 1) {
   const data = await getFaq();
   data.forEach(paste);
@@ -232,31 +213,12 @@ refs.createSubmit.addEventListener("click", async (e) => {
 refs.faqsList.addEventListener("click", async (e) => {
   refs.deleteModal.style.display = "block";
   document.body.style.overflow = "hidden";
-  let card = e.target.closest("li");
-  await deleteFaq(card.id);
-  card.remove();
+  refs.submitDelete.addEventListener("click", async () => {
+    refs.deleteModal.style.display = "none";
+    document.body.style.overflow = "auto";
+    let card = e.target.closest("li");
+    await deleteFaq(card.id);
+    card.remove();
+  });
+  refs.submitDelete.removeEventListener()
 });
-refs.submitDelete.addEventListener("click", () => {
-  refs.deleteModal.style.display = "none";
-  document.body.style.overflow = "auto";
-});
-
-
-
-
-function hideButtonsIfNotAuthorized() {
-  if (!localStorage.getItem("token")) {
-    document
-      .querySelectorAll(".faqs-delete")
-      .forEach((btn) => (btn.style.display = "none"));
-    document
-      .querySelectorAll(".faqs-editing")
-      .forEach((btn) => (btn.style.display = "none"));
-      document
-      .querySelectorAll(".faqs-creating")
-      .forEach((btn) => (btn.style.display = "none"));
-    document.querySelectorAll(".faqs__item-text").forEach((el) => {
-      el.style.margin = 0;
-    });
-  }
-}
