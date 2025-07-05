@@ -1,12 +1,14 @@
 import axios from "axios";
 import { refs } from "./refs.js";
 
-
+if (refs.page === 1) {
+  const data = await getFaq();
+  data.forEach(paste);
+}
 
 export async function getFaq() {
   try {
     const res = await axios.get(`https://duriki-bd.onrender.com/faqs?page=${refs.page}`);
-    console.log(res.data);
     refs.page++
     return res.data; 
   } catch (error) {

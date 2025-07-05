@@ -46,7 +46,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
     &::after {
       content: "";
       position: absolute;
@@ -62,7 +61,6 @@
       padding: 30px;
       border-radius: 10px;
       border: 1px solid var(--Grey-15, #262626);
-
       .faqs__item-title {
         color: var(--Absolute-White, #fff);
         font-family: $font-family-base;
@@ -157,7 +155,6 @@
         }
       }
     }
-
   }
 }
 
