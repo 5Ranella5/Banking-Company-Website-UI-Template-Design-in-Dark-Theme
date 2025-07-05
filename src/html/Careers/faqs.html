@@ -1,0 +1,32 @@
+<section class="faqs">
+  <div class="faqs__container">
+    <div class="faqs__wrapper-title">
+      <h2 class="faqs__title"><span>Frequently</span> Asked Questions</h2>
+      <p class="faqs__subtitle">
+        Still you have any questions? Contact our Team via support@yourbank.com
+      </p>
+    </div>
+
+    <div class="faqs__content">
+      <ul class="faqs__list"></ul>
+
+      <div class="faqs__buttons">
+        <button class="faqs__btn load__btn">Load All FAQ’s</button>
+        <button class="faqs-creating faqs__btn">creating questions</button>
+      </div>
+    </div>
+    <div id="createModal">
+      <form id="createForm">
+        <h2>Create new question</h2>
+        <input class="createQuestion" type="text"  placeholder="Question" required />
+        <textarea class="createAnswer"  placeholder="Answer" required></textarea>
+        <button class="createSubmit" type="submit">Create</button>
+        <button class="createClose" type="button" class="closeModal">Cancel</button>
+      </form>
+    </div>
+    <div id="deleteModal">
+      <p>Are you sure? You want to delete this question this process is irreversible</p>
+      <button class="submitDelete">Delete</button>
+    </div>
+  </div>
+</section>

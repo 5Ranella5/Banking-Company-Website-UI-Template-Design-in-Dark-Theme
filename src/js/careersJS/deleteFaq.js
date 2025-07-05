@@ -1,0 +1,24 @@
+import axios from "axios";
+import { refs } from "./refs.js";
+
+export async function deleteFaq(id) {
+  const token = localStorage.getItem("token");
+  try {
+    await axios.delete(`https://duriki-bd.onrender.com/faqs/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+  } catch (error) {
+    if (error.response) {
+      console.error(
+        "сука что тепер не так",
+        error.response.status,
+        error.response.data
+      );
+    } else {
+      console.error("иди нах", error.message);
+    }
+  }
+}

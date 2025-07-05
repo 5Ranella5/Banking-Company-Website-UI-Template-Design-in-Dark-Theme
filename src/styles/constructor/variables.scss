@@ -14,8 +14,11 @@
 
 // === FONT SIZES ===
 $font-xs: 14px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
 $font-sm: 16px;
 $font-md: 18px;
+$font-size-lg: 20px;
 $font-lg: 20px;
 $font-xl: 24px;
 $font-x2l: 28px;
@@ -83,5 +86,5 @@ $grey-75: #bfbfbf;
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
-
+$font-family-base: 'Lexend', sans-serif;
 $bg-img-modal-login: '../../img/Login/modal-login/modal-login.png';

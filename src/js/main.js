@@ -1,14 +1,18 @@
-import '../styles/main.scss';
-
+import "../styles/main.scss";
+import { getFaq } from "./careersJS/getFaq.js";
+import { paste } from "./careersJS/getFaq.js";
+import { createFaq } from "./careersJS/createFaq.js";
+import { refs } from "./careersJS/refs.js";
+import { deleteFaq } from "./careersJS/deleteFaq.js";
 //свайпер//
 const ref = {
-  swiper_container: document.querySelector('.swiper-wrapper'),
-  slides: document.querySelector('.swiper-testimonial-reviews'),
-  button_next: document.querySelector('.swiper-button-next'),
-  button_prev: document.querySelector('.swiper-button-prev'),
-  modal_registration: document.querySelector('.modal-registration'),
-  burger_button: document.querySelector('.burger-button-work'),
-  modal_burger: document.querySelector('.modal-burger'),
+  swiper_container: document.querySelector(".swiper-wrapper"),
+  slides: document.querySelector(".swiper-testimonial-reviews"),
+  button_next: document.querySelector(".swiper-button-next"),
+  button_prev: document.querySelector(".swiper-button-prev"),
+  modal_registration: document.querySelector(".modal-registration"),
+  burger_button: document.querySelector(".burger-button-work"),
+  modal_burger: document.querySelector(".modal-burger"),
 };
 
 // Створення нового слайду з текстом
@@ -32,40 +36,40 @@ const CreateSlide = (text) => {
           </p>
           <p class="name-testimonial-reviews">John D</p>
         </div>`;
-  ref.swiper_container.insertAdjacentHTML('beforeend', newSlide);
+  ref.swiper_container.insertAdjacentHTML("beforeend", newSlide);
 };
 
 // Завантаження нового GIF і додавання нового слайду
 const GetGif = (swiper) => {
-  fetch('https://yesno.wtf/api')
+  fetch("https://yesno.wtf/api")
     .then((response) => {
-      if (!response.ok) throw new Error('HTTP error ' + response.status);
+      if (!response.ok) throw new Error("HTTP error " + response.status);
       return response.json();
     })
     .then((data) => {
       CreateSlide(data.answer);
       swiper.update(); // Оновлюємо swiper після додавання слайду
     })
-    .catch((error) => console.error('Помилка завантаження нового GIF:', error));
+    .catch((error) => console.error("Помилка завантаження нового GIF:", error));
 };
 
 // Клік по слайду (вліво — назад, вправо — новий + вперед)
 const ClickSlides = (swiper) => {
   if (!ref.slides) {
-    console.warn('Контейнер слайдів не знайдено');
+    console.warn("Контейнер слайдів не знайдено");
     return;
   }
 
-  ref.slides.addEventListener('click', (e) => {
+  ref.slides.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
-    const slides = document.querySelectorAll('.swiper-slide');
+    const slides = document.querySelectorAll(".swiper-slide");
     const activeIndex = swiper.activeIndex;
     const activeSlide = slides[activeIndex];
 
     if (!activeSlide) {
-      console.warn('Активний слайд не знайдено');
+      console.warn("Активний слайд не знайдено");
       return;
     }
 
@@ -82,22 +86,22 @@ const ClickSlides = (swiper) => {
 };
 
 // Основний запуск після завантаження DOM
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof Swiper === 'undefined') {
-    console.error('Swiper не завантажено');
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof Swiper === "undefined") {
+    console.error("Swiper не завантажено");
     return;
   }
 
-  const swiper = new Swiper('.swiper-testimonial-reviews', {
+  const swiper = new Swiper(".swiper-testimonial-reviews", {
     slidesPerView: 1,
     spaceBetween: 20,
-    effect: 'slide',
+    effect: "slide",
     grabCursor: true,
 
     loop: false,
     navigation: {
-      nextEl: '.swiper-button-next', // ← добавь родителя
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next", // ← добавь родителя
+      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       0: {
@@ -114,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Обробка кнопки "Next"
   if (ref.button_next) {
-    ref.button_next.addEventListener('click', (e) => {
+    ref.button_next.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       GetGif(swiper);
@@ -124,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Обробка кнопки "Prev"
   if (ref.button_prev) {
-    ref.button_prev.addEventListener('click', (e) => {
+    ref.button_prev.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       swiper.slidePrev();
@@ -139,22 +143,79 @@ document.addEventListener('DOMContentLoaded', () => {
 // let currentPostId = null;
 
 const currentPath = window.location.pathname;
-const navLinks = document.querySelectorAll('.nav__link');
+const navLinks = document.querySelectorAll(".nav__link");
 
 console.log(currentPath);
 
 navLinks.forEach((link) => {
-  console.log(link.getAttribute('href'));
-  if (link.getAttribute('href') === currentPath) {
-    link.classList.add('active');
+  console.log(link.getAttribute("href"));
+  if (link.getAttribute("href") === currentPath) {
+    link.classList.add("active");
   }
 });
 
 const closeModal = (modal) => {
-  modal.classList.remove('hidden');
+  modal.classList.remove("hidden");
 };
 
-ref.burger_button.addEventListener('click', () => {
-  console.log('Тикаю');
+ref.burger_button.addEventListener("click", () => {
+  console.log("Тикаю");
   closeModal(ref.modal_burger);
+});
+
+// faqs
+if (refs.page === 1) {
+  const data = await getFaq();
+  data.forEach(paste);
+}
+refs.loadBtn.addEventListener("click", async () => {
+  const data = await getFaq();
+  console.log(data);
+
+  data.forEach(paste);
+});
+
+// create
+refs.creatingQuestionsBtn.addEventListener("click", () => {
+  refs.createModal.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+refs.createClose.addEventListener("click", () => {
+  refs.createModal.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+
+refs.createSubmit.addEventListener("click", async (e) => {
+  e.preventDefault();
+  console.log(e);
+
+  const question = refs.createQuestion.value.trim();
+  const answer = refs.createAnswer.value.trim();
+
+  if (!question || !answer) {
+    alert("Пожалуйста, заполните и вопрос, и ответ.");
+    return;
+  }
+
+  await createFaq(question, answer);
+
+  refs.createModal.style.display = "none";
+  document.body.style.overflow = "auto";
+  refs.createQuestion.value = "";
+  refs.createAnswer.value = "";
+});
+
+// // delete
+refs.faqsList.addEventListener("click", (e) => {
+  refs.deleteModal.style.display  = "block";
+  document.body.style.overflow = "hidden";
+  refs.submitDelete.addEventListener("click",async () => {
+    let card = e.target.closest("li");
+    await deleteFaq(card.id);
+    card.remove();
+    
+    refs.deleteModal.style.display  = "none";
+    document.body.style.overflow = "auto";
+  });
 });
