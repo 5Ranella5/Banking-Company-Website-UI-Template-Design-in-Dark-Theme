@@ -183,7 +183,7 @@
 
       &-item {
         width: calc(50% - 15px);
-        padding: 50px;
+        padding: 50px; 
 
         .faqs__item-title {
           font-size: $font-size-lg;
@@ -197,4 +197,4 @@
       }
     }
   }
-}
+}    
