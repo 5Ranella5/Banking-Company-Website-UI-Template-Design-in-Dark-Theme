@@ -5,18 +5,24 @@ import { refs } from "./refs.js";
 export async function getFaq() {
   try {
     const res = await axios.get(`https://duriki-bd.onrender.com/faqs?page=${refs.page}`);
-    refs.page++
-    return res.data; 
+
+    if (res.data.length === 0) {
+      return [];
+    }
+
+    refs.page++;  
+
+    return res.data;
   } catch (error) {
-    console.error("бляяяяя");
+    console.error("Ошибка при загрузке FAQ:", error);
+    return [];
   }
 }
-
 export function paste(elem) {
   
   refs.faqsList.insertAdjacentHTML(
     "beforeend",
-    `<li id="${elem._idx}" class="faqs__list-item">
+    `<li id="${elem._id}" class="faqs__list-item">
       <h3 class="faqs__item-title">${elem.question}</h3>
       <p class="faqs__item-text">${elem.answer}</p>
       <div class="faqs__wrapper-btn">

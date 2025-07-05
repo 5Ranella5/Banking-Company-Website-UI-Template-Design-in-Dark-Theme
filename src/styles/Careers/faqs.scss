@@ -1,5 +1,5 @@
 @use "../constructor/variables.scss" as *;
-#createModal {
+.modal {
   display: none;
   position: fixed;
   top: 50%;
@@ -9,15 +9,17 @@
   padding: 20px;
   border-radius: 16px;
   z-index: 1000;
-
-  #createForm {
+  form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    .area{
+      resize: none;
+    }
   }
 }
 
-#deleteModal{
+#deleteModal {
   display: none;
   position: fixed;
   top: 50%;
@@ -28,17 +30,13 @@
   border-radius: 16px;
   z-index: 1000;
 
-  .submitDelete{
+  .submitDelete {
     padding: 10px;
     background-color: $grey-70;
     border-radius: 15px;
     margin-top: 15px;
   }
 }
-
-
-
-
 
 .faqs {
   margin-bottom: 80px;

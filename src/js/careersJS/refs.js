@@ -10,4 +10,10 @@ export const refs = {
     createClose: document.querySelector(".createClose"),
     deleteModal: document.querySelector("#deleteModal"),
     submitDelete: document.querySelector(".submitDelete"),
+    editeModal: document.querySelector("#editeModal"),
+    editeQuestion: document.querySelector(".editeQuestion"),
+    editeAnswer: document.querySelector(".editeAnswer"),
+    editeSubmit: document.querySelector(".editeSubmit"),
+    editeClose: document.querySelector(".editeClose"),
+    
 }

@@ -15,17 +15,39 @@
         <button class="faqs-creating faqs__btn">creating questions</button>
       </div>
     </div>
-    <div id="createModal">
+    <div id="createModal" class="modal">
       <form id="createForm">
         <h2>Create new question</h2>
-        <input class="createQuestion" type="text"  placeholder="Question" required />
-        <textarea class="createAnswer"  placeholder="Answer" required></textarea>
+        <input
+          class="createQuestion"
+          type="text"
+          placeholder="Question"
+          required
+        />
+        <textarea class="createAnswer area" placeholder="Answer" required></textarea>
         <button class="createSubmit" type="submit">Create</button>
-        <button class="createClose" type="button" class="closeModal">Cancel</button>
+        <button class="createClose" type="button" class="closeModal">
+          Cancel
+        </button>
+      </form>
+    </div>
+
+    <div id="editeModal" class="modal">
+      <form id="editeForm">
+        <h2>edite question</h2>
+        <input class="editeQuestion" type="text" placeholder="" required />
+        <textarea class="editeAnswer area" placeholder="" required></textarea>
+        <button class="editeSubmit" type="submit">edite</button>
+        <button class="editeClose" type="button" class="closeModal">
+          Cancel
+        </button>
       </form>
     </div>
     <div id="deleteModal">
-      <p>Are you sure? You want to delete this question this process is irreversible</p>
+      <p>
+        Are you sure? You want to delete this question this process is
+        irreversible
+      </p>
       <button class="submitDelete">Delete</button>
     </div>
   </div>

@@ -13,7 +13,7 @@ export async function deleteFaq(id) {
   } catch (error) {
     if (error.response) {
       console.error(
-        "сука что тепер не так",
+        "помилка видалення FAQ",
         error.response.status,
         error.response.data
       );

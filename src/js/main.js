@@ -5,6 +5,8 @@ import { createFaq } from "./careersJS/createFaq.js";
 import { refs } from "./careersJS/refs.js";
 import { deleteFaq } from "./careersJS/deleteFaq.js";
 import { hideButtonsIfNotAuthorized } from "./careersJS/hideButtonsIfNotAuthorized.js";
+import { editingFaq } from "./careersJS/editingFaq.js";
+import { updateFaqList } from "./careersJS/updateFaqList.js";
 //свайпер//
 const ref = {
   swiper_container: document.querySelector(".swiper-wrapper"),
@@ -173,8 +175,6 @@ if (refs.page === 1) {
 }
 refs.loadBtn.addEventListener("click", async () => {
   const data = await getFaq();
-  console.log(data);
-
   data.forEach(paste);
   hideButtonsIfNotAuthorized();
 });
@@ -207,18 +207,71 @@ refs.createSubmit.addEventListener("click", async (e) => {
   document.body.style.overflow = "auto";
   refs.createQuestion.value = "";
   refs.createAnswer.value = "";
+  await getFaq();
+});
+let currentEditId = null;
+let onDeleteConfirm;
+refs.faqsList.addEventListener("click", async (e) => {
+  // deleting
+  if (e.target.classList.contains("faqs-delete")) {
+    refs.deleteModal.style.display = "block";
+    document.body.style.overflow = "hidden";
+
+    if (onDeleteConfirm) {
+      refs.submitDelete.removeEventListener("click", onDeleteConfirm);
+    }
+
+    onDeleteConfirm = async () => {
+      refs.deleteModal.style.display = "none";
+      document.body.style.overflow = "auto";
+      let card = e.target.closest("li");
+      await deleteFaq(card.id);
+      card.remove();
+
+      refs.submitDelete.removeEventListener("click", onDeleteConfirm);
+      onDeleteConfirm = null;
+    };
+
+    refs.submitDelete.addEventListener("click", onDeleteConfirm);
+  }
+  // editing
+  if (e.target.classList.contains("faqs-editing")) {
+    refs.editeModal.style.display = "block";
+    document.body.style.overflow = "hidden";
+    let card = e.target.closest("li");
+    currentEditId = card.id;
+
+    let question = card.querySelector(".faqs__item-title").textContent;
+    let answer = card.querySelector(".faqs__item-text").textContent;
+
+    refs.editeQuestion.value = question;
+    refs.editeAnswer.value = answer;
+  }
+});
+refs.editeClose.addEventListener("click", () => {
+  refs.editeModal.style.display = "none";
+  document.body.style.overflow = "auto";
+  currentEditId = null;
 });
 
-// // delete
-refs.faqsList.addEventListener("click", async (e) => {
-  refs.deleteModal.style.display = "block";
-  document.body.style.overflow = "hidden";
-  refs.submitDelete.addEventListener("click", async () => {
-    refs.deleteModal.style.display = "none";
-    document.body.style.overflow = "auto";
-    let card = e.target.closest("li");
-    await deleteFaq(card.id);
-    card.remove();
-  });
-  refs.submitDelete.removeEventListener()
+refs.editeSubmit.addEventListener("click", async (e) => {
+  e.preventDefault();
+  if (!currentEditId) return;
+
+  let newQuestion = refs.editeQuestion.value.trim();
+  let newAnswer = refs.editeAnswer.value.trim();
+
+  if (!newQuestion || !newAnswer) {
+    alert("Пожалуйста, заполните и вопрос, и ответ.");
+    return;
+  }
+
+  refs.editeModal.style.display = "none";
+  document.body.style.overflow = "auto";
+
+  await editingFaq(currentEditId, newQuestion, newAnswer);
+  refs.page = 1;
+  await updateFaqList();
+
+  currentEditId = null;
 });
