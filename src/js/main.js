@@ -163,16 +163,39 @@ ref.burger_button.addEventListener("click", () => {
   closeModal(ref.modal_burger);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // faqs
 if (refs.page === 1) {
   const data = await getFaq();
   data.forEach(paste);
+  hideButtonsIfNotAuthorized();
 }
 refs.loadBtn.addEventListener("click", async () => {
   const data = await getFaq();
   console.log(data);
 
   data.forEach(paste);
+  hideButtonsIfNotAuthorized();
 });
 
 // create
@@ -197,25 +220,43 @@ refs.createSubmit.addEventListener("click", async (e) => {
     alert("Пожалуйста, заполните и вопрос, и ответ.");
     return;
   }
-
+  refs.createModal.style.display = "none";
   await createFaq(question, answer);
 
-  refs.createModal.style.display = "none";
   document.body.style.overflow = "auto";
   refs.createQuestion.value = "";
   refs.createAnswer.value = "";
 });
 
 // // delete
-refs.faqsList.addEventListener("click", (e) => {
-  refs.deleteModal.style.display  = "block";
+refs.faqsList.addEventListener("click", async (e) => {
+  refs.deleteModal.style.display = "block";
   document.body.style.overflow = "hidden";
-  refs.submitDelete.addEventListener("click",async () => {
-    let card = e.target.closest("li");
-    await deleteFaq(card.id);
-    card.remove();
-    
-    refs.deleteModal.style.display  = "none";
-    document.body.style.overflow = "auto";
-  });
+  let card = e.target.closest("li");
+  await deleteFaq(card.id);
+  card.remove();
 });
+refs.submitDelete.addEventListener("click", () => {
+  refs.deleteModal.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+
+
+
+
+function hideButtonsIfNotAuthorized() {
+  if (!localStorage.getItem("token")) {
+    document
+      .querySelectorAll(".faqs-delete")
+      .forEach((btn) => (btn.style.display = "none"));
+    document
+      .querySelectorAll(".faqs-editing")
+      .forEach((btn) => (btn.style.display = "none"));
+      document
+      .querySelectorAll(".faqs-creating")
+      .forEach((btn) => (btn.style.display = "none"));
+    document.querySelectorAll(".faqs__item-text").forEach((el) => {
+      el.style.margin = 0;
+    });
+  }
+}

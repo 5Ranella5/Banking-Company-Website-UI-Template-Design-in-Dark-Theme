@@ -9,5 +9,5 @@ export const refs = {
     createSubmit: document.querySelector(".createSubmit"),
     createClose: document.querySelector(".createClose"),
     deleteModal: document.querySelector("#deleteModal"),
-    submitDelete: document.querySelector(".submitDelete")
+    submitDelete: document.querySelector(".submitDelete"),
 }
