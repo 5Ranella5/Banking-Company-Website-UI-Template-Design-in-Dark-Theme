@@ -49,16 +49,15 @@ button {
   background: #caff33;
   transition: all 0.5s ease;
 }
-
 .hero__btn:hover {
   color: #caff33;
+  background-color: #1a1a1a;
   border: 1px solid #caff33;
-  background-color: #1c1c1c;
 }
-
 .hero__btn:focus {
   color: #caff33;
-  background-color: #1c1c1c;
+  background-color: #1a1a1a;
+  border: 1px solid #caff33;
 }
 
 .quick {
@@ -75,6 +74,12 @@ button {
     width: 20px;
     height: 20px;
   }
+}
+
+.hero__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .hero__money {
@@ -213,6 +218,9 @@ button {
     .item {
       display: flex;
       .box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         width: 132px;
         display: flex;
         align-items: flex-start;
@@ -264,7 +272,7 @@ button {
     font-size: 9px;
     line-height: 1.5;
     width: 100%;
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
   }
 }
 
@@ -299,18 +307,14 @@ button {
   }
 }
 
-.arrows {
-  position: absolute;
-}
-
 .arr {
   display: none;
 }
 
-.min {
+.arrows-img {
   position: absolute;
-  z-index: -1;
-  margin: -380px 0 0 135px;
+  z-index: -1001;
+  margin: -409px 0 0 120px;
 }
 
 @media (min-width: 1440px) {
@@ -321,6 +325,7 @@ button {
     align-items: flex-start;
     gap: 100px;
     flex-direction: row;
+    position: relative;
   }
   .hero__welcome {
     width: 645px;
@@ -359,6 +364,11 @@ button {
       font-size: 14px;
     }
   }
+
+  .hero__text-container {
+    gap: 10px;
+  }
+
   .monthly {
     .img {
       width: 23px;
@@ -489,41 +499,304 @@ button {
       }
     }
   }
-
-  .arr {
-    opacity: 40%;
-    display: block;
-    position: absolute;
-    z-index: -1;
-    margin: -380px 0 0 135px;
-    .img {
-      width: 200px;
-      position: absolute;
-      margin: 0 0 0 0;
-      transform: translate(185px, -80px);
-      transition: transform 0.3s ease-out;
-    }
-  }
-  #arr2 {
-    transform: translate(168px, 35px);
-  }
-  #arr2:hover {
-    transform: translate(10px, 10px);
-    cursor: pointer;
-  }
-  #arr3 {
-    transform: translate(255px, -90px);
-  }
-  #arr4 {
-    transform: translate(345px, -15px);
-  }
-  #arr5 {
-    transform: translate(380px, 50px);
-  }
-  #arr6 {
-    transform: translate(300px, 60px);
-  }
   .min {
     display: none;
+  }
+
+  .arr {
+    width: 300px;
+    height: 275px;
+    position: absolute;
+    right: 69px;
+    top: 54px;
+    opacity: 40%;
+    display: block;
+  }
+
+  .arr-wrapper {
+    opacity: 100%;
+  }
+  .arr-container {
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+  }
+
+  .arr-trigger {
+    z-index: 100;
+    left: 0px;
+    top: 0px;
+  }
+
+  .img-arr {
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  .arr1 {
+    width: 194px;
+    height: 194px;
+    right: 31px;
+    top: 0px;
+  }
+
+  .arr2 {
+    width: 161px;
+    height: 161px;
+    right: 78px;
+    bottom: 0px;
+  }
+
+  .arr3 {
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    top: 133px;
+  }
+
+  .arr4 {
+    width: 40px;
+    height: 40px;
+    right: 109px;
+    top: 0px;
+  }
+
+  .arr5 {
+    width: 40px;
+    height: 40px;
+    right: 31px;
+    top: 70px;
+  }
+
+  .arr6 {
+    width: 78px;
+    height: 78px;
+    right: 39px;
+    top: 138px;
+  }
+
+  .active {
+    .img-arr {
+      transition: transform 0.3s ease;
+    }
+    .arr1 {
+      transform: translate(20px, -10px);
+    }
+
+    .arr2 {
+      transform: translate(16px, -3px);
+    }
+
+    .arr3 {
+      transform: translate(30px, -15px);
+    }
+
+    .arr4 {
+      transform: translate(15px, -15px);
+    }
+
+    .arr5 {
+      transform: translate(30px, -8px);
+    }
+
+    .arr6 {
+      transform: translate(25px, 0px);
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    width: 1920px;
+    padding: 100px 297px 100px 162px;
+    align-items: flex-start;
+    gap: 120px;
+  }
+  .hero__welcome {
+    width: 826px;
+    gap: 50px;
+    .box {
+      gap: 20px;
+    }
+  }
+  .exchange__box {
+    padding: 34px;
+    gap: 26px;
+  }
+
+  .hero__title {
+    font-size: 48px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+  }
+
+  .quick {
+    .text {
+      font-size: 18px;
+    }
+  }
+
+  .hero__text-container {
+    gap: 14px;
+  }
+
+  .monthly {
+    padding: 13px 17px;
+    gap: 8px;
+    margin: -40px 0px 0px -45px;
+  }
+
+  .monthly__box {
+    .title {
+      font-size: 17px;
+    }
+    .text {
+      font-size: 13px;
+    }
+  }
+
+  .block {
+    height: 190px;
+    gap: 17px;
+    .title {
+      font-size: 17px;
+    }
+  }
+
+  .block__list {
+    width: 445px;
+    .item {
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+        .sub-container {
+          display: block;
+          .title {
+            font-size: 17px;
+            font-weight: 400;
+          }
+          .text {
+            font-size: 15px;
+          }
+        }
+      }
+      .num {
+        font-size: 20px;
+      }
+    }
+  }
+  #two {
+    margin: 50px 0 0 0;
+  }
+  #tree {
+    margin: 90px 0 0 0;
+  }
+  .exchange__block {
+    gap: 25px;
+    .title {
+      font-size: 17px;
+    }
+    .list {
+      .item {
+        .box {
+          width: 222px;
+          padding: 17px;
+          .sub {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .title {
+              font-size: 15px;
+            }
+          }
+          .text {
+            font-size: 13px;
+          }
+        }
+        .num {
+          width: 222px;
+          font-size: 17px;
+          padding: 26px 17px;
+        }
+      }
+    }
+    .btn {
+      font-size: 15px;
+    }
+  }
+
+  .support {
+    width: 370px;
+    padding: 8px 8px 8px 20px;
+    margin: 10px 0 0 13%;
+    .text {
+      font-size: 15px;
+    }
+    .list {
+      padding: 8px;
+      gap: 6px;
+      .item {
+        .img {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+  }
+
+  .arr {
+    width: 300px;
+    height: 275px;
+    right: 162px;
+    top: 30px;
+  }
+
+  .arr1 {
+    width: 194px;
+    height: 194px;
+    right: 31px;
+    top: 0px;
+  }
+
+  .arr2 {
+    width: 161px;
+    height: 161px;
+    right: 78px;
+    bottom: 0px;
+  }
+
+  .arr3 {
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    top: 133px;
+  }
+
+  .arr4 {
+    width: 40px;
+    height: 40px;
+    right: 109px;
+    top: 0px;
+  }
+
+  .arr5 {
+    width: 40px;
+    height: 40px;
+    right: 31px;
+    top: 70px;
+  }
+
+  .arr6 {
+    width: 78px;
+    height: 78px;
+    right: 39px;
+    top: 138px;
   }
 }

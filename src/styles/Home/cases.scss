@@ -30,8 +30,10 @@
   .sub-box {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
     .cases__list {
+      width: 360px;
       display: grid;
       grid-template-columns: 154px 154px;
       grid-template-rows: 160px 160px;
@@ -140,7 +142,7 @@
 .interest__box::after {
   content: "";
   width: 258px;
-  height: 1px;
+  height: 2px;
   background-image: url(./img/Home/home-img/cases/lineDashed.svg);
 }
 .interest__box:last-child::after {

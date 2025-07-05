@@ -1,19 +1,17 @@
-.start{
-    
+.start {
+  padding: 0 12px 0 12px;
+  margin: 0 auto;
 }
 
 .start__container {
   position: relative;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 24px;
-  position: absolute;
   padding: 30px;
   margin: 0 auto;
-  width: 358px;
-  height: 360px;
   border-radius: 20px;
   border: 1px solid transparent;
   background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
@@ -40,6 +38,9 @@
   background-image: url(./img/Home/home-img/start/bacStart.svg);
 }
 .start__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   .title {
     text-align: center;
     font-size: 24px;
@@ -60,10 +61,10 @@
   display: flex;
   padding: 14px 24px;
   align-items: center;
-  gap: 10px;
   border-radius: 82px;
   background: #caff33;
   transition: all 0.5s ease;
+  white-space: nowrap;
 }
 .start__btn:hover {
   color: #caff33;
@@ -77,28 +78,54 @@
 }
 
 @media (min-width: 1440px) {
-    .start{
-    }
-  .start__container {
-    width: 1596px;
-    height: 288px;
+  .start {
+    padding: 0 80px;
   }
-  .bac {
+  .start__container {
+    width: 100%;
     flex-direction: row;
-    padding: 80px;
+    padding: 60px;
     gap: 150px;
   }
-  .start__text-container {
-  .title {
-    text-align: left;
-    font-size: 40px;
+  .start__container::after {
+    background-image: url(./img/Home/home-img/start/bacStart1440.svg);
   }
-  .text {
-    text-align: left;
+  .start__text-container {
+    .title {
+      text-align: left;
+      font-size: 30px;
+    }
+    .text {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+  .start__btn {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .start {
+    padding: 0 162px;
+  }
+  .start__container {
+    padding: 80px;
+  }
+  .start__container::after {
+    background-image: url(./img/Home/home-img/start/bacStart1920.svg);
+  }
+  .start__text-container {
+    .title {
+      font-size: 40px;
+    }
+    .text {
+      font-size: 18px;
+    }
+  }
+  .start__btn {
+    padding: 18px 30px;
     font-size: 18px;
   }
-}
-.start__btn{
-    width: 183px;
-}
 }
