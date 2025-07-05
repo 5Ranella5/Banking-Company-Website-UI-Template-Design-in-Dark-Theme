@@ -1,14 +1,10 @@
-.products {
-  margin: 120px 0;
-}
-
 .products__container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  padding: 0 80px;
+  padding: 140px 80px 80px 80px;
 }
 
 .products__enter {
@@ -84,6 +80,9 @@
         height: 60px;
       }
       .box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
         .title {
           font-size: 20px;
           line-height: 1.5;
@@ -111,7 +110,8 @@
 
 @media (min-width: 1440px) {
   .products__container {
-    padding: 0 80px;
+    gap: 80px;
+    padding: 120px 80px;
   }
 
   .products__enter {
@@ -137,16 +137,16 @@
   .products__box {
     .products__list {
       flex-direction: row;
-      gap: 40px;
+      gap: 80px;
       .products__item:last-child {
         border-right: none;
+        padding-right: 0;
       }
       .products__item {
-        padding-right: 40px;
+        padding-right: 60px;
         border-right: 1px solid #262626;
-        .svg {
-        }
         .box {
+          gap: 16px;
           .title {
             font-size: 20px;
           }
@@ -164,30 +164,42 @@
 
 @media (min-width: 1920px) {
   .products__container {
+    gap: 100px;
+    padding: 165px;
   }
 
   .products__enter {
+    gap: 300px;
   }
   .sub-container {
-    .title {
+    align-items: flex-start;
+    .products__title {
+      font-size: 48px;
     }
-    .text {
+    .products__text {
+      font-size: 18px;
     }
   }
   .buttons {
     .btn {
+      font-size: 18px;
+      width: 180px;
     }
   }
 
   .products__box {
-    .list {
-      .item {
-        .svg {
-        }
+    .products__list {
+      flex-direction: row;
+      gap: 80px;
+      .products__item {
+        padding-right: 60px;
         .box {
+          gap: 20px;
           .title {
+            font-size: 24px;
           }
           .text {
+            font-size: 18px;
           }
         }
       }
