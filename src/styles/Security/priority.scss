@@ -1,28 +1,27 @@
 .priority {
-}
-
-.priority__container {
-  display: flex;
-  padding: 14px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.priority__text-container {
-  .priority__title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.3;
-    .span {
-      color: #caff33;
-    }
+  .priority__container {
+    display: flex;
+    padding: 14px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .priority__text {
-    color:  #B3B3B3;
-text-align: center;
-font-size: 14px;
-font-weight: 300;
-line-height: 1.5;
+
+  .priority__text-container {
+    .priority__title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.3;
+      .span {
+        color: #caff33;
+      }
+    }
+    .priority__text {
+      color: #b3b3b3;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
   }
 }
