@@ -1,30 +1,26 @@
 import { refs } from "./refs.js";
 import { deleteFaq } from "./deleteFaq.js";
 
-export async function deletingFaqBase() {
-  refs.faqsList.addEventListener("click", async (e) => {
-    // deleting
-    let onDeleteConfirm;
-    if (e.target.classList.contains("faqs-delete")) {
-      refs.deleteModal.style.display = "block";
-      document.body.style.overflow = "hidden";
+export function deletingFaqBase() {
+  refs.faqsList.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("faqs-delete")) return;
 
-      if (onDeleteConfirm) {
-        refs.submitDelete.removeEventListener("click", onDeleteConfirm);
-      }
+    const card = e.target.closest("li");
+    if (!card) return;
 
-      onDeleteConfirm = async () => {
-        refs.deleteModal.style.display = "none";
-        document.body.style.overflow = "auto";
-        let card = e.target.closest("li");
-        await deleteFaq(card.id);
-        card.remove();
+    refs.deleteModal.style.display = "block";
+    document.body.style.overflow = "hidden";
 
-        refs.submitDelete.removeEventListener("click", onDeleteConfirm);
-        onDeleteConfirm = null;
-      };
+    const onDeleteConfirm = async () => {
+      refs.deleteModal.style.display = "none";
+      document.body.style.overflow = "auto";
+      await deleteFaq(card.id);
+      card.remove();
+      refs.submitDelete.removeEventListener("click", onDeleteConfirm);
+    };
 
-      refs.submitDelete.addEventListener("click", onDeleteConfirm);
-    }
+    refs.submitDelete.addEventListener("click", onDeleteConfirm, {
+      once: true,
+    });
   });
 }

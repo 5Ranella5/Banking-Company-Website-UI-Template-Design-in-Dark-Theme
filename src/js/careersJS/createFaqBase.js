@@ -15,7 +15,6 @@ export async function createFaqBase() {
 
   refs.createSubmit.addEventListener("click", async (e) => {
     e.preventDefault();
-    console.log(e);
 
     const question = refs.createQuestion.value.trim();
     const answer = refs.createAnswer.value.trim();
