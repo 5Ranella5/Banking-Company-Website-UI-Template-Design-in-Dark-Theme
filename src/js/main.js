@@ -1,12 +1,15 @@
 import "../styles/main.scss";
 import { getFaq } from "./careersJS/getFaq.js";
-import { paste } from "./careersJS/getFaq.js";
+import { paste } from "./careersJS/paste.js";
 import { createFaq } from "./careersJS/createFaq.js";
 import { refs } from "./careersJS/refs.js";
 import { deleteFaq } from "./careersJS/deleteFaq.js";
 import { hideButtonsIfNotAuthorized } from "./careersJS/hideButtonsIfNotAuthorized.js";
 import { editingFaq } from "./careersJS/editingFaq.js";
 import { updateFaqList } from "./careersJS/updateFaqList.js";
+import { createFaqBase } from "./careersJS/createFaqbase.js";
+import { deletingFaqBase } from "./careersJS/deletingFaqBase.js";
+import { editeFaqBase } from "./careersJS/editeFaqBase.js";
 //свайпер//
 const ref = {
   swiper_container: document.querySelector(".swiper-wrapper"),
@@ -166,112 +169,50 @@ ref.burger_button.addEventListener("click", () => {
   closeModal(ref.modal_burger);
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // faqs
 
 if (refs.page === 1) {
   const data = await getFaq();
   data.forEach(paste);
-  hideButtonsIfNotAuthorized();
+  // hideButtonsIfNotAuthorized();
 }
 refs.loadBtn.addEventListener("click", async () => {
   const data = await getFaq();
   data.forEach(paste);
-  hideButtonsIfNotAuthorized();
+  // hideButtonsIfNotAuthorized();
 });
-
 // create
-refs.creatingQuestionsBtn.addEventListener("click", () => {
-  refs.createModal.style.display = "block";
-  document.body.style.overflow = "hidden";
-});
+createFaqBase()
+// delete
+deletingFaqBase()
+// edite
+editeFaqBase()
 
-refs.createClose.addEventListener("click", () => {
-  refs.createModal.style.display = "none";
-  document.body.style.overflow = "auto";
-});
 
-refs.createSubmit.addEventListener("click", async (e) => {
-  e.preventDefault();
-  console.log(e);
 
-  const question = refs.createQuestion.value.trim();
-  const answer = refs.createAnswer.value.trim();
 
-  if (!question || !answer) {
-    alert("Пожалуйста, заполните и вопрос, и ответ.");
-    return;
-  }
-  refs.createModal.style.display = "none";
-  await createFaq(question, answer);
 
-  document.body.style.overflow = "auto";
-  refs.createQuestion.value = "";
-  refs.createAnswer.value = "";
-  await getFaq();
-});
-let currentEditId = null;
-let onDeleteConfirm;
-refs.faqsList.addEventListener("click", async (e) => {
-  // deleting
-  if (e.target.classList.contains("faqs-delete")) {
-    refs.deleteModal.style.display = "block";
-    document.body.style.overflow = "hidden";
 
-    if (onDeleteConfirm) {
-      refs.submitDelete.removeEventListener("click", onDeleteConfirm);
-    }
 
-    onDeleteConfirm = async () => {
-      refs.deleteModal.style.display = "none";
-      document.body.style.overflow = "auto";
-      let card = e.target.closest("li");
-      await deleteFaq(card.id);
-      card.remove();
-
-      refs.submitDelete.removeEventListener("click", onDeleteConfirm);
-      onDeleteConfirm = null;
-    };
-
-    refs.submitDelete.addEventListener("click", onDeleteConfirm);
-  }
-  // editing
-  if (e.target.classList.contains("faqs-editing")) {
-    refs.editeModal.style.display = "block";
-    document.body.style.overflow = "hidden";
-    let card = e.target.closest("li");
-    currentEditId = card.id;
-
-    let question = card.querySelector(".faqs__item-title").textContent;
-    let answer = card.querySelector(".faqs__item-text").textContent;
-
-    refs.editeQuestion.value = question;
-    refs.editeAnswer.value = answer;
-  }
-});
-refs.editeClose.addEventListener("click", () => {
-  refs.editeModal.style.display = "none";
-  document.body.style.overflow = "auto";
-  currentEditId = null;
-});
-
-refs.editeSubmit.addEventListener("click", async (e) => {
-  e.preventDefault();
-  if (!currentEditId) return;
-
-  let newQuestion = refs.editeQuestion.value.trim();
-  let newAnswer = refs.editeAnswer.value.trim();
-
-  if (!newQuestion || !newAnswer) {
-    alert("Пожалуйста, заполните и вопрос, и ответ.");
-    return;
-  }
-
-  refs.editeModal.style.display = "none";
-  document.body.style.overflow = "auto";
-
-  await editingFaq(currentEditId, newQuestion, newAnswer);
-  refs.page = 1;
-  await updateFaqList();
-
-  currentEditId = null;
-});
