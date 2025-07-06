@@ -1,6 +1,6 @@
 import {refs} from "./refs.js"
 import { createFaq } from "./createFaq.js";
-
+import { getFaq } from "./getFaq.js";
 
 export async function createFaqBase() {
   refs.creatingQuestionsBtn.addEventListener("click", () => {
