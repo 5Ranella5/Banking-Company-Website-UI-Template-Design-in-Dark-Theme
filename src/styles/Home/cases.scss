@@ -5,6 +5,12 @@
   gap: 60px;
   margin: 0 auto;
   padding: 0 16px;
+  position: relative;
+}
+.ModalLoading{
+  // display: none;
+position: absolute;
+
 }
 
 .cases__text-container {
