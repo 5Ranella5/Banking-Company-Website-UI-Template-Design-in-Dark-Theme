@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  .title {
+  .text-container__title {
     text-align: center;
     font-size: 28px;
     font-weight: 500;
@@ -24,7 +24,7 @@
       color: #caff33;
     }
   }
-  .text {
+  .text-container__text {
     color: #b3b3b3;
     text-align: center;
     font-size: 14px;
@@ -52,16 +52,16 @@
     .protect__box {
       display: flex;
       align-items: center;
-      .svg {
+      .protect__svg {
         width: 87px;
         height: 68px;
       }
-      .title {
+      .protect__title {
         font-size: 18px;
         line-height: 1.5;
       }
     }
-    .text {
+    .protect__text {
       color: #b3b3b3;
       font-size: 14px;
       font-weight: 300;
@@ -81,11 +81,11 @@
     padding-right: 250px;
     align-items: flex-start;
     gap: 10px;
-    .title {
+    .text-container__title {
       text-align: left;
       font-size: 38px;
     }
-    .text {
+    .text-container__text {
       text-align: left;
       font-size: 16px;
     }
@@ -120,15 +120,15 @@
       gap: 20px;
       .protect__box {
         gap: 14px;
-        .svg {
+        .protect__svg {
           width: 87px;
           height: 68px;
         }
-        .title {
+        .protect__title {
           font-size: 20px;
         }
       }
-      .text {
+      .protect__text {
         font-size: 16px;
       }
     }
@@ -144,10 +144,10 @@
   .protect__text-container {
     padding-right: 300px;
     gap: 14px;
-    .title {
+    .text-container__title {
       font-size: 48px;
     }
-    .text {
+    .text-container__text {
       font-size: 18px;
     }
   }
@@ -166,11 +166,11 @@
       gap: 24px;
       .protect__box {
         gap: 20px;
-        .title {
+        .protect__title {
           font-size: 24px;
         }
       }
-      .text {
+      .protect__text {
         font-size: 18px;
       }
     }

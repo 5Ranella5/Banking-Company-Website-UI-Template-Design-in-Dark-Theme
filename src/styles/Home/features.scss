@@ -33,14 +33,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  .btns {
+  .features__btns {
     display: flex;
     padding: 20px;
     gap: 20px;
     border-radius: 10px;
     background: #1c1c1c;
     overflow: auto;
-    .btn {
+    .features__btn {
       display: flex;
       padding: 14px 20px;
       align-items: center;
@@ -54,12 +54,12 @@
       white-space: nowrap;
       transition: all 0.5s ease;
     }
-    .btn:hover {
+    .features__btn:hover {
       color: #caff33;
       border: 1px solid #262626;
       background: #1a1a1a;
     }
-    .btn:focus {
+    .features__btn:focus {
       color: #caff33;
       border: 1px solid #262626;
       background: #1a1a1a;
@@ -77,7 +77,7 @@
       border-radius: 10px;
       border: 1px solid #262626;
       background: #1c1c1c;
-      .sub-box {
+      .features__sub-box {
         display: flex;
         justify-content: space-between;
         gap: 10px;
@@ -90,7 +90,7 @@
           height: 24px;
         }
       }
-      .text {
+      .features__text {
         color: #b3b3b3;
         font-size: 14px;
         font-weight: 300;
@@ -123,7 +123,7 @@
 
   .features__box {
     flex-direction: row;
-    .btns {
+    .features__btns {
       height: 267px;
       display: flex;
       flex-direction: column;
@@ -139,7 +139,7 @@
         .title {
           font-size: 18px;
         }
-        .text {
+        .features__text {
           font-size: 16px;
         }
       }
@@ -165,11 +165,11 @@
 
   .features__box {
     gap: 30px;
-    .btns {
+    .features__btns {
       height: 337px;
       padding: 50px;
       gap: 24px;
-      .btn {
+      .features__btn {
         font-size: 18px;
         padding: 18px 24px;
       }
@@ -185,7 +185,7 @@
         .title {
           font-size: 22px;
         }
-        .text {
+        .features__text {
           font-size: 18px;
         }
       }

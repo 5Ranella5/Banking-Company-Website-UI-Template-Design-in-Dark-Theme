@@ -7,7 +7,7 @@
   padding: 0 16px;
 }
 
-.text-container {
+.cases__text-container {
   .cases__title {
     color: #caff33;
     text-align: center;
@@ -28,12 +28,12 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  .sub-box {
+  .cases__sub-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    .cases__list {
+    .sub-box__list {
       width: 360px;
       display: grid;
       grid-template-columns: 154px 154px;
@@ -45,7 +45,7 @@
       gap: 10px;
       background-image: url(./img/Home/home-img/cases/bac.svg);
       background-repeat: no-repeat;
-      .cases__item {
+      .sub-box__item {
         display: flex;
         padding: 20px 14px;
         flex-direction: column;
@@ -55,11 +55,11 @@
         border-radius: 12px;
         border: 1px solid #262626;
         background: #1a1a1a;
-        .svg {
+        .sub-box__svg {
           width: 64px;
           height: 64px;
         }
-        .text {
+        .sub-box__text {
           text-align: center;
           font-size: 14px;
           line-height: 1.5;
@@ -77,12 +77,12 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        .title {
+        .enter__title {
           text-align: center;
           font-size: 20px;
           line-height: 1.5;
         }
-        .text {
+        .enter__text {
           color: #b3b3b3;
           text-align: center;
           font-size: 14px;
@@ -157,7 +157,7 @@
   .cases__container {
     padding: 0 80px;
   }
-  .text-container {
+  .cases__text-container {
     display: flex;
     padding-right: 30%;
     flex-direction: column;
@@ -173,34 +173,33 @@
   }
   .cases__box {
     flex-direction: column;
-    .sub-box {
+    .cases__sub-box {
       flex-direction: row;
       align-items: center;
       gap: 60px;
-      .cases__list {
+      .sub-box__list {
         width: 610px;
         grid-template-columns: 260px 260px;
         grid-template-rows: 174px 174px;
         padding: 40px;
         background-image: url(./img/Home/home-img/cases/bac1440.svg);
-        .cases__item {
+        .sub-box__item {
           padding: 24px;
           width: 260px;
-          .text {
+          .sub-box__text {
             font-size: 16px;
           }
         }
       }
       .sub-box__container {
         align-items: flex-start;
-
         gap: 50px;
         .sub-box__enter {
           align-items: flex-start;
-          .title {
+          .enter__title {
             font-size: 26px;
           }
-          .text {
+          .enter__text {
             text-align: left;
             font-size: 16px;
           }
@@ -231,7 +230,7 @@
       }
     }
   }
-  .sub-box:last-child {
+  .cases__sub-box:last-child {
     display: flex;
     flex-direction: row-reverse;
   }
@@ -249,7 +248,7 @@
   .cases__container {
     padding: 0 160px;
   }
-  .text-container {
+  .cases__text-container {
     padding-right: 40%;
     gap: 14px;
     .cases__title {
@@ -260,19 +259,19 @@
     }
   }
   .cases__box {
-    .sub-box {
+    .cases__sub-box {
       gap: 60px;
-      .cases__list {
+      .sub-box__list {
         width: 750px;
         grid-template-columns: 314px 314px;
         grid-template-rows: 192px 192px;
         padding: 50px;
         gap: 20px;
         background-image: url(./img/Home/home-img/cases/bac1920.svg);
-        .cases__item {
+        .sub-box__item {
           padding: 30px;
           width: 314px;
-          .text {
+          .sub-box__text {
             font-size: 20px;
           }
         }
@@ -280,10 +279,10 @@
       .sub-box__container {
         gap: 62px;
         .sub-box__enter {
-          .title {
+          .enter__title {
             font-size: 30px;
           }
-          .text {
+          .enter__text {
             font-size: 18px;
           }
         }
