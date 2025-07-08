@@ -196,12 +196,12 @@ ref.burger_button.addEventListener("click", () => {
 if (refs.page === 1) {
   const data = await getFaq();
   data.forEach(paste);
-  // hideButtonsIfNotAuthorized();
+  hideButtonsIfNotAuthorized();
 }
 refs.loadBtn.addEventListener("click", async () => {
   const data = await getFaq();
   data.forEach(paste);
-  // hideButtonsIfNotAuthorized();
+  hideButtonsIfNotAuthorized();
 });
 // create
 createFaqBase()
