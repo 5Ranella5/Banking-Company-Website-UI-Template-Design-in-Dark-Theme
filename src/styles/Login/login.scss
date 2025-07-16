@@ -1,0 +1,345 @@
+@use '../constructor/variables.scss' as *;
+
+.login {
+  padding-top: 143px;
+
+  &__container {
+    display: flex;
+    max-width: 358px;
+    margin: 0 auto;
+    padding: $spacing-x3l;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-x4l;
+    position: relative;
+  }
+
+  &__container--points {
+    position: absolute;
+    width: 154px;
+    height: 159px;
+    right: 0;
+    top: 0;
+    z-index: 80;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-sm;
+
+    .login__title {
+      color: var(--Green-60);
+      text-align: center;
+      font-size: $font-x2l;
+      font-weight: 500;
+    }
+
+    .login__text {
+      color: var(--Grey-75);
+      text-align: center;
+      font-size: $font-xs;
+      font-weight: 300;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-x2l + 4px;
+
+    .login__fields {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: $spacing-x2l;
+      align-self: stretch;
+
+      .login__label {
+        width: 100%;
+        border-radius: 88px;
+        border: 1px solid var(--Grey-15);
+        background: var(--Grey-10);
+        padding: $spacing-lg;
+
+        .login__input {
+          background: var(--Grey-10);
+          color: var(--Grey-35);
+          font-family: $font-family-lexend;
+          font-size: $font-sm;
+          font-weight: 300;
+          line-height: $lh-default;
+          flex: 1 0 0;
+        }
+      }
+    }
+
+    .login__forgot {
+      color: var(--Absolute-White);
+      font-size: $font-xs;
+      font-weight: 400;
+      line-height: $lh-default;
+      text-decoration-line: underline;
+      text-decoration-skip-ink: none;
+    }
+
+    .login__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-x2l + 4px;
+
+      .login__button {
+        padding: 14px 24px;
+        align-self: stretch;
+        border-radius: 63px;
+        text-align: center;
+        font-size: $font-sm;
+        line-height: $lh-default;
+        transition: all 0.5s ease;
+      }
+      .login__button--login:hover,
+      .login__button--login:focus {
+        opacity: 90%;
+        border: 1px solid var(--Grey-20);
+        background: var(--Grey-15);
+        color: var(--Absolute-White);
+      }
+
+      .login__button--signup:hover,
+      .login__button--signup:focus {
+        opacity: 90%;
+        color: var(--Grey-11);
+        background: var(--Green-60);
+      }
+
+      .login__button--login {
+        background: var(--Green-60);
+        color: var(--Grey-15);
+      }
+
+      .login__button--signup {
+        border: 1px solid var(--Grey-20);
+        background: var(--Grey-15);
+        color: var(--Absolute-White);
+      }
+
+      .login__divider {
+        display: flex;
+        align-items: center;
+        gap: $spacing-lg;
+
+        .login__line {
+          width: 75px;
+          height: 1px;
+          background: var(--Grey-70);
+        }
+
+        .login__divider-text {
+          color: var(--Grey-70);
+          text-align: center;
+          font-size: $font-xs;
+          line-height: $lh-default;
+        }
+      }
+
+      .login__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing-x2l;
+        align-self: stretch;
+
+        .login__icon {
+          width: 68px;
+          height: 68px;
+        }
+      }
+    }
+  }
+
+  &__container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/Login/login.png') 50% / cover no-repeat;
+    background-blend-mode: overlay, normal;
+    border-radius: 16px;
+    border: 1px solid var(--Grey-15);
+    z-index: -1;
+    opacity: 40%;
+  }
+
+  &__label--password {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  &__label--eye {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@include respond(md) {
+  .login {
+    padding-top: 153px;
+
+    &__container {
+      gap: $spacing-x5l + 10px;
+      max-width: 1064px;
+      padding: 80px 200px;
+    }
+
+    &__container--points {
+      width: 235px;
+      height: 243px;
+    }
+
+    &__header {
+      gap: $spacing-md;
+
+      .login__title {
+        font-size: $font-x4l;
+      }
+
+      .login__text {
+        font-size: $spacing-md;
+      }
+    }
+
+    &__form {
+      gap: $spacing-x3l;
+
+      .login__fields {
+        flex-direction: row;
+        align-items: center;
+        gap: $spacing-x2l + 10px;
+
+        .login__label {
+          padding: $spacing-xl;
+
+          .login__input {
+            width: 100%;
+          }
+        }
+      }
+
+      .login__forgot {
+        font-size: $spacing-md;
+      }
+
+      .login__actions {
+        padding: 0 130px;
+        .login__button {
+          width: 404px;
+        }
+
+        .login__divider {
+          .login__line {
+            width: 128px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond(lg) {
+  .login {
+    padding-top: 200px;
+
+    &__container {
+      gap: $spacing-x6l + 20px;
+      max-width: 1326px;
+      padding: 100px 150px;
+      border-radius: 20px;
+    }
+
+    &__container--points {
+      width: 317px;
+      height: 325px;
+    }
+
+    &__header {
+      gap: $spacing-xl;
+
+      .login__title {
+        font-size: $font-x5l;
+        line-height: normal;
+      }
+
+      .login__text {
+        font-size: $font-md;
+        line-height: normal;
+      }
+    }
+
+    &__form {
+      gap: $spacing-x4l;
+
+      .login__fields {
+        gap: $spacing-x3l;
+
+        .login__label {
+          padding: $spacing-x2l;
+
+          .login__input {
+            color: var(--Grey-35);
+            font-size: $font-md;
+          }
+        }
+      }
+
+      .login__forgot {
+        font-size: $font-md;
+        line-height: $lh-default;
+      }
+
+      .login__actions {
+        padding: 0 254px;
+
+        .login__button {
+          width: 518px;
+          padding: 18px 20px;
+          font-size: $font-md;
+          line-height: $lh-default;
+        }
+
+        .login__divider {
+          gap: $spacing-lg + 4px;
+
+          .login__line {
+            width: 164px;
+          }
+
+          .login__divider-text {
+            font-size: $font-md;
+            line-height: $lh-default;
+          }
+        }
+
+        .login__social {
+          gap: $spacing-x2l + 4px;
+          margin-top: 6px;
+
+          .login__icon {
+            width: 94px;
+            height: 94px;
+          }
+        }
+      }
+    }
+    &__label--eye {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

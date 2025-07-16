@@ -1,0 +1,52 @@
+// === CONSTRUCTOR ===
+@use './constructor/reset.scss';
+@use './constructor/variables.scss' as vars;
+
+// === UNIVERSAL ===
+@use './universal-styles/header.scss';
+@use './universal-styles/footer.scss';
+@use './universal-styles/testimonial.scss';
+@use './universal-styles/modal-burger.scss';
+@use './universal-styles/faqs.scss';
+@use './universal-styles/start.scss';
+
+// === HOME ===
+@use './Home/hero.scss';
+@use './Home/cases.scss';
+@use './Home/features.scss';
+@use './Home/products.scss';
+
+// === CAREERS ===
+@use './Careers/welcome.scss';
+@use './Careers/OV.scss';
+@use './Careers/OB.scss';
+@use './Careers/JO.scss';
+
+// === ABOUT ===
+@use './About/excellence.scss';
+@use './About/MV.scss';
+@use './About/PR.scss';
+
+// === SECURITY ===
+@use './Security/priority.scss';
+@use './Security/protect.scss';
+
+// === SIGNUP ===
+@use './SignUp/signup.scss';
+
+// === LOGIN ===
+@use './Login/login.scss';
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--Grey-10, vars.$bg-body);
+  font-family: vars.$font-family-lexend;
+}
+
+.hidden {
+  display: none;
+}

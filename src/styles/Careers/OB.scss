@@ -1,0 +1,212 @@
+@use '../constructor/variables.scss' as *;
+svg {
+  width: 72px;
+  height: 72px;
+}
+
+.our-benefits {
+  padding-top: $spacing-x7l;
+
+  &__container {
+    max-width: 358px;
+    margin: 0 auto;
+  }
+
+  &__wrapper-title {
+    margin-bottom: $spacing-x6l;
+
+    .our-benefits__title {
+      color: var(--Absolute-White);
+      text-align: center;
+      font-size: $font-x2l;
+      font-weight: 500;
+      line-height: $lh-default;
+
+      span {
+        color: var(--Green-60);
+      }
+    }
+
+    .our-benefits__subtitle {
+      color: var(--Grey-70);
+      text-align: center;
+      font-size: $font-xs;
+      font-weight: 300;
+      line-height: $lh-default;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    .our-benefits__list-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-image: url('../img/Careers/line/line-390.png');
+    }
+
+    &-item {
+      position: relative;
+      padding: $spacing-x2l;
+      border-radius: 40px 40px 14px 14px;
+      border: 1px solid rgba(202, 255, 51, 0.1);
+      background: linear-gradient(
+          106deg,
+          rgba(202, 255, 51, 0.05) -29.45%,
+          rgba(202, 255, 51, 0) 27.86%
+        ),
+        linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%);
+
+      .our-benefits__item-wrapper-title {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-xl;
+
+        .our-benefits__item-title {
+          color: var(--Absolute-White);
+          font-size: $font-md;
+          font-weight: 400;
+          line-height: $lh-default;
+        }
+      }
+
+      .our-benefits__item-text {
+        color: var(--Grey-70);
+        font-size: $font-xs;
+        font-weight: 300;
+        line-height: $lh-default;
+      }
+    }
+  }
+}
+
+@include respond(md) {
+  .our-benefits {
+    padding-top: $spacing-x7l + 40px;
+
+    &__container {
+      max-width: 1280px;
+    }
+
+    &__wrapper-title {
+      .our-benefits__title {
+        text-align: start;
+        font-size: $font-x4l;
+      }
+
+      .our-benefits__subtitle {
+        text-align: start;
+        font-size: $font-sm;
+      }
+    }
+
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $spacing-x5l + 10px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        background-image: url('../img/Careers/line/line-1440-horizontal.png');
+      }
+
+      .our-benefits__list-item {
+        &:nth-of-type(1)::after,
+        &:nth-of-type(3)::after {
+          content: none;
+        }
+
+        &:nth-of-type(2)::after,
+        &:last-child::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -30px;
+          width: 1px;
+          height: 100%;
+          background-image: url('../img/Careers/line/line-1440.png');
+        }
+      }
+
+      &-item {
+        width: calc(50% - 30px);
+        padding: $spacing-x4l;
+
+        .our-benefits__item-wrapper-title {
+          margin-bottom: $spacing-x2l;
+
+          .our-benefits__item-title {
+            font-size: $font-md;
+          }
+        }
+
+        .our-benefits__item-text {
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+}
+
+@include respond(lg) {
+  .our-benefits {
+    padding-top: $spacing-x8l + 50px;
+
+    &__container {
+      max-width: 1596px;
+    }
+
+    &__wrapper-title {
+      margin-bottom: $spacing-x5l + 30px;
+      padding-right: 300px;
+
+      .our-benefits__title {
+        margin-bottom: $spacing-md;
+        font-size: $font-x5l;
+      }
+
+      .our-benefits__subtitle {
+        font-size: $font-md;
+      }
+    }
+
+    &__list {
+      gap: $spacing-x8l;
+
+      .our-benefits__list-item:nth-of-type(2)::after,
+      .our-benefits__list-item:last-child::after {
+        left: -50px;
+      }
+
+      &-item {
+        width: calc(50% - 50px);
+        padding: $spacing-x5l;
+
+        .our-benefits__item-wrapper-title {
+          margin-bottom: $spacing-x3l;
+          gap: $spacing-lg;
+
+          .our-benefits__item-title {
+            font-size: $font-xl;
+          }
+        }
+
+        .our-benefits__item-text {
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+}

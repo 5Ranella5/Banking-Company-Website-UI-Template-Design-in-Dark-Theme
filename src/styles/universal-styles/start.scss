@@ -1,0 +1,129 @@
+@use '../constructor/variables.scss' as *;
+
+.start {
+  padding-top: $spacing-x7l;
+  margin: 0 auto;
+  &__container {
+    max-width: 357px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-x2l;
+    padding: $spacing-x3l;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+      linear-gradient(
+          302deg,
+          rgba(38, 38, 38, 1) 0%,
+          rgba(52, 57, 39, 0.27) 46%,
+          rgba(68, 78, 40, 0.25) 62%,
+          rgba(78, 92, 41, 0.23) 73%,
+          rgba(134, 165, 46, 0.25) 83%,
+          rgba(189, 238, 50, 0.23) 90%,
+          rgba(202, 255, 51, 0.21) 100%
+        )
+        border-box;
+  }
+  .start__container--points {
+    position: absolute;
+    left: -8px;
+    top: 0px;
+    width: 151px;
+    height: 143px;
+  }
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    .start__title {
+      text-align: center;
+      font-size: $font-xl;
+      line-height: 1.5;
+    }
+
+    .start__title--accent {
+      color: #caff33;
+    }
+
+    .start__text {
+      color: #b3b3b3;
+      text-align: center;
+      font-size: $font-xs;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+  &__btn {
+    display: flex;
+    padding: $spacing-md $spacing-x2l;
+    align-items: center;
+    border-radius: 82px;
+    background: #caff33;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+  }
+
+  &__btn:hover {
+    color: #caff33;
+    background-color: #1a1a1a;
+    border: 1px solid #caff33;
+  }
+  &__btn:focus {
+    color: #caff33;
+    background-color: #1a1a1a;
+    border: 1px solid #caff33;
+  }
+}
+
+@media (min-width: 1440px) {
+  .start {
+    padding-top: $spacing-x7l + 40px;
+    &__container {
+      max-width: 1279px;
+      flex-direction: row;
+      padding: $spacing-x6l;
+      gap: $spacing-x8l + 50px;
+    }
+    &__text-box {
+      .start__title {
+        text-align: left;
+        font-size: $font-x3l;
+      }
+
+      .start__text {
+        text-align: left;
+        font-size: $font-sm;
+      }
+    }
+    &__btn {
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-xs;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .start {
+    padding-top: $spacing-x8l + 50px;
+    &__container {
+      max-width: 1599px;
+      padding: $spacing-x7l;
+    }
+    &__text-box {
+      .start__title {
+        font-size: 40px;
+      }
+      .start__text {
+        font-size: $font-md;
+      }
+    }
+    &__btn {
+      padding: 18px $spacing-x3l;
+      font-size: $font-md;
+    }
+  }
+}
