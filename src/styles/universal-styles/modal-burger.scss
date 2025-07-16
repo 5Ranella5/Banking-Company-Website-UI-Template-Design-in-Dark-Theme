@@ -1,0 +1,71 @@
+/* Оверлей — затемнення + розмиття */
+
+.burger-modal {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-right: 25px;
+  background-color: rgba(28, 28, 28, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  &__container {
+    height: auto;
+    max-height: 90vh; // обмеження на всяк випадок
+    display: flex;
+    width: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: var(--Grey-11);
+    border-radius: 20px;
+    border-left: 1px solid var(--Grey-15);
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .burger-modal__nav-link {
+      color: var(--Absolute-White);
+      font-family: Lexend;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+  &__divider {
+    width: 100px;
+    height: 10px;
+    background: var(--Grey-10);
+  }
+  &__auth {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .burger-modal__button {
+      border-radius: 63px;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .burger-modal__button--signup {
+      background: var(--Green-60);
+      color: var(--Grey-15);
+    }
+
+    .burger-modal__button--login {
+      border: 1px solid var(--Grey-20);
+      background: var(--Grey-15);
+      color: var(--Absolute-White);
+    }
+  }
+}

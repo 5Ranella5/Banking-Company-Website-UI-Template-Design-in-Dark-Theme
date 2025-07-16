@@ -1,0 +1,109 @@
+@use '../constructor/variables.scss' as *;
+
+.welcome {
+  padding-top: $spacing-x8l + 43px;
+
+  &__container {
+    max-width: 357px;
+    margin: 0 auto;
+    padding: 212px $spacing-md $spacing-md $spacing-md;
+    border-radius: 20px;
+
+    background: url('../img/Careers/grey-people/grey-people.png') 15px 15px /
+        328px no-repeat,
+      url('../img/About/abstract-img/abstract-img.png') top right / auto
+        no-repeat;
+    background-color: var(--Grey-11);
+
+    .welcome__wrapper-info {
+      padding: $spacing-x2l;
+      background-color: var(--Grey-10);
+      border-radius: 20px;
+
+      .welcome__title {
+        text-align: center;
+        color: var(--Absolute-White);
+        font-weight: 500;
+        font-size: $font-x2l;
+        line-height: $lh-tight;
+        margin-bottom: $spacing-md;
+
+        span {
+          color: var(--Green-60);
+        }
+      }
+
+      .welcome__text {
+        color: var(--Grey-70);
+        font-weight: 300;
+        font-size: $font-xs;
+        line-height: $lh-default;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@include respond(md) {
+  .welcome {
+    padding-top: $spacing-x8l + 53px;
+
+    &__container {
+      max-width: 1279px;
+      padding: $spacing-x4l 581px 200px $spacing-x4l;
+
+      background: url('../img/Careers/grey-people/grey-people-1440.png') 520px
+          42px / auto no-repeat,
+        url('../img/About/abstract-img/abstract-img-1440.png') top right / auto
+          no-repeat;
+      background-color: var(--Grey-11);
+
+      .welcome__wrapper-info {
+        padding: $spacing-x6l;
+        border-radius: 20px 0px 60px 20px;
+
+        .welcome__title {
+          font-size: $font-x5l;
+          text-align: start;
+          margin-bottom: $spacing-xl;
+        }
+
+        .welcome__text {
+          font-size: $font-sm;
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+@include respond(lg) {
+  .welcome {
+    padding-top: $spacing-x8l + $spacing-x8l;
+
+    &__container {
+      max-width: 1599px;
+      padding: 50px 758px 271px 50px;
+
+      background: url('../img/Careers/grey-people/grey-people-1920.png') 581px
+          50px / auto no-repeat,
+        url('../img/About/abstract-img/abstract-img-1920.png') top right / auto
+          no-repeat;
+      background-color: var(--Grey-11);
+
+      .welcome__wrapper-info {
+        padding: 80px;
+        border-radius: 20px 0px 80px 20px;
+
+        .welcome__title {
+          font-size: $font-x6l;
+          margin-bottom: 23px;
+        }
+
+        .welcome__text {
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+}

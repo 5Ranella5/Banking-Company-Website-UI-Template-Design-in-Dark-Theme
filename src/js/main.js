@@ -1,115 +1,48 @@
 import '../styles/main.scss';
+import { ref } from './components/settings.js';
+import { initHomePage } from './pages/home.js';
+import { initCareersPage } from './pages/careers.js';
+import { initLoginPage } from './pages/login.js';
 
-const ref = {
-  slide_1: document.querySelector('.swiper-slide-1'),
-  slide_2: document.querySelector('.swiper-slide-2'),
-  swiper_container: document.querySelector('.swiper-wrapper'),
-  slides: document.querySelector('.swiper-testimonial-reviews'),
-  button_next: document.querySelector('.swiper-button-next'),
-  button_prev: document.querySelector('.swiper-button-prev'),
-};
+import { initSignupPage } from './pages/signup.js';
+import { BurgerModal } from './components/modal/burger-modal.js';
+import { initSecurityPage } from './pages/security.js';
+console.log(ref.path);
+const API_URL = import.meta.env.VITE_API_URL;
+console.log('VITE_API_URL:', import.meta.env.VITE_API_URL);
+console.log('import.meta.env:', import.meta.env);
 
-// Створення нового слайду з текстом
-const CreateSlide = (text) => {
-  if (!ref.swiper_container) return;
+switch (ref.path) {
+  case '/':
+    initHomePage();
+    break;
+  case '/careers.html':
+    initCareersPage();
+    break;
+  case '/security.html':
+    initSecurityPage();
+    break;
+  case '/login.html':
+    initLoginPage();
+    break;
+  case '/sign-up.html':
+    initSignupPage();
+    break;
+}
 
-  const newSlide = `<div class="swiper-slide"><p>${text}</p></div>`;
-  ref.swiper_container.insertAdjacentHTML('beforeend', newSlide);
-};
+const navLinks = document.querySelectorAll('.header__link');
 
-// Завантаження нового GIF і додавання нового слайду
-const GetGif = (swiper) => {
-  fetch('https://yesno.wtf/api')
-    .then((response) => {
-      if (!response.ok) throw new Error('HTTP error ' + response.status);
-      return response.json();
-    })
-    .then((data) => {
-      CreateSlide(data.answer);
-      swiper.update(); // Оновлюємо swiper після додавання слайду
-    })
-    .catch((error) => console.error('Помилка завантаження нового GIF:', error));
-};
-
-// Клік по слайду (вліво — назад, вправо — новий + вперед)
-const ClickSlides = (swiper) => {
-  if (!ref.slides) {
-    console.warn('Контейнер слайдів не знайдено');
-    return;
-  }
-
-  ref.slides.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const slides = document.querySelectorAll('.swiper-slide');
-    const activeIndex = swiper.activeIndex;
-    const activeSlide = slides[activeIndex];
-
-    if (!activeSlide) {
-      console.warn('Активний слайд не знайдено');
-      return;
-    }
-
-    const rect = activeSlide.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-
-    if (clickX < rect.width / 2) {
-      swiper.slidePrev();
+navLinks.forEach((link) => {
+  const href = link.getAttribute('href');
+  if (href === ref.path) {
+    if (href === '/login.html') {
+      link.classList.add('active--login');
+    } else if (href === '/sign-up.html') {
+      link.classList.add('active--signup');
     } else {
-      GetGif(swiper);
-      swiper.slideNext();
+      link.classList.add('active');
     }
-  });
-};
-
-// Основний запуск після завантаження DOM
-document.addEventListener('DOMContentLoaded', () => {
-  if (typeof Swiper === 'undefined') {
-    console.error('Swiper не завантажено');
-    return;
-  }
-
-  const swiper = new Swiper('.swiper-testimonial-reviews', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    effect: 'slide',
-    grabCursor: true,
-
-    loop: false,
-    navigation: {
-      nextEl: '.swiper-button-next', // ← добавь родителя
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      1440: {
-        slidesPerView: 3,
-      },
-    },
-  });
-
-  // Ініціалізація\
-  ClickSlides(swiper);
-
-  // Обробка кнопки "Next"
-  if (ref.button_next) {
-    ref.button_next.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      GetGif(swiper);
-      swiper.slideNext();
-    });
-  }
-
-  // Обробка кнопки "Prev"
-  if (ref.button_prev) {
-    ref.button_prev.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      swiper.slidePrev();
-    });
   }
 });
+
+BurgerModal();

@@ -12,36 +12,78 @@
   }
 }
 
-// === COLORS ===
-$bg-body: #000000;
+// === FONT SIZES ===
+$font-xs: 14px;
+$font-sm: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+$font-xl: 24px;
+$font-x2l: 28px;
+$font-x3l: 30px;
+$font-x4l: 38px;
+$font-x5l: 48px;
+$font-x6l: 58px;
+
+// === LINE HEIGHTS ===
+$lh-default: 150%;
+$lh-tight: 130%;
+
+// === SPACING ===
+$spacing-xs: 6px;
+$spacing-sm: 10px;
+$spacing-md: 14px;
+$spacing-lg: 16px;
+$spacing-xl: 20px;
+$spacing-x2l: 24px;
+$spacing-x3l: 30px;
+$spacing-x4l: 40px;
+$spacing-x5l: 50px;
+$spacing-x6l: 60px;
+$spacing-x7l: 80px;
+$spacing-x8l: 100px;
+
+// Base Colors
+$white: #ffffff;
+$bg-body: #1a1a1a;
+$text-color: #333;
+$background-color: #f9f9f9;
+$white-90: #e4e4e7;
+$olive-dark: #22251b;
+
+// Theme Colors
 $primary-color: #1e90ff;
 $secondary-color: #ff6f61;
-$background-color: #f9f9f9;
-$text-color: #333;
-$white: #ffffff;
+$accent-color: #caff33;
+
+// Grey Shades
+$grey-10: #1a1a1a;
+$grey-11: #1c1c1c;
+$grey-15: #262626;
+$grey-70: #b3b3b3;
+$grey-75: #bfbfbf;
 
 :root {
-  --Grey-70: #b3b3b3;
-  --Absolute-White: #fff;
-  --Grey-75: #bfbfbf;
-  --Grey-10: #{$bg-body};
-  --Green-60: #caff33;
-  --Grey-11: #1c1c1c;
-  --white: #{$white};
-  --Grey-15: #262626;
+  // Grey palette
+  --Grey-10: #{$grey-10};
+  --Grey-11: #{$grey-11};
+  --Grey-15: #{$grey-15};
+  --Grey-70: #{$grey-70};
+  --Grey-75: #{$grey-75};
+  --White-90: #{$white-90};
+
+  // Base colors
+  --Absolute-White: #{$white};
+  --bg-body: #{$bg-body};
+  --text-color: #{$text-color};
+  --background-color: #{$background-color};
+
+  // Theme colors
+  --Primary-Color: #{$primary-color};
+  --Secondary-Color: #{$secondary-color};
+  --Green-60: #{$accent-color};
 }
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
-
-// === SPACING ===
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md-2: 14px;
-$spacing-md: 16px;
-$spacing-lg-2: 18px;
-$spacing-lg: 24px;
-$spacing-xl-2: 28px;
-$spacing-xl: 32px;
 
 $bg-img-modal-login: '../../img/Login/modal-login/modal-login.png';
