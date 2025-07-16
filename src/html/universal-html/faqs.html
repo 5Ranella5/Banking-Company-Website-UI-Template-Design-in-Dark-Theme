@@ -1,0 +1,72 @@
+<section class="faqs">
+  <div class="faqs__container">
+    <div class="faqs__wrapper-title">
+      <h2 class="faqs__title"><span>Frequently</span> Asked Questions</h2>
+      <p class="faqs__subtitle">
+        Still you have any questions? Contact our Team via support@yourbank.com
+      </p>
+    </div>
+
+    <div class="faqs__content">
+      <ul class="faqs__list"></ul>
+
+      <div class="faqs__buttons">
+        <button class="faqs__btn load__btn">Load All FAQ’s</button>
+        <button class="faqs-creating faqs__btn">Creating Questions</button>
+      </div>
+    </div>
+    <div id="createModal" class="modal">
+      <form id="createForm">
+        <h2 class="faqs__text">Create new question</h2>
+        <input
+          class="createQuestion faqs__input"
+          type="text"
+          placeholder="Question"
+          required
+          minlength="5"
+        />
+        <textarea
+          class="createAnswer area faqs__input"
+          placeholder="Answer"
+          required
+          minlength="10"
+        ></textarea>
+        <button class="createSubmit faqs__button" type="submit">Create</button>
+        <button class="createClose faqs__button" type="button">Cancel</button>
+      </form>
+    </div>
+
+    <div id="editModal" class="modal">
+      <form id="editForm">
+        <h2 class="faqs__text">Edite question</h2>
+        <input
+          class="editQuestion faqs__input"
+          type="text"
+          placeholder=""
+          required
+        />
+        <textarea
+          class="editAnswer area faqs__input"
+          placeholder=""
+          required
+        ></textarea>
+        <button class="editSubmit faqs__button" type="submit">Edit</button>
+        <button class="editClose faqs__button" type="button">Cancel</button>
+      </form>
+    </div>
+    <div id="deleteModal" class="modal">
+      <div class="deleteModal">
+        <p class="faqs__delete-text">
+          Are you sure? You want to delete this question this process is
+          irreversible
+        </p>
+        <div class="faqs__delete-button">
+          <button class="deleteSubmit faqs__button" type="submit">
+            Delete
+          </button>
+          <button class="deleteClose faqs__button" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

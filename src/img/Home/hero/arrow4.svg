@@ -1,0 +1,9 @@
+<svg id='arrow4' viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28.7993 2.97685L28.7392 1.10079L39.9998 0.689453L39.5891 11.966L37.7157 11.9058L37.9962 4.02024L1.69962 40.3779L0.367188 39.0436L36.6737 2.69595L28.7993 2.97685Z" fill="url(#paint0_linear_104_626)" style="mix-blend-mode:screen"/>
+<defs>
+<linearGradient id="paint0_linear_104_626" x1="35.712" y1="-1.78919" x2="8.91639" y2="44.5541" gradientUnits="userSpaceOnUse">
+<stop offset="0.11" stop-color="#CAFF33"/>
+<stop offset="1" stop-color="#191919" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
