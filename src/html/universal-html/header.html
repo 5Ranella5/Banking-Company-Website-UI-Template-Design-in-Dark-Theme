@@ -1,30 +1,39 @@
 <header class="header">
   <div class="header__container">
-    <div class="header-logo">
-      <svg class="header-logo-svg">
+    <div class="header__logo">
+      <svg class="header__logo-icon">
         <use href="../../img/header/icon-bank.svg#icon-bank"></use>
       </svg>
-      <h3 class="header-logo-text">YourBanK</h3>
+      <h3 class="header__logo-text">YourBanK</h3>
     </div>
-    <nav class="header-buttons-container">
-      <a class="header-buttons nav__link" href="/index.html">Home</a>
-      <a class="header-buttons nav__link" href="/careers.html">Careers</a>
-      <a class="header-buttons nav__link" href="/about.html">About</a>
-      <a class="header-buttons nav__link" href="/security.html">Security</a>
+
+    <nav class="header__nav">
+      <a class="header__nav-link header__link" href="/">Home</a>
+      <a class="header__nav-link header__link" href="/careers.html">Careers</a>
+      <a class="header__nav-link header__link" href="/about.html">About</a>
+      <a class="header__nav-link header__link" href="/security.html"
+        >Security</a
+      >
     </nav>
-    <div class="header-buttons">
-      <div class="header-buttons-pc">
-        <button type="button" class="button-header sign-up-button-header">
-          <a href="./signup.html">Sign up</a>
-        </button>
-        <button type="button" class="button-header login-button-header">
-          <a href="./login.html">Login</a>
-        </button>
+
+    <div class="header__actions">
+      <div class="header__auth-buttons">
+        <a
+          href="/sign-up.html"
+          class="header__button header__button--signup header__link"
+          >Sign up</a
+        >
+        <a
+          href="/login.html"
+          class="header__button header__button--login header__link"
+          >Login</a
+        >
       </div>
-      <div class="header__menu">
-        <button type="button" class="burger-button-work">
-          <svg class="burger-button">
-            <use href="./img/header/burger.svg#burger"></use>
+
+      <div class="header__burger">
+        <button type="button" class="header__burger-button">
+          <svg class="header__burger-icon">
+            <use href="../../img/header/burger.svg#burger"></use>
           </svg>
         </button>
       </div>

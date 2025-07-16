@@ -1,151 +1,176 @@
 <section class="hero">
-  <div class="container">
+  <div class="hero__container">
     <div class="hero__welcome">
-      <div class="box">
-        <div class="quick">
-          <img class="svg" src="" alt="" />
-          <p class="text">No LLC Required, No Credit Check.</p>
+      <div class="hero__box">
+        <div class="hero__quick">
+          <svg class="hero__quick-icon">
+            <use href="../../img/Home/hero/like.svg#like"></use>
+          </svg>
+          <p class="hero__quick-text">No LLC Required, No Credit Check.</p>
         </div>
-        <h2 class="hero__title">
-          Welcome to YourBank Empowering Your
-          <span class="span"> Financial Journey </span>
-        </h2>
-        <p class="hero__text">
-          At YourBank, our mission is to provide comprehensive banking solutions
-          that empower individuals and businesses to achieve their financial
-          goals. We are committed to delivering personalized and innovative
-          services that prioritize our customers' needs.
-        </p>
+        <div class="hero__text-group">
+          <h2 class="hero__title">
+            Welcome to YourBank Empowering Your
+            <span class="hero__highlight">Financial Journey</span>
+          </h2>
+          <p class="hero__description">
+            At YourBank, our mission is to provide comprehensive banking
+            solutions that empower individuals and businesses to achieve their
+            financial goals. We are committed to delivering personalized and
+            innovative services that prioritize our customers' needs.
+          </p>
+        </div>
       </div>
       <button class="hero__btn">Open Account</button>
     </div>
-    <div class="hero__money">
-      <div class="monthly">
-        <svg class="img">
-          <use href="./img/home-img/hero/plus.svg"></use>
+
+    <div class="hero__info">
+      <div class="hero__income">
+        <svg class="hero__income-icon">
+          <use href="../../img/Home/hero/plus.svg#plus"></use>
         </svg>
-        <div class="monthly__box">
-          <h4 class="title">+$5000,00</h4>
-          <p class="text">Monthly Income</p>
+        <div class="hero__income-box">
+          <h4 class="hero__income-title">+$5000,00</h4>
+          <p class="hero__income-text">Monthly Income</p>
         </div>
       </div>
-      <div class="exchange">
-        <div class="exchange__box">
-          <div class="block">
-            <h3 class="title">Your Transactions</h3>
-            <ul class="block__list">
-              <li class="item">
-                <div class="info">
-                  <img
-                    class="svg"
-                    src="./img/Home/home-img/hero/tap.svg"
-                    alt="#"
-                  />
-                  <div class="sub-container">
-                    <p class="text">Transaction</p>
-                    <h4 class="title">Joel Kenley</h4>
-                  </div>
+
+      <div class="hero__exchange">
+        <div class="hero__transactions">
+          <h3 class="hero__transactions-title">Your Transactions</h3>
+          <ul class="hero__transactions-list">
+            <li class="hero__transaction">
+              <div class="hero__transaction-info">
+                <svg class="hero__transaction-icon">
+                  <use href="../../img/Home/hero/tap.svg#tap"></use>
+                </svg>
+                <div class="hero__transaction-user">
+                  <p class="hero__transaction-label">Transaction</p>
+                  <h4 class="hero__transaction-name">Joel Kenley</h4>
                 </div>
-                <p class="num">-$68.00</p>
-              </li>
-              <li class="item" id="two">
-                <div class="info">
-                  <img
-                    class="svg"
-                    src="./img/Home/home-img/hero/tap.svg"
-                    alt="#"
-                  />
-                  <div class="sub-container">
-                    <p class="text">Transaction</p>
-                    <h4 class="title">Mark Smith</h4>
-                  </div>
+              </div>
+              <p class="hero__transaction-amount">-$68.00</p>
+            </li>
+            <li class="hero__transaction" id="two">
+              <div class="hero__transaction-info">
+                <svg class="hero__transaction-icon">
+                  <use href="../../img/Home/hero/tap.svg#tap"></use>
+                </svg>
+                <div class="hero__transaction-user">
+                  <p class="hero__transaction-label">Transaction</p>
+                  <h4 class="hero__transaction-name">Mark Smith</h4>
                 </div>
-                <p class="num">-$68.00</p>
-              </li>
-              <li class="item" id="tree">
-                <div class="info">
-                  <img
-                    class="svg"
-                    src="./img/Home/home-img/hero/tap.svg"
-                    alt="#"
-                  />
-                  <div class="sub-container">
-                    <p class="text">Transaction</p>
-                    <h4 class="title">Lenen Roy</h4>
-                  </div>
+              </div>
+              <p class="hero__transaction-amount">-$68.00</p>
+            </li>
+            <li class="hero__transaction" id="three">
+              <div class="hero__transaction-info">
+                <svg class="hero__transaction-icon">
+                  <use href="../../img/Home/hero/tap.svg#tap"></use>
+                </svg>
+                <div class="hero__transaction-user">
+                  <p class="hero__transaction-label">Transaction</p>
+                  <h4 class="hero__transaction-name">Lenen Roy</h4>
                 </div>
-                <p class="num">-$68.00</p>
-              </li>
-            </ul>
-          </div>
-          <div class="exchange__block">
-            <h3 class="title">Money Exchange</h3>
-            <ul class="list">
-              <li class="item">
-                <div class="box">
-                  <div class="sub">
-                    <img class="svg" src="" alt="#" />
-                    <h4 class="title">INR</h4>
-                  </div>
-                  <p class="text">Indian Rupees</p>
-                </div>
-                <div class="box" id="bord">
-                  <div class="sub">
-                    <img class="svg" src="" alt="#" />
-                    <h4 class="title">USD</h4>
-                  </div>
-                  <p class="text">United States Dollar</p>
-                </div>
-              </li>
-              <li class="item" id="num">
-                <p class="num">5,0000</p>
-                <p class="num" id="bord">12.00</p>
-              </li>
-            </ul>
-            <button class="btn">Exchange</button>
-          </div>
+              </div>
+              <p class="hero__transaction-amount">-$68.00</p>
+            </li>
+          </ul>
         </div>
-        <div class="arrows">
-          <div class="min">
-            <img
-              class="arrows"
-              src="./img/Home/home-img/hero/arrow.svg"
-              alt="arrows"
-            />
-          </div>
-          <div class="arr">
-            <img class="arrows__img" src="" alt="" />
-            <img class="arrows__img" src="" alt="" />
-            <img class="arrows__img" src="" alt="" />
-            <img class="arrows__img" src="" alt="" />
-          </div>
+
+        <div class="hero__currency">
+          <h3 class="hero__currency-title">Money Exchange</h3>
+          <ul class="hero__currency-list">
+            <li class="hero__currency-item">
+              <div class="hero__currency-box">
+                <div class="hero__currency-sub">
+                  <svg class="hero__currency-icon">
+                    <use href="../../img/Home/hero/inr.svg#inr"></use>
+                  </svg>
+                  <h4 class="hero__currency-code">INR</h4>
+                </div>
+                <p class="hero__currency-name">Indian Rupees</p>
+              </div>
+              <div class="hero__currency-box" id="bord">
+                <div class="hero__currency-sub">
+                  <svg class="hero__currency-icon">
+                    <use href="../../img/Home/hero/usd.svg#usd"></use>
+                  </svg>
+                  <h4 class="hero__currency-code">USD</h4>
+                </div>
+
+                <p class="hero__currency-name">United States Dollar</p>
+              </div>
+            </li>
+            <li class="hero__currency-item">
+              <p class="hero__currency-value">5,0000</p>
+              <p class="hero__currency-value" id="bord">12.00</p>
+            </li>
+          </ul>
+          <button class="hero__currency-btn">Exchange</button>
+        </div>
+
+        <div class="hero__exchange-icon">
+          <img
+            class="hero__arrows-img"
+            src="../../img/Home/hero/arrow.svg#arrow"
+            alt="arrows"
+          />
         </div>
       </div>
-      <div class="support">
-        <p class="text">Supported Currency</p>
-        <ul class="list">
-          <li class="item">
-            <svg class="img">
-              <use href="./img/Home/home-img/hero/dollar.svg"></use>
+
+      <div class="hero__support">
+        <p class="hero__support-label">Supported Currency</p>
+        <ul class="hero__support-list">
+          <li class="hero__support-item">
+            <svg class="hero__support-icon">
+              <use href="../../img/Home/hero/dollar.svg#dollar"></use>
             </svg>
           </li>
-          <li class="item">
-            <svg class="img">
-              <use href="./img/Home/home-img/hero/evro.svg"></use>
+          <li class="hero__support-item">
+            <svg class="hero__support-icon">
+              <use
+                class="hero__support-icon"
+                href="../../img/Home/hero/evro.svg#evro"
+              ></use>
             </svg>
           </li>
-          <li class="item">
-            <svg class="img">
-              <use href="./img/Home/home-img/hero/bitcoin.svg"></use>
+          <li class="hero__support-item">
+            <svg class="hero__support-icon">
+              <use href="../../img/Home/hero/bitcoin.svg#bitcoin"></use>
             </svg>
           </li>
-          <li class="item">
-            <svg class="img">
-              <use href="./img/Home/home-img/hero/efirium.svg"></use>
+          <li class="hero__support-item">
+            <svg class="hero__support-icon">
+              <use href="../../img/Home/hero/efirium.svg#efirium"></use>
             </svg>
           </li>
         </ul>
       </div>
+    </div>
+
+    <div class="hero__arrows arr">
+      <div class="arr__container arr">
+        <svg class="arr__icon arr__icon--1">
+          <use href="../../img/Home/hero/arrow1.svg#arrow1"></use>
+        </svg>
+        <svg class="arr__icon arr__icon--2">
+          <use href="../../img/Home/hero/arrow2.svg#arrow2"></use>
+        </svg>
+        <svg class="arr__icon arr__icon--3">
+          <use href="../../img/Home/hero/arrow3.svg#arrow3"></use>
+        </svg>
+        <svg class="arr__icon arr__icon--4">
+          <use href="../../img/Home/hero/arrow4.svg#arrow4"></use>
+        </svg>
+        <svg class="arr__icon arr__icon--5">
+          <use href="../../img/Home/hero/arrow5.svg#arrow5"></use>
+        </svg>
+        <svg class="arr__icon arr__icon--6">
+          <use href="../../img/Home/hero/arrow6.svg#arrow6"></use>
+        </svg>
+      </div>
+      <div class="arr__trigger arr"></div>
     </div>
   </div>
 </section>
