@@ -14,11 +14,8 @@
 
 // === FONT SIZES ===
 $font-xs: 14px;
-$font-size-sm: 14px;
-$font-size-base: 16px;
 $font-sm: 16px;
 $font-md: 18px;
-$font-size-lg: 20px;
 $font-lg: 20px;
 $font-xl: 24px;
 $font-x2l: 28px;
@@ -50,11 +47,13 @@ $white: #ffffff;
 $bg-body: #1a1a1a;
 $text-color: #333;
 $background-color: #f9f9f9;
+$white-90: #e4e4e7;
+$olive-dark: #22251b;
 
 // Theme Colors
 $primary-color: #1e90ff;
 $secondary-color: #ff6f61;
-$accent-color: #caff33; // Зеленуватий акцент
+$accent-color: #caff33;
 
 // Grey Shades
 $grey-10: #1a1a1a;
@@ -70,9 +69,9 @@ $grey-75: #bfbfbf;
   --Grey-15: #{$grey-15};
   --Grey-70: #{$grey-70};
   --Grey-75: #{$grey-75};
+  --White-90: #{$white-90};
 
   // Base colors
-  --white: #{$white};
   --Absolute-White: #{$white};
   --bg-body: #{$bg-body};
   --text-color: #{$text-color};
@@ -86,5 +85,5 @@ $grey-75: #bfbfbf;
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
-$font-family-base: 'Lexend', sans-serif;
+
 $bg-img-modal-login: '../../img/Login/modal-login/modal-login.png';

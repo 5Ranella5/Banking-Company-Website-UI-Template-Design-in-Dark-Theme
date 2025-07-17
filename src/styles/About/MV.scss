@@ -1,7 +1,7 @@
 @use '../constructor/variables.scss' as *;
 
 .mission-vision {
-  margin-bottom: 80px;
+  padding-top: $spacing-x7l;
 
   &__container {
     max-width: 357px;
@@ -9,27 +9,27 @@
   }
 
   &__wrapper-title {
-    margin-bottom: 60px;
+    margin-bottom: $spacing-x6l;
 
     .mission-vision__title {
       color: var(--Green-60);
       font-weight: 400;
-      font-size: 28px;
-      line-height: 150%;
+      font-size: $font-x2l;
+      line-height: $lh-default;
       text-align: center;
     }
 
     .mission-vision__subtitle {
       color: var(--Grey-70);
       font-weight: 300;
-      font-size: 14px;
-      line-height: 150%;
+      font-size: $font-xs;
+      line-height: $lh-default;
       text-align: center;
     }
   }
 
   .mission {
-    margin-bottom: 50px;
+    margin-bottom: $spacing-x5l;
   }
 
   .vision {
@@ -40,18 +40,19 @@
   &__block {
     .mission-vision__text-wrapper {
       .mission-vision__block-title {
-        color: $white;
+        color: var(--Absolute-White);
+        font-family: $font-family-lexend;
         font-weight: 500;
         font-size: 26px;
-        line-height: 150%;
+        line-height: $lh-default;
         text-align: center;
       }
 
       .mission-vision__text {
         color: var(--Grey-70);
         font-weight: 300;
-        font-size: 14px;
-        line-height: 150%;
+        font-size: $font-xs;
+        line-height: $lh-default;
         text-align: center;
       }
     }
@@ -59,8 +60,8 @@
     .mission-vision__image-wrapper {
       display: flex;
       justify-content: center;
-      padding: 20px 20px 0;
-      margin-bottom: 30px;
+      padding: $spacing-xl $spacing-xl 0;
+      margin-bottom: $spacing-x3l;
 
       background-color: var(--Grey-15);
       background-image: url('../img/About/abstract-img/abstract-img-MV.png');
@@ -78,8 +79,9 @@
     }
   }
 }
-@media (min-width: 1440px) {
+@include respond(md) {
   .mission-vision {
+    padding-top: $spacing-x7l + 40px;
     &__container {
       max-width: 1279px;
     }
@@ -88,12 +90,12 @@
       padding-right: 250px;
 
       .mission-vision__title {
-        font-size: 38px;
+        font-size: $font-x4l;
         text-align: start;
       }
 
       .mission-vision__subtitle {
-        font-size: 16px;
+        font-size: $font-sm;
         text-align: start;
       }
     }
@@ -103,14 +105,14 @@
       margin-top: -84px;
 
       .mission-vision__text-wrapper {
-        padding-right: 40px;
+        padding-right: $spacing-x4l;
         border-right: 1px solid var(--Green-60);
       }
     }
 
     .mission {
       .mission-vision__text-wrapper {
-        padding-left: 40px;
+        padding-left: $spacing-x4l;
         border-left: 1px solid var(--Green-60);
       }
     }
@@ -123,20 +125,20 @@
         .mission-vision__block-title {
           text-align: start;
           font-size: 32px;
-          margin-bottom: 10px;
+          margin-bottom: $spacing-md;
         }
 
         .mission-vision__text {
           text-align: start;
-          font-size: 16px;
+          font-size: $font-sm;
         }
       }
 
       .mission-vision__image-wrapper {
         margin: 0;
-        padding: 60px 60px 0;
+        padding: $spacing-x6l $spacing-x6l 0;
         box-sizing: content-box;
-        border: 1px solid var(--Grey-15, #262626);
+        border: 1px solid var(--Grey-15);
         border-radius: 50px 50px 20px 20px;
 
         background: linear-gradient(
@@ -147,52 +149,59 @@
           linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
           url('../img/About/abstract-img/abstract-img-MV-1440.png');
         background-repeat: no-repeat, no-repeat, no-repeat;
+
         background-size: auto, auto, auto;
         background-position: top left, top left, center center;
+
+        background-size: auto, auto, contain;
+        background-position: center center, center center, center center;
+
       }
     }
   }
 }
-@media (min-width: 1920px) {
+
+@include respond(lg) {
   .mission-vision {
+    padding-top: $spacing-x8l + 50px;
     &__container {
       max-width: 1599px;
     }
 
     &__wrapper-title {
       padding-right: 300px;
-      margin-bottom: 80px;
+      margin-bottom: $spacing-x7l;
 
       .mission-vision__title {
-        font-size: 48px;
+        font-size: $font-x5l;
       }
 
       .mission-vision__subtitle {
-        font-size: 18px;
+        font-size: $font-md;
       }
     }
 
     .mission .mission-vision__text-wrapper {
-      padding-left: 50px;
+      padding-left: $spacing-x5l;
     }
 
     .vision {
       margin-top: -100px;
 
       .mission-vision__text-wrapper {
-        padding-right: 50px;
+        padding-right: $spacing-x5l;
       }
     }
 
     &__block {
       .mission-vision__text-wrapper {
         .mission-vision__block-title {
-          font-size: 38px;
-          margin-bottom: 14px;
+          font-size: $font-x4l;
+          margin-bottom: $spacing-md;
         }
 
         .mission-vision__text {
-          font-size: 18px;
+          font-size: $font-md;
         }
       }
 
@@ -206,7 +215,7 @@
           url('../img/About/abstract-img/abstract-img-MV-1920.png');
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-size: auto, auto, contain;
-        background-position: top left, top left, center center;
+        background-position: top left, center center;
       }
     }
   }

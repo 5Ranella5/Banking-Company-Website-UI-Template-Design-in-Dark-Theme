@@ -1,0 +1,218 @@
+@use '../constructor/variables.scss' as *;
+
+.features__container {
+  margin: 0 auto;
+  padding: $spacing-x7l $spacing-sm 0px $spacing-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-x5l;
+}
+
+.features__enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-sm;
+
+  .features__title {
+    text-align: center;
+    font-size: $font-x2l;
+    font-weight: 500;
+    line-height: $lh-default;
+
+    span {
+      color: var(--Green-60);
+    }
+  }
+
+  .features__text {
+    color: var(--Grey-70);
+    text-align: center;
+    font-size: $font-xs;
+    font-weight: 300;
+    line-height: $lh-default;
+  }
+}
+
+.features__box {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  .features__btns {
+    display: flex;
+    padding: $spacing-xl;
+    gap: $spacing-xl;
+    background: var(--Grey-11);
+    overflow: auto;
+
+    .features__btn {
+      display: flex;
+      padding: $spacing-lg $spacing-xl;
+      align-items: center;
+      justify-content: center;
+      background: var(--Grey-11);
+      color: $white;
+      font-size: $font-xs;
+      line-height: $lh-default;
+      white-space: nowrap;
+      border: 1px solid var(--Grey-15);
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        background: var(--Grey-10);
+        border: 1px solid var(--Grey-15);
+      }
+    }
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    .features__item {
+      display: flex;
+      flex-direction: column;
+      padding: $spacing-x3l;
+      gap: $spacing-xl;
+      border: 1px solid $grey-15;
+      background: $grey-11;
+
+      .features__sub-box {
+        display: flex;
+        justify-content: space-between;
+        gap: $spacing-sm;
+
+        .title {
+          font-size: $font-md;
+          line-height: $lh-default;
+        }
+
+        .svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .features__text {
+        color: var(--Grey-70);
+        font-size: $font-xs;
+        font-weight: 300;
+        line-height: $lh-default;
+        letter-spacing: -0.084px;
+      }
+    }
+  }
+}
+
+// === BREAKPOINT 1440px ===
+
+@include respond(md) {
+  .features__container {
+    padding: 120px $spacing-x4l;
+    gap: $spacing-x6l;
+  }
+
+  .features__enter {
+    padding-right: 250px;
+    align-items: flex-start;
+
+    .features__title {
+      text-align: left;
+      font-size: $font-x4l;
+    }
+
+    .features__text {
+      text-align: left;
+      font-size: $font-sm;
+    }
+  }
+
+  .features__box {
+    flex-direction: row;
+
+    .features__btns {
+      height: 267px;
+      flex-direction: column;
+      padding: $spacing-x2l;
+      overflow: hidden;
+    }
+
+    .features__list {
+      display: grid;
+      grid-template-columns: 500px 500px;
+
+      .features__item {
+        padding: $spacing-x4l;
+        gap: $spacing-x2l;
+
+        .title {
+          font-size: $font-md;
+        }
+
+        .features__text {
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+}
+
+// === BREAKPOINT 1920px ===
+
+@include respond(lg) {
+  .features__container {
+    padding: 150px $spacing-x8l;
+    gap: $spacing-x7l;
+  }
+
+  .features__enter {
+    padding-right: 300px;
+
+    .features__title {
+      font-size: $font-x5l;
+    }
+
+    .features__text {
+      font-size: $font-md;
+    }
+  }
+
+  .features__box {
+    gap: $spacing-x3l;
+
+    .features__btns {
+      height: 337px;
+      padding: $spacing-x5l;
+      gap: $spacing-x2l;
+
+      .features__btn {
+        font-size: $font-md;
+        padding: $spacing-x3l $spacing-x4l;
+      }
+    }
+
+    .features__list {
+      gap: $spacing-x3l;
+      grid-template-columns: 615px 615px;
+      grid-template-rows: 270px 270px;
+
+      .features__item {
+        justify-content: center;
+        padding: $spacing-x5l;
+        gap: $spacing-x3l;
+
+        .title {
+          font-size: $font-xl;
+        }
+
+        .features__text {
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+}

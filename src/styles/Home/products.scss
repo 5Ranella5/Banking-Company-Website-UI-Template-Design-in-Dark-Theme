@@ -1,0 +1,272 @@
+@use '../constructor/variables.scss' as *;
+
+.products__container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-x6l;
+  padding: 140px $spacing-x4l $spacing-x4l;
+}
+
+.products__enter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-x2l;
+}
+
+.products__sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-sm;
+
+  .products__title {
+    font-size: $font-x2l;
+    font-weight: 500;
+    line-height: $lh-default;
+
+    .span {
+      color: var(--Green-60);
+    }
+  }
+
+  .products__text {
+    color: var(--Grey-70);
+    text-align: center;
+    font-size: $font-xs;
+    font-weight: 300;
+    line-height: $lh-default;
+  }
+}
+
+.products__buttons {
+  display: flex;
+  padding: $spacing-sm + 2px;
+  align-items: center;
+  border-radius: 82px;
+  background: var(--Grey-11);
+  border: 1px solid var(--Grey-15);
+
+  .products__btn {
+    width: 140px;
+    padding: $spacing-sm 18px;
+    background: var(--Grey-11);
+    color: var(--Absolute-White);
+    border-radius: 140px;
+    font-size: $font-xs;
+    line-height: $lh-default;
+    transition: all 0.5s ease;
+  }
+
+  .products__btn:hover,
+  .products__btn:focus {
+    opacity: 90%;
+    color: var(--Grey-11);
+    background: var(--Green-60);
+  }
+}
+
+.products__box {
+  .products__list {
+    display: flex;
+    padding: 0 $spacing-sm;
+    flex-direction: column;
+    gap: $spacing-x3l;
+
+    .products__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-x3l;
+
+      .products__svg {
+        width: 65px;
+        height: 60px;
+      }
+
+      .products__box {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        .products__sub-title {
+          text-align: center;
+          font-size: $font-lg;
+          line-height: $lh-default;
+        }
+
+        .products__text {
+          color: $grey-70;
+          text-align: center;
+          font-size: $font-xs;
+          font-weight: 300;
+          line-height: $lh-default;
+        }
+      }
+    }
+  }
+}
+
+.products__item::after {
+  content: '';
+  width: 338px;
+  height: 1px;
+  background: var(--Grey-15);
+}
+
+.products__item:last-child::after {
+  display: none;
+}
+
+.products__item.one {
+  order: 1;
+}
+.products__item.two {
+  order: 2;
+}
+.products__item.tree {
+  order: 3;
+}
+
+.individuals__active {
+  .products__item.one {
+    order: 2;
+  }
+  .products__item.two {
+    order: 1;
+  }
+  .products__item.tree {
+    order: 3;
+  }
+}
+
+.businesses__active {
+  .products__item.one {
+    order: 3;
+  }
+  .products__item.two {
+    order: 2;
+  }
+  .products__item.tree {
+    order: 1;
+  }
+}
+
+@include respond(md) {
+  .products__container {
+    gap: $spacing-x7l;
+    padding: 120px $spacing-x4l;
+  }
+
+  .products__enter {
+    flex-direction: row;
+    gap: 150px;
+  }
+
+  .products__sub-container {
+    align-items: flex-start;
+
+    .products__title {
+      font-size: $font-x4l;
+    }
+
+    .products__text {
+      font-size: $font-sm;
+      text-align: left;
+    }
+  }
+
+  .products__buttons {
+    .products__btn {
+      width: 139px;
+    }
+  }
+
+  .products__box {
+    .products__list {
+      flex-direction: row;
+      gap: $spacing-x7l;
+
+      .products__item {
+        padding-right: $spacing-x4l;
+        border-right: 1px solid var(--Grey-15);
+
+        &:last-child {
+          border-right: none;
+          padding-right: 0;
+        }
+
+        .products__box {
+          gap: $spacing-x2l;
+
+          .products__sub-title {
+            font-size: $font-lg;
+          }
+
+          .products__text {
+            font-size: $font-sm;
+          }
+        }
+      }
+    }
+  }
+
+  .products__item::after {
+    display: none;
+  }
+}
+
+// BREAKPOINT 1920px
+@include respond(lg) {
+  .products__container {
+    gap: $spacing-x8l;
+    padding: 165px;
+  }
+
+  .products__enter {
+    gap: 300px;
+  }
+
+  .products__sub-container {
+    align-items: flex-start;
+
+    .products__title {
+      font-size: $font-x5l;
+    }
+
+    .products__text {
+      font-size: $font-md;
+    }
+  }
+
+  .products__buttons {
+    .products__btn {
+      font-size: $font-md;
+      width: 180px;
+    }
+  }
+
+  .products__box {
+    .products__list {
+      gap: $spacing-x7l;
+
+      .products__item {
+        padding-right: $spacing-x4l;
+
+        .products__box {
+          gap: $spacing-x3l;
+
+          .products__sub-title {
+            font-size: $font-xl;
+          }
+
+          .products__text {
+            font-size: $font-md;
+          }
+        }
+      }
+    }
+  }
+}

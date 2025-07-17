@@ -1,64 +1,65 @@
 @use '../constructor/variables.scss' as *;
 
 .excellence {
-  margin-bottom: 80px;
+  padding-top: $spacing-x8l + 43px;
+
   &__container {
     max-width: 357px;
     margin: 0 auto;
-    padding: 212px 14px 14px 14px;
-    border-radius: 20px;
+    padding: 212px $spacing-md $spacing-md $spacing-md;
+    border-radius: $spacing-xl;
 
     background: url('../img/About/grey-people/grey-people.png') 15px 15px /
         328px no-repeat,
       url('../img/About/abstract-img/abstract-img.png') top right / auto
         no-repeat,
       var(--Grey-11);
-
-    background: url('../img/About/grey-people/grey-people.png') 15px 15px /
-        328px no-repeat,
-      url('../img/About/abstract-img/abstract-img.png') top right / auto
-        no-repeat;
     background-color: var(--Grey-11);
 
     .excellence__wrapper-info {
-      padding: 24px;
+      padding: $spacing-x2l;
       background-color: var(--Grey-10);
-      border-radius: 20px;
+      border-radius: $spacing-xl;
+
       .excellence__subtitle {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
+        font-size: $font-xs;
+        line-height: $lh-default;
         text-align: center;
-        color: var(--white);
+        color: var(--Absolute-White);
       }
+
       .excellence__title {
         text-align: center;
-        color: var(--white);
+        color: var(--Absolute-White);
         font-weight: 500;
-        font-size: 28px;
-        line-height: 130%;
-        margin-bottom: 14px;
+        font-size: $font-x2l;
+        line-height: $lh-tight;
+        margin-bottom: $spacing-md;
+
         span {
           color: var(--Green-60);
         }
       }
+
       .excellence__text {
         color: var(--Grey-70);
         font-weight: 300;
-        font-size: 14px;
-        line-height: 150%;
+        font-size: $font-xs;
+        line-height: $lh-default;
         text-align: center;
       }
     }
   }
 }
 
-@media (min-width: 1440px) {
+@include respond(md) {
   .excellence {
-    margin-bottom: 120px;
+    padding-top: $spacing-x8l + 53px;
+
     &__container {
       max-width: 1279px;
-      padding: 40px 581px 101px 40px;
+      padding: $spacing-x4l 581px 101px $spacing-x4l;
       background: url('../img/About/grey-people/grey-people-1440.png') 520px
           42px / auto no-repeat,
         url('../img/About/abstract-img/abstract-img-1440.png') top right / auto
@@ -66,47 +67,56 @@
         var(--Grey-11);
 
       .excellence__wrapper-info {
-        padding: 60px;
-        border-radius: 20px 0px 60px 20px;
+        padding: $spacing-x6l;
+        border-radius: $spacing-xl 0 $spacing-x6l $spacing-xl;
+
         .excellence__subtitle {
-          font-size: 18px;
+          font-size: $font-md;
           text-align: start;
         }
+
         .excellence__title {
-          font-size: 48px;
+          font-size: $font-x5l;
           text-align: start;
-          margin-bottom: 20px;
+          margin-bottom: $spacing-xl;
         }
+
         .excellence__text {
-          font-size: 16px;
+          font-size: $font-sm;
           text-align: start;
         }
       }
     }
   }
 }
-@media (min-width: 1920px) {
+
+@include respond(lg) {
   .excellence {
+    padding-top: $spacing-x8l + $spacing-x8l;
     &__container {
       max-width: 1599px;
-      padding: 50px 758px 187px 50px;
+      padding: $spacing-x5l 758px 187px $spacing-x5l;
       background: url('../img/About/grey-people/grey-people-1920.png') 581px
           50px / auto no-repeat,
         url('../img/About/abstract-img/abstract-img-1920.png') top right / auto
           no-repeat,
         var(--Grey-11);
+
       .excellence__wrapper-info {
-        padding: 80px;
-        border-radius: 20px 0px 80px 20px;
+        padding: $spacing-x7l;
+        border-radius: $spacing-xl 0 $spacing-x7l $spacing-xl;
+
         .excellence__subtitle {
-          font-size: 20px;
+          font-size: $font-lg;
         }
+
         .excellence__title {
-          font-size: 58px;
+          font-size: $font-x6l;
           margin-bottom: 23px;
         }
+
         .excellence__text {
-          font-size: 18px;
+          font-size: $font-md;
         }
       }
     }

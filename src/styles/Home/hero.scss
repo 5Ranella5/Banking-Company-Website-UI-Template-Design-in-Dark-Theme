@@ -1,315 +1,800 @@
+@use '../constructor/variables.scss' as *;
+
 section {
-  color: #fff;
+  color: var(--Absolute-White);
 }
+
 button {
-  color: #1c1c1c;
+  color: $grey-11;
 }
 
-.hero__welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-.container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
+.hero {
+  padding-top: $spacing-x8l + 43px;
 
-.box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.hero__title {
-  text-align: center;
-  font-size: 28px;
-  line-height: 1.5;
-}
-.span {
-  color: #caff33;
-}
-
-.hero__text {
-  color: #e4e4e7;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.hero__btn {
-  padding: 14px 24px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 82px;
-  background: #caff33;
-}
-
-.quick {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 8px 16px 8px 8px;
-  border-radius: 61px;
-  background: #262626;
-  .text {
-    font-size: 12px;
-  }
-}
-
-.hero__money {
-  margin: 0 auto;
-}
-
-.monthly {
-  width: 111px;
-  display: flex;
-  padding: 8px 10px;
-  align-items: center;
-  gap: 5.128px;
-  border-radius: 6.154px;
-  background: #22251b;
-  position: absolute;
-  margin: -25px 0px 0px -35px;
-  .img {
-    width: 23px;
-    height: 23px;
-  }
-}
-
-.monthly__box {
-  .title {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 150%;
-  }
-  .text {
-    color: #e4e4e7;
-    font-size: 8px;
-    line-height: 1.5;
-  }
-}
-
-.exchange__box {
-  display: flex;
-  width: auto;
-  padding: 20px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  border-radius: 6.154px;
-  border: 0.513px solid transparent;
-  background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-    linear-gradient(
-        15deg,
-        rgba(202, 255, 51, 0.2) 0%,
-        rgba(38, 38, 38, 1) 10%,
-        rgba(38, 38, 38, 1) 0%,
-        rgba(38, 38, 38, 1) 18%,
-        rgba(38, 38, 38, 1) 90%,
-        rgba(38, 38, 38, 1) 82%,
-        rgba(202, 255, 51, 0.2) 100%
-      )
-      border-box;
-}
-
-.block {
-  height: 125px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  .title {
-    font-size: 10px;
-    line-height: 1.5;
-  }
-}
-
-.block__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .item {
-    z-index: 2;
-    width: 260px;
-    border-radius: 6px;
-    border: 0.513px solid #262626;
-    background: #1c1c1c;
+  .hero__container {
+    max-width: 357px;
+    margin: 0 auto;
     display: flex;
-    padding: 8px 12px;
-    justify-content: space-between;
-    align-items: flex-end;
-    .info {
+    flex-direction: column;
+  }
+
+  .hero__welcome {
+    gap: $spacing-x7l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-x3l;
+
+    .hero__box {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-sm;
+
+      .hero__quick {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 8px $spacing-lg 8px 8px;
+        border-radius: 61px;
+        background: $grey-15;
+
+        .hero__quick-icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        .hero__quick-text {
+          font-size: 12px;
+        }
+      }
+
+      .hero__text-group {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+
+        .hero__title {
+          text-align: center;
+          font-size: $font-x2l;
+          line-height: $lh-default;
+        }
+
+        .hero__highlight {
+          color: $accent-color;
+        }
+
+        .hero__description {
+          color: $white-90;
+          text-align: center;
+          font-size: $font-xs;
+          line-height: $lh-default;
+        }
+      }
+    }
+
+    .hero__btn {
+      padding: $spacing-md $spacing-x2l;
+      font-size: $font-xs;
+      line-height: $lh-default;
+      border-radius: 82px;
+      background: $accent-color;
+      transition: all 0.5s ease;
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        background-color: $bg-body;
+        border: 1px solid $accent-color;
+      }
+    }
+  }
+
+  .hero__info {
+    position: relative;
+
+    .hero__income {
+      z-index: 8;
+      display: flex;
+      padding: $spacing-sm $spacing-md;
       align-items: center;
       gap: 5px;
-      .sub-container {
-        .text {
-          font-size: 9px;
-          font-weight: 300;
-          line-height: 1.5;
+      border-radius: 6px;
+      background: #22251b;
+      position: absolute;
+      top: 52.5px;
+
+      .hero__income-icon {
+        width: 23px;
+        height: 23px;
+      }
+
+      .hero__income-box {
+        .hero__income-title {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: $lh-default;
+        }
+
+        .hero__income-text {
+          color: $white-90;
+          font-size: 8px;
+          line-height: $lh-default;
         }
       }
     }
-    .num {
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 1.5;
-    }
-  }
-}
 
-#two {
-  width: 240px;
-  position: absolute;
-  z-index: 1;
-  margin: 30px 0 0 0;
-  opacity: 60%;
-}
-
-#tree {
-  width: 220px;
-  position: absolute;
-  z-index: 0;
-  margin: 60px 0 0 0;
-  opacity: 25%;
-}
-
-.exchange__block {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  .title {
-    font-size: 10px;
-    line-height: 1.5;
-  }
-  .list {
-    border-radius: 6px;
-    border: 0.5px solid #262626;
-    .item {
+    .hero__exchange {
       display: flex;
-      .box {
-        width: 132px;
-        display: flex;
-        align-items: flex-start;
-        padding: 10px;
+      width: 305px;
+      margin: 0 auto;
+      margin-top: $spacing-x7l;
+      padding: $spacing-xl;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $spacing-lg;
+      border-radius: 6px;
+      border: 0.513px solid transparent;
+      background: linear-gradient($bg-body, $bg-body) padding-box,
+        linear-gradient(
+            15deg,
+            rgba($accent-color, 0.2) 0%,
+            $grey-15 10%,
+            $grey-15 18%,
+            $grey-15 90%,
+            rgba($accent-color, 0.2) 100%
+          )
+          border-box;
 
-        .sub {
+      .hero__transactions {
+        height: 125px;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+
+        .hero__transactions-title {
+          font-size: 10px;
+          line-height: $lh-default;
+        }
+
+        .hero__transactions-list {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          gap: 5px;
-          .title {
-            font-size: 9px;
-            line-height: 1.5;
+
+          .hero__transaction {
+            z-index: 2;
+            width: 260px;
+            border-radius: 6px;
+            border: 0.513px solid $grey-15;
+            background: $grey-11;
+            display: flex;
+            padding: $spacing-sm $spacing-md;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .hero__transaction-info {
+              display: flex;
+              align-items: center;
+              gap: $spacing-xs;
+
+              .hero__transaction-icon {
+                width: 25px;
+                height: 25px;
+              }
+
+              .hero__transaction-user {
+                .hero__transaction-label {
+                  font-size: 9px;
+                  font-weight: 300;
+                  line-height: $lh-default;
+                }
+              }
+            }
+
+            .hero__transaction-amount {
+              font-size: $font-xs;
+              font-weight: 500;
+              line-height: $lh-default;
+            }
           }
         }
-        .text {
-          color: #e4e4e7;
-          font-size: 8px;
-          line-height: 1.5;
+      }
+
+      .hero__currency {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-md;
+
+        .hero__currency-title {
+          font-size: 10px;
+          line-height: $lh-default;
+        }
+
+        .hero__currency-list {
+          border-radius: 6px;
+          border: 0.5px solid $grey-15;
+
+          .hero__currency-item {
+            display: flex;
+
+            .hero__currency-box {
+              display: flex;
+              flex-direction: column;
+              gap: $spacing-xs;
+              width: 132px;
+              padding: $spacing-md;
+
+              .hero__currency-sub {
+                display: flex;
+                align-items: center;
+                gap: $spacing-xs;
+
+                .hero__currency-icon {
+                  width: 25px;
+                  height: 25px;
+                }
+
+                .hero__currency-code {
+                  font-size: 9px;
+                  line-height: $lh-default;
+                }
+              }
+
+              .hero__currency-name {
+                color: $white-90;
+                font-size: 8px;
+                line-height: $lh-default;
+              }
+            }
+
+            .hero__currency-value {
+              border-top: 0.5px solid $grey-15;
+              width: 132px;
+              font-size: 10px;
+              font-weight: 500;
+              line-height: $lh-default;
+              padding: 15px 10px;
+            }
+          }
+        }
+
+        .hero__currency-btn {
+          display: flex;
+          padding: 8px 15px;
+          justify-content: center;
+          align-items: center;
+          gap: $spacing-xs;
+          border-radius: 42px;
+          background: #22251b;
+          color: #d1ff4d;
+          font-size: 9px;
+          line-height: $lh-default;
+          width: 100%;
+          transition: all 0.5s ease;
         }
       }
-      .num {
-        border-top: 0.5px solid #262626;
-        width: 132px;
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 1.5;
-        padding: 15px 10px;
+
+      .hero__exchange-icon {
+        position: absolute;
+        width: 220px;
+        height: 201px;
       }
     }
+
+    .hero__support {
+      display: flex;
+      width: 219px;
+      padding: 5px 5px 5px 12px;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      margin: 10px 0 0 116px;
+      border-radius: 40px;
+      background: #22251b;
+
+      .hero__support-label {
+        font-size: 9px;
+        line-height: $lh-default;
+      }
+
+      .hero__support-list {
+        display: flex;
+        padding: 5px;
+        align-items: flex-start;
+        gap: 4px;
+        border-radius: 28.205px;
+        border: 0.513px solid $grey-15;
+        background: $bg-body;
+
+        .hero__support-item {
+          .hero__support-icon {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  #two {
+    width: 240px;
+    position: absolute;
+    z-index: 1;
+    top: 155px;
+    opacity: 60%;
+  }
+
+  #three {
+    width: 220px;
+    position: absolute;
+    z-index: 0;
+    top: 185px;
+    opacity: 25%;
   }
 
   #bord {
-    border-left: 1px solid #262626;
+    border-left: 1px solid $grey-15;
   }
 
-  .btn {
-    display: flex;
-    padding: 8px 15px;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border-radius: 42px;
-    background: #22251b;
-    color: #d1ff4d;
-    font-size: 9px;
-    line-height: 1.5;
-    width: 100%;
+  .hero__arrows-img {
+    position: absolute;
+    z-index: -1;
+    right: -106px;
+    top: -45px;
+  }
+
+  .arr {
+    display: none;
   }
 }
 
-.support {
-  display: flex;
-  width: 219px;
-  padding: 5px 5px 5px 12px;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  margin: 10px 0 0 116px;
-  border-radius: 40px;
-  background: #22251b;
-  .text {
-    font-size: 9px;
-    line-height: 1.5;
+.arr__container.active {
+  .arr__icon {
+    transition: transform 0.3s ease;
   }
-  .list {
-    display: flex;
-    padding: 5px;
-    align-items: flex-start;
-    gap: 4px;
-    border-radius: 28.205px;
-    border: 0.513px solid #262626;
-    background: #1a1a1a;
-    .item {
-      .img {
-        width: 20px;
-        height: 20px;
+
+  .arr__icon--1 {
+    transform: translate(20px, -10px);
+  }
+
+  .arr__icon--2 {
+    transform: translate(16px, -3px);
+  }
+
+  .arr__icon--3 {
+    transform: translate(30px, -15px);
+  }
+
+  .arr__icon--4 {
+    transform: translate(15px, -15px);
+  }
+
+  .arr__icon--5 {
+    transform: translate(30px, -8px);
+  }
+
+  .arr__icon--6 {
+    transform: translate(25px, 0px);
+  }
+}
+
+@include respond(md) {
+  .hero {
+    padding-top: $spacing-x8l + 53px;
+    .hero__container {
+      max-width: 1280px;
+      padding: 60px 200px 60px 80px;
+      margin: 0 auto;
+      align-items: flex-start;
+      gap: $spacing-x8l;
+      flex-direction: row;
+      position: relative;
+    }
+    .hero__welcome {
+      width: 645px;
+      align-items: flex-start;
+      gap: $spacing-x4l;
+      .hero__box {
+        align-items: flex-start;
+        gap: $spacing-md;
+        .hero__quick {
+          .hero__quick-text {
+            font-size: $font-sm;
+          }
+        }
+        .hero__text-group {
+          gap: $spacing-sm;
+          .hero__title {
+            text-align: left;
+            font-size: $font-x4l;
+          }
+          .hero__description {
+            text-align: left;
+            font-size: $font-sm;
+          }
+        }
       }
     }
-  }
-}
 
-.arrows {
-  position: absolute;
-}
+    .hero__info {
+      .hero__income {
+        left: -48.339px;
+        top: -34.338px;
+        .hero__income-icon {
+          width: 23px;
+          height: 23px;
+        }
+        .hero__income-box {
+          .hero__income-title {
+            font-size: 13px;
+          }
+          .hero__income-text {
+            font-size: 11px;
+          }
+        }
+      }
+      .hero__exchange {
+        width: 410.192px;
+        padding: 27px;
+        gap: 82px;
+        margin-top: 0px;
 
-.arr {
-  display: none;
-}
+        .hero__transactions {
+          gap: 14px;
+          .hero__transactions-title {
+            font-size: $font-xs;
+            font-weight: 500;
+          }
 
-.min {
-  position: absolute;
-  z-index: -1;
-  margin: -380px 0 0 135px;
-}
+          .hero__transactions-list {
+            .hero__transaction {
+              z-index: 2;
+              width: 355px;
+              border-radius: 6px;
+              border: 0.513px solid #262626;
+              background: #1c1c1c;
+              display: flex;
+              padding: 8px 12px;
+              justify-content: space-between;
+              align-items: flex-end;
+              .hero__transaction-info {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .hero__transaction-icon {
+                  height: 25px;
+                  width: 25px;
+                }
+                .hero__transaction-user {
+                  .hero__transaction-label {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 23px;
+                  }
 
-@media (min-width: 1440px) {
-  .hero {
-  }
-  .container {
-    display: flex;
-    width: 1440px;
-    padding: 60px 200px 60px 80px;
-    align-items: flex-start;
-    gap: 100px;
-    flex-direction: row;
-  }
-  .hero__welcome {
-    align-items: flex-start;
-    gap: 40px;
-    .box {
-      align-items: flex-start;
-      gap: 16px;
+                  .hero__transaction-name {
+                    font-size: $font-xs;
+                    line-height: 24px;
+                  }
+                }
+              }
+              .hero__transaction-amount {
+                font-size: $font-sm;
+                font-weight: 500;
+                line-height: $lh-default;
+              }
+            }
+          }
+        }
+
+        .hero__currency {
+          gap: $spacing-xl;
+          .hero__currency-title {
+            font-size: 13px;
+            font-weight: 500;
+          }
+
+          .hero__currency-list {
+            .hero__currency-item {
+              .hero__currency-box {
+                width: 177px;
+                padding: 13px;
+
+                .hero__currency-sub {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  .hero__currency-code {
+                    font-size: 12px;
+                    line-height: $lh-default;
+                  }
+                }
+                .hero__currency-name {
+                  font-size: 11px;
+                }
+              }
+              .hero__currency-value {
+                width: 177px;
+                font-size: 13px;
+                padding: $spacing-xl $spacing-md;
+              }
+            }
+          }
+          .hero__currency-btn {
+            padding: 11.019px 20.66px;
+            font-size: 12.396px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+      .hero__support {
+        position: absolute;
+        right: -41.434px;
+        bottom: -68.963px;
+        width: 294px;
+        padding: $spacing-xs $spacing-xs $spacing-xs $spacing-lg;
+        margin: 10px 0 0 15%;
+        .hero__support-label {
+          font-size: 12px;
+        }
+        .hero__support-list {
+          padding: 5px;
+          align-items: flex-start;
+          gap: 4px;
+          border-radius: 28.205px;
+          border: 0.513px solid #262626;
+          background: #1a1a1a;
+          .hero__support-item {
+            .hero__support-icon {
+              width: 27px;
+              height: 27px;
+            }
+          }
+        }
+      }
+    }
+
+    #two {
+      width: 320px;
+      top: 110px;
+    }
+    #three {
+      width: 300px;
+      top: 157px;
+    }
+    .hero__exchange-icon {
+      display: none;
+    }
+    .arr {
+      width: 300px;
+      height: 275px;
+      position: absolute;
+      right: 69px;
+      top: 54px;
+      opacity: 40%;
+      display: block;
+    }
+    .hero__arrows {
+      opacity: 100%;
+    }
+    .arr__container {
+      position: absolute;
+      z-index: -1;
+      left: 0px;
+      top: 0px;
+    }
+    .arr__trigger {
+      position: absolute;
+      z-index: 100;
+      left: 0px;
+      top: 0px;
+    }
+    .arr__icon {
+      position: absolute;
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+    .arr__icon--1 {
+      width: 194px;
+      height: 194px;
+      right: 31px;
+      top: 0px;
+    }
+    .arr__icon--2 {
+      width: 161px;
+      height: 161px;
+      right: 78px;
+      bottom: 0px;
+    }
+
+    .arr__icon--3 {
+      width: 40px;
+      height: 40px;
+      right: 0px;
+      top: 133px;
+    }
+
+    .arr__icon--4 {
+      width: 40px;
+      height: 40px;
+      right: 109px;
+      top: 0px;
+    }
+
+    .arr__icon--5 {
+      width: 40px;
+      height: 40px;
+      right: 31px;
+      top: 70px;
+    }
+
+    .arr__icon--6 {
+      width: 78px;
+      height: 78px;
+      right: 39px;
+      top: 138px;
     }
   }
-  .exchange__box {
-    width: 410px;
-    padding: 27px;
-    gap: 20px;
+}
+
+@media (min-width: 1920px) {
+  .hero {
+    padding-top: $spacing-x8l + $spacing-x8l;
+    .hero__container {
+      max-width: 1920px;
+      padding: $spacing-x8l 297px $spacing-x8l 162px;
+      margin: 0 auto;
+      gap: 120px;
+    }
+    .hero__welcome {
+      width: 826px;
+      gap: $spacing-x5l;
+      .hero__box {
+        gap: $spacing-xl;
+        .hero__quick {
+          .hero__quick-text {
+            font-size: $font-md;
+          }
+        }
+        .hero__text-group {
+          gap: $spacing-md;
+          .hero__title {
+            font-size: 48px;
+          }
+          .hero__description {
+            font-size: $font-md;
+          }
+        }
+      }
+    }
+
+    .hero__info {
+      .hero__income {
+        padding: 13px 17px;
+        gap: 8px;
+        left: -60.692px;
+        top: -43.352px;
+
+        .hero__income-box {
+          .hero__income-title {
+            font-size: 17px;
+          }
+
+          .hero__income-text {
+            font-size: 13px;
+          }
+        }
+      }
+      .hero__exchange {
+        width: 515px;
+        padding: 34px;
+        gap: 26px;
+        .hero__transactions {
+          height: 190px;
+          gap: 17px;
+          .hero__transactions-title {
+            font-size: 17px;
+          }
+          .hero__transactions-list {
+            .hero__transaction {
+              width: 446px;
+              .hero__transaction-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                .hero__transaction-icon {
+                  width: 40px;
+                  height: 40px;
+                }
+                .hero__transaction-user {
+                  display: block;
+                  .hero__transaction-label {
+                    font-size: 15px;
+                    font-weight: 400;
+                  }
+
+                  .hero__transaction-name {
+                    font-size: 17px;
+                    line-height: 26px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .hero__currency {
+          gap: 25px;
+          .hero__currency-title {
+            font-size: 17px;
+          }
+
+          .hero__currency-list {
+            .hero__currency-item {
+              .hero__currency-box {
+                width: 222px;
+                padding: 17px;
+                .hero__currency-sub {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+
+                  .hero__currency-code {
+                    font-size: 15px;
+                  }
+                }
+                .hero__currency-name {
+                  font-size: 13px;
+                }
+              }
+              .hero__currency-value {
+                width: 222px;
+                font-size: 17px;
+                padding: 26px 17px;
+              }
+            }
+          }
+
+          .hero__currency-btn {
+            font-size: 15px;
+            padding: 13.873px 26.011px;
+          }
+        }
+      }
+      .hero__support {
+        width: 370px;
+        padding: 8px 8px 8px 20px;
+        right: -52.022px;
+        bottom: -81.884px;
+        .hero__support-label {
+          font-size: 15px;
+        }
+        .hero__support-list {
+          padding: 8px;
+          gap: $spacing-xs;
+          .hero__support-item {
+            .hero__support-icon {
+              width: 34px;
+              height: 34px;
+            }
+          }
+        }
+      }
+    }
+    #two {
+      width: 411px;
+      top: 126px;
+    }
+    #three {
+      width: 376px;
+      top: 173px;
+    }
+    .arr {
+      right: 162px;
+      top: 48px;
+    }
   }
 }
