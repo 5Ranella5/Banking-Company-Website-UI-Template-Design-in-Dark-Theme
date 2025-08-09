@@ -10,11 +10,10 @@ const __dirname = dirname(__filename);
 
 export default defineConfig(({ command }) => ({
   root: 'src',
-  base: '/', // на Vercel ок
+  base: '/',
   build: {
     target: ['es2022', 'chrome89', 'firefox89', 'safari15'],
     outDir: '../dist',
-    assetsDir: 'assets',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
@@ -27,11 +26,10 @@ export default defineConfig(({ command }) => ({
     },
   },
   plugins: [
-    // Копіюємо всі картинки та SVG зі src/img → dist/img
     viteStaticCopy({
       targets: [
         { src: 'src/img/**/*', dest: 'img' },
-        // за потреби: { src: 'src/fonts/**/*', dest: 'fonts' },
+        { src: 'src/fonts/**/*', dest: 'fonts' },
       ],
     }),
     injectHTML(),
