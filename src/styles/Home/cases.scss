@@ -1,15 +1,21 @@
 @use '../constructor/variables.scss' as *;
 
+.cases {
+  padding-top: $spacing-x7l;
+}
 .cases__container {
   display: flex;
+  max-width: 358px;
   flex-direction: column;
   align-items: center;
   gap: $spacing-x6l;
   margin: 0 auto;
-  padding: 0 $spacing-lg;
 }
 
 .cases__text-container {
+  display: flex;
+  gap: $spacing-sm;
+  flex-direction: column;
   .cases__title {
     color: $accent-color;
     text-align: center;
@@ -45,10 +51,11 @@
       grid-template-rows: 160px 160px;
       justify-items: center;
       padding: $spacing-xl;
-      border-radius: 0; // радіуси більше не використовуються
-      background: $grey-11 url(./img/Home/home-img/cases/bac.svg) no-repeat;
+      border-radius: 20px;
       gap: $spacing-sm;
-
+      background: url('../../img/Home/points/points-390.png') top left / auto
+          no-repeat,
+        var(--Grey-11);
       .sub-box__item {
         display: flex;
         padding: $spacing-xl $spacing-md;
@@ -58,10 +65,54 @@
         width: 154px;
         border: 1px solid var(--Grey-15);
         background: var(--Grey-10);
+        border-radius: 12px;
 
-        .sub-box__svg {
-          width: 64px;
-          height: 64px;
+        .sub-box__icon-border {
+          padding: 8px;
+          border-radius: 70px;
+          background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.05) 0%,
+            rgba(202, 255, 51, 0) 100%
+          );
+          .sub-box__icon {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            border-radius: 50px;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            justify-content: center;
+            align-items: center;
+            .sub-box__icon-svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          .sub-box__icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            border-radius: 50px;
+            pointer-events: none;
+            padding: 1px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+          }
         }
 
         .sub-box__text {
@@ -88,6 +139,7 @@
           text-align: center;
           font-size: $font-lg;
           line-height: $lh-default;
+          font-weight: 500;
         }
 
         .enter__text {
@@ -125,7 +177,7 @@
             font-size: $font-xs;
             font-weight: 300;
             line-height: $lh-default;
-            margin-bottom: $spacing-x5l;
+            margin-bottom: 28px;
           }
         }
       }
@@ -155,7 +207,7 @@
   content: '';
   width: 258px;
   height: 2px;
-  background-image: url(./img/Home/cases/lineDashed.svg);
+  background-image: url(../../img/Home/lines/line-cases-390.png);
 }
 
 .interest__box:last-child::after {
@@ -167,8 +219,11 @@
 }
 
 @include respond(md) {
+  .cases {
+    padding-top: $spacing-x7l + $spacing-x4l;
+  }
   .cases__container {
-    padding: 0 $spacing-x4l;
+    max-width: 1280px;
   }
 
   .cases__text-container {
@@ -198,8 +253,7 @@
         width: 610px;
         grid-template-columns: 260px 260px;
         grid-template-rows: 174px 174px;
-        padding: $spacing-x2l * 2;
-        background-image: url(./img/Home/home-img/cases/bac1440.svg);
+        padding: $spacing-x4l;
 
         .sub-box__item {
           padding: $spacing-x3l;
@@ -210,7 +264,14 @@
           }
         }
       }
-
+      .sub-box__list-1 {
+        background-image: url(../../img/Home/points/points-1440-left.png);
+      }
+      .sub-box__list-2 {
+        background: url('../../img/Home/points/points-1440-right.png') top right /
+            auto no-repeat,
+          var(--Grey-11);
+      }
       .sub-box__container {
         align-items: flex-start;
 
@@ -218,7 +279,7 @@
           align-items: flex-start;
 
           .enter__title {
-            font-size: $font-x3l;
+            font-size: 26px;
           }
 
           .enter__text {
@@ -262,19 +323,23 @@
     z-index: 10;
     width: 2px;
     height: 111px;
-    right: -50px;
-    background-image: url(./img/Home/cases/lineDashed1440.svg);
+    right: -$spacing-x5l;
+    background-image: url(../../img/Home/lines/line-cases-1440.png);
   }
 }
 
 @include respond(lg) {
+  .cases {
+    padding-top: $spacing-x8l + $spacing-x5l;
+  }
   .cases__container {
-    padding: 0 $spacing-x8l;
+    max-width: 1596px;
+    gap: $spacing-x7l;
   }
 
   .cases__text-container {
     padding-right: 40%;
-    gap: $spacing-sm + $spacing-xs;
+    gap: $spacing-md;
 
     .cases__title {
       font-size: $font-x5l;
@@ -286,20 +351,33 @@
   }
 
   .cases__box {
+    gap: $spacing-x6l;
     .cases__sub-box {
-      gap: $spacing-x6l;
+      gap: $spacing-x8l;
 
       .sub-box__list {
         width: 750px;
         grid-template-columns: 314px 314px;
-        grid-template-rows: 192px 192px;
+        grid-template-rows: 222px 222px;
         padding: $spacing-x5l;
         gap: $spacing-xl;
-        background-image: url(./img/Home/home-img/cases/bac1920.svg);
 
         .sub-box__item {
-          padding: $spacing-x4l;
+          padding: $spacing-x3l;
           width: 314px;
+          gap: $spacing-x2l;
+
+          .sub-box__icon-border {
+            padding: $spacing-sm;
+            .sub-box__icon {
+              width: 58px;
+              height: 58px;
+              .sub-box__icon-svg {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
 
           .sub-box__text {
             font-size: $font-lg;
@@ -311,8 +389,9 @@
         gap: 62px;
 
         .sub-box__enter {
+          gap: $spacing-md;
           .enter__title {
-            font-size: $font-x5l;
+            font-size: $font-x3l;
           }
 
           .enter__text {
@@ -343,6 +422,6 @@
   .interest__box::after {
     width: 3px;
     height: 146px;
-    background-image: url(./img/Home/cases/lineDashed1920.svg);
+    background-image: url(../../img/Home/lines/line-cases-1920.png);
   }
 }

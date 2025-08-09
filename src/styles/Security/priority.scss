@@ -1,100 +1,99 @@
 @use '../constructor/variables.scss' as *;
 
 .priority {
-  padding-top: 143px;
+  padding-top: $spacing-x8l + 43px;
   .priority__container {
-    max-width: 357px;
+    max-width: 358px;
     margin: 0 auto;
-    padding: 300px 14px 14px 14px;
+    padding: 288px $spacing-md $spacing-md $spacing-md;
     border-radius: 20px;
-    background: url('../img/Security/priority/bacSecurity.svg') 15px 15px /
+    background: url('../../img/Security/priority/security-390.png') 15px 15px /
         328px no-repeat,
-      url('../img/Security/priority/AbstractSecurity.svg') top right / auto
+      url('../../img/About/abstract-img/abstract-img.png') top right / auto
         no-repeat;
-    background-color: #1c1c1c;
+    background-color: var(--Grey-11);
   }
 
   .priority__text-container {
     display: flex;
-    padding: 24px;
+    padding: $spacing-x2l;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: $spacing-md;
     border-radius: 20px;
-    background: #1a1a1a;
+    background: var(--Grey-10);
     .priority__title {
       text-align: center;
-      font-size: 28px;
+      font-size: $font-x2l;
       font-weight: 500;
-      line-height: 1.3;
+      line-height: $lh-tight;
       .span {
-        color: #caff33;
+        color: var(--Green-60);
       }
     }
     .priority__text {
-      color: #b3b3b3;
+      color: var(--Grey-70);
       text-align: center;
-      font-size: 14px;
+      font-size: $font-xs;
       font-weight: 300;
-      line-height: 1.5;
+      line-height: $lh-default;
     }
   }
 }
 
-@media (min-width: 1440px) {
+@include respond(md) {
   .priority {
-    padding-top: 153x;
+    padding-top: $spacing-x8l + 53px;
     .priority__container {
-      min-width: 1279px;
+      max-width: 1280px;
       min-height: 648px;
-      width: 1279px;
-      padding: 35px;
-      background: url('../img/Security/priority/bacSecurity1440.svg') 531px 36px /
-          715px 568px no-repeat,
-        url('../img/Security/priority/AbstractSecurity1440.svg') top right /
-          auto no-repeat;
-      background-color: #1c1c1c;
+      padding: $spacing-x4l;
+      background: url('../../img/Security/priority/security-1440.png') 525px
+          42px / auto no-repeat,
+        url('../img/About/abstract-img/abstract-img-1440.png') top right / auto
+          no-repeat;
+      background-color: var(--Grey-11);
     }
 
     .priority__text-container {
       width: 658px;
-      padding: 60px;
-      gap: 20px;
+      padding: $spacing-x6l;
+      gap: $spacing-xl;
       .priority__title {
         text-align: left;
-        font-size: 48px;
+        font-size: $font-x5l;
       }
       .priority__text {
         text-align: left;
-        font-size: 16px;
+        font-size: $font-sm;
       }
     }
   }
 }
 
-@media (min-width: 1920px) {
+@include respond(lg) {
   .priority {
-    padding-top: 200px;
+    padding-top: $spacing-x8l + $spacing-x8l;
     .priority__container {
-      min-width: 1599px;
+      max-width: 1596px;
       min-height: 816px;
-      padding: 50px;
-      background: url('../img/Security/priority/bacSecurity1920.svg') 583px 49px /
-          968px 716px no-repeat,
-        url('../img/Security/priority/AbstractSecurity1920.svg') top right /
-          auto no-repeat;
-      background-color: #1c1c1c;
+      padding: $spacing-x5l;
+      background: url('../../img/Security/priority/security-1920.png') 579px
+          49px / auto no-repeat,
+        url('../img/About/abstract-img/abstract-img-1920.png') top right / auto
+          no-repeat;
+      background-color: var(--Grey-11);
     }
 
     .priority__text-container {
       width: 790px;
-      padding: 80px;
+      padding: $spacing-x7l;
       gap: 23px;
       .priority__title {
-        font-size: 58px;
+        font-size: $font-x6l;
       }
       .priority__text {
-        font-size: 18px;
+        font-size: $font-md;
       }
     }
   }

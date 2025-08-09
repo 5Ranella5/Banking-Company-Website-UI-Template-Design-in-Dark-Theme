@@ -6,8 +6,6 @@ import { editeFaqBase } from './Careers/editeFaqBase.js';
 import { createFaqBase } from './Careers/createFaqBase.js';
 import { deletingFaqBase } from './Careers/deletingFaqBase.js';
 
-// faqs
-
 export const initFaqs = async () => {
   if (ref.page === 1) {
     const data = await getFaq();
@@ -19,10 +17,10 @@ export const initFaqs = async () => {
     data.forEach(paste);
     hideButtonsIfNotAuthorized();
   });
-  // create
+
   createFaqBase();
-  // delete
+
   deletingFaqBase();
-  // edite
+
   editeFaqBase();
 };

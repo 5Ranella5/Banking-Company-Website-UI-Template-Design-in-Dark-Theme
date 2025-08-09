@@ -1,0 +1,112 @@
+@use '../constructor/variables.scss' as *;
+.page-404 {
+  padding-top: $spacing-x8l + 77px;
+  &__container {
+    padding: 0 $spacing-x4l;
+    margin: 0 auto;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    color: var(--Green-60);
+    text-align: center;
+    font-size: $font-x4l * 2.56;
+    font-weight: 900;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__subtitle {
+    color: var(--Absolute-White);
+    text-align: center;
+    font-size: $font-x4l;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__text {
+    color: var(--Grey-75);
+    text-align: center;
+    font-size: $font-xs;
+    margin-bottom: $spacing-x3l;
+  }
+
+  &__button {
+    width: 298px;
+    padding: $spacing-md $spacing-x2l;
+    text-align: center;
+    border-radius: 63px;
+    text-align: center;
+    font-size: $font-xs;
+    line-height: $lh-default;
+    transition: all 0.5s ease;
+    border: 1px solid var(--Grey-20);
+    background: var(--Grey-15);
+    color: var(--Absolute-White);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    opacity: 90%;
+    color: var(--Grey-11);
+    background: var(--Green-60);
+  }
+}
+
+@include respond(md) {
+  .page-404 {
+    padding-top: $spacing-x8l * 2 + 33px;
+    &__container {
+      max-width: 1440px;
+    }
+    &__title {
+      font-size: $font-x5l * 2.56;
+      margin-bottom: $spacing-md;
+    }
+
+    &__subtitle {
+      font-size: $font-x5l;
+      margin-bottom: $spacing-x2l;
+    }
+
+    &__text {
+      font-size: $font-sm;
+    }
+
+    &__button {
+      width: 404px;
+      font-size: $font-sm;
+    }
+  }
+}
+
+@include respond(lg) {
+  .page-404 {
+    padding-top: $spacing-x8l * 2 + $spacing-x6l + 17px;
+    &__container {
+      max-width: 1440px;
+    }
+    &__title {
+      font-size: $font-x6l * 2.56;
+      margin-bottom: $spacing-lg;
+    }
+
+    &__subtitle {
+      font-size: $font-x6l;
+      margin-bottom: $spacing-x3l;
+    }
+
+    &__text {
+      font-size: $font-md;
+      margin-bottom: $spacing-x4l;
+    }
+
+    &__button {
+      padding: 18px $spacing-xl;
+      width: 518px;
+      font-size: $font-md;
+    }
+  }
+}

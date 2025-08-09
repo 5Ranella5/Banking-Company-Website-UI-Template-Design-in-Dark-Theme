@@ -28,10 +28,8 @@ export const initTestimonialSwiper = () => {
     },
   });
 
-  // Клік по слайдам
   ClickSlide(swiper);
 
-  // Кнопка "Next"
   if (ref.button_next) {
     ref.button_next.addEventListener('click', (e) => {
       e.preventDefault();
@@ -41,7 +39,6 @@ export const initTestimonialSwiper = () => {
     });
   }
 
-  // Кнопка "Prev"
   if (ref.button_prev) {
     ref.button_prev.addEventListener('click', (e) => {
       e.preventDefault();

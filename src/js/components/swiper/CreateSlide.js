@@ -6,7 +6,7 @@ export const CreateSlide = (review) => {
       <div class="testimonial__quotes">
         <div class="testimonial__line"></div>
         <svg class="testimonial__quote-icon">
-          <use href="../../img/Login/modal-login/quotes.svg#quotes"></use>
+          <use href="../../img/symbol.svg#quotes"></use>
         </svg>
         <div class="testimonial__line"></div>
       </div>

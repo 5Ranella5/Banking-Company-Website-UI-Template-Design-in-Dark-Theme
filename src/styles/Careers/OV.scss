@@ -9,7 +9,7 @@
   }
 
   &__wrapper-title {
-    margin-bottom: $spacing-x2l + $spacing-xl;
+    margin-bottom: $spacing-x5l;
 
     .our-values__title {
       color: var(--Absolute-White);
@@ -17,7 +17,7 @@
       font-size: $font-x2l;
       font-weight: 500;
       line-height: $lh-default;
-      margin-bottom: $spacing-md;
+      margin-bottom: $spacing-sm;
 
       span {
         color: var(--Green-60);
@@ -71,15 +71,15 @@
 
 @include respond(md) {
   .our-values {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
 
     &__container {
       max-width: 1280px;
     }
 
     &__wrapper-title {
-      padding-right: 150px;
-      margin-bottom: $spacing-x3l;
+      padding-right: $spacing-x8l + $spacing-x5l;
+      margin-bottom: $spacing-x6l;
 
       .our-values__title {
         text-align: start;
@@ -95,7 +95,7 @@
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: $spacing-x5l + 10px;
+      gap: $spacing-x5l + $spacing-sm;
 
       &-item {
         width: calc(50% - 30px);
@@ -116,15 +116,15 @@
 
 @include respond(lg) {
   .our-values {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
 
     &__container {
       max-width: 1596px;
     }
 
     &__wrapper-title {
-      padding-right: 300px;
-      margin-bottom: $spacing-x5l + 30px;
+      padding-right: $spacing-xl * 3;
+      margin-bottom: $spacing-x5l + $spacing-x3l;
 
       .our-values__title {
         font-size: $font-x5l;

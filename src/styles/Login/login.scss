@@ -30,14 +30,14 @@
     align-items: center;
     gap: $spacing-sm;
 
-    .login__title {
+    .login__header-title {
       color: var(--Green-60);
       text-align: center;
       font-size: $font-x2l;
       font-weight: 500;
     }
 
-    .login__text {
+    .login__header-text {
       color: var(--Grey-75);
       text-align: center;
       font-size: $font-xs;
@@ -49,13 +49,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $spacing-x2l + 4px;
+    gap: $spacing-x2l;
 
     .login__fields {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: $spacing-x2l;
+      gap: $spacing-xl;
       align-self: stretch;
 
       .login__label {
@@ -80,7 +80,6 @@
     .login__forgot {
       color: var(--Absolute-White);
       font-size: $font-xs;
-      font-weight: 400;
       line-height: $lh-default;
       text-decoration-line: underline;
       text-decoration-skip-ink: none;
@@ -90,14 +89,14 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: $spacing-x2l + 4px;
+      gap: $spacing-x2l;
 
       .login__button {
-        padding: 14px 24px;
+        padding: $spacing-md $spacing-x2l;
         align-self: stretch;
         border-radius: 63px;
         text-align: center;
-        font-size: $font-sm;
+        font-size: $font-xs;
         line-height: $lh-default;
         transition: all 0.5s ease;
       }
@@ -150,12 +149,54 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: $spacing-x2l;
+        gap: $spacing-xl;
         align-self: stretch;
+        .login__social-item {
+          padding: 8px;
+          border-radius: 70px;
+          background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.05) 0%,
+            rgba(202, 255, 51, 0) 100%
+          );
+          .login__icon {
+            position: relative;
+            width: 52px;
+            height: 52px;
+            display: flex;
+            border-radius: 50px;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            justify-content: center;
+            align-items: center;
+            .login__icon-svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
 
-        .login__icon {
-          width: 68px;
-          height: 68px;
+          .login__icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            border-radius: 50px;
+            pointer-events: none;
+            padding: 1px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+          }
         }
       }
     }
@@ -173,7 +214,7 @@
     border-radius: 16px;
     border: 1px solid var(--Grey-15);
     z-index: -1;
-    opacity: 40%;
+    opacity: 30%;
   }
 
   &__label--password {
@@ -190,12 +231,12 @@
 
 @include respond(md) {
   .login {
-    padding-top: 153px;
+    padding-top: $spacing-x8l + 53px;
 
     &__container {
-      gap: $spacing-x5l + 10px;
+      gap: $spacing-x5l + $spacing-sm;
       max-width: 1064px;
-      padding: 80px 200px;
+      padding: $spacing-x7l $spacing-x8l * 2;
     }
 
     &__container--points {
@@ -204,14 +245,14 @@
     }
 
     &__header {
-      gap: $spacing-md;
+      gap: $spacing-lg;
 
-      .login__title {
+      .login__header-title {
         font-size: $font-x4l;
       }
 
-      .login__text {
-        font-size: $spacing-md;
+      .login__header-text {
+        font-size: $font-sm;
       }
     }
 
@@ -221,7 +262,7 @@
       .login__fields {
         flex-direction: row;
         align-items: center;
-        gap: $spacing-x2l + 10px;
+        gap: $spacing-x2l;
 
         .login__label {
           padding: $spacing-xl;
@@ -233,11 +274,11 @@
       }
 
       .login__forgot {
-        font-size: $spacing-md;
+        font-size: $font-sm;
       }
 
       .login__actions {
-        padding: 0 130px;
+        padding: 0 $spacing-x8l + $spacing-x3l;
         .login__button {
           width: 404px;
         }
@@ -254,12 +295,12 @@
 
 @include respond(lg) {
   .login {
-    padding-top: 200px;
+    padding-top: $spacing-x8l * 2;
 
     &__container {
-      gap: $spacing-x6l + 20px;
+      gap: $spacing-x6l + $spacing-xl;
       max-width: 1326px;
-      padding: 100px 150px;
+      padding: $spacing-x8l $spacing-x8l + $spacing-x5l;
       border-radius: 20px;
     }
 
@@ -271,12 +312,12 @@
     &__header {
       gap: $spacing-xl;
 
-      .login__title {
+      .login__header-title {
         font-size: $font-x5l;
         line-height: normal;
       }
 
-      .login__text {
+      .login__header-text {
         font-size: $font-md;
         line-height: normal;
       }
@@ -308,7 +349,7 @@
 
         .login__button {
           width: 518px;
-          padding: 18px 20px;
+          padding: 18px $spacing-xl;
           font-size: $font-md;
           line-height: $lh-default;
         }
@@ -327,12 +368,19 @@
         }
 
         .login__social {
-          gap: $spacing-x2l + 4px;
-          margin-top: 6px;
+          gap: $spacing-x2l;
+          margin-top: $spacing-xs;
 
-          .login__icon {
-            width: 94px;
-            height: 94px;
+          .login__social-item {
+            padding: 12px;
+            .login__icon {
+              width: 70px;
+              height: 70px;
+              .login__icon-svg {
+                width: 30px;
+                height: 30px;
+              }
+            }
           }
         }
       }

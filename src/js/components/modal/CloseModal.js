@@ -16,6 +16,3 @@ export const handleEscapePress = (e, modal) => {
     document.body.style.overflow = 'auto';
   }
 };
-
-// document.addEventListener('click', handleOutsideClick);
-// document.addEventListener('keydown', handleEscapePress);

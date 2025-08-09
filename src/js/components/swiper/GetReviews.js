@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const GetReviews = (swiper) => {
   axios
-    .get('https://duriki-bd.onrender.com/reviews')
+    .get('https://duriki-bd-elfh.onrender.com/reviews')
     .then((response) => {
       const reviews = response.data;
       console.log(reviews);

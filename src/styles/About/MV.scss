@@ -4,7 +4,7 @@
   padding-top: $spacing-x7l;
 
   &__container {
-    max-width: 357px;
+    max-width: 358px;
     margin: 0 auto;
   }
 
@@ -13,10 +13,10 @@
 
     .mission-vision__title {
       color: var(--Green-60);
-      font-weight: 400;
       font-size: $font-x2l;
       line-height: $lh-default;
       text-align: center;
+      margin-bottom: $spacing-sm;
     }
 
     .mission-vision__subtitle {
@@ -46,6 +46,7 @@
         font-size: 26px;
         line-height: $lh-default;
         text-align: center;
+        margin-bottom: $spacing-sm;
       }
 
       .mission-vision__text {
@@ -81,9 +82,9 @@
 }
 @include respond(md) {
   .mission-vision {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
     &__container {
-      max-width: 1279px;
+      max-width: 1280px;
     }
 
     &__wrapper-title {
@@ -111,6 +112,7 @@
     }
 
     .mission {
+      margin-bottom: 0;
       .mission-vision__text-wrapper {
         padding-left: $spacing-x4l;
         border-left: 1px solid var(--Green-60);
@@ -125,10 +127,10 @@
         .mission-vision__block-title {
           text-align: start;
           font-size: 32px;
-          margin-bottom: $spacing-md;
         }
 
         .mission-vision__text {
+          width: 695px;
           text-align: start;
           font-size: $font-sm;
         }
@@ -141,16 +143,16 @@
         border: 1px solid var(--Grey-15);
         border-radius: 50px 50px 20px 20px;
 
-        background: linear-gradient(
+        background: url('../img/About/abstract-img/abstract-img-MV-1440.png'),
+          linear-gradient(
             106deg,
             rgba(202, 255, 51, 0.05) -29.45%,
             rgba(202, 255, 51, 0) 27.86%
           ),
-          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
-          url('../img/About/abstract-img/abstract-img-MV-1440.png');
-        background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: auto, auto, contain;
-        background-position: center center, center center, center center;
+          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
       }
     }
   }
@@ -158,9 +160,9 @@
 
 @include respond(lg) {
   .mission-vision {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
     &__container {
-      max-width: 1599px;
+      max-width: 1596px;
     }
 
     &__wrapper-title {
@@ -169,6 +171,7 @@
 
       .mission-vision__title {
         font-size: $font-x5l;
+        margin-bottom: $spacing-md;
       }
 
       .mission-vision__subtitle {
@@ -181,7 +184,7 @@
     }
 
     .vision {
-      margin-top: -100px;
+      margin-top: -$spacing-x8l;
 
       .mission-vision__text-wrapper {
         padding-right: $spacing-x5l;
@@ -197,20 +200,21 @@
 
         .mission-vision__text {
           font-size: $font-md;
+          width: 882px;
         }
       }
 
       .mission-vision__image-wrapper {
-        background: linear-gradient(
+        background: url('../img/About/abstract-img/abstract-img-MV-1920.png'),
+          linear-gradient(
             106deg,
             rgba(202, 255, 51, 0.05) -29.45%,
             rgba(202, 255, 51, 0) 27.86%
           ),
-          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%),
-          url('../img/About/abstract-img/abstract-img-MV-1920.png');
-        background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: auto, auto, contain;
-        background-position: top left, center center;
+          linear-gradient(267deg, #1c1c1c 40.67%, rgba(28, 28, 28, 0) 99.81%);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center center, top left, center center;
       }
     }
   }

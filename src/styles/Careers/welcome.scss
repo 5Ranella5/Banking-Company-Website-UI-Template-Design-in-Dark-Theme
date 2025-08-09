@@ -4,9 +4,9 @@
   padding-top: $spacing-x8l + 43px;
 
   &__container {
-    max-width: 357px;
+    max-width: 358px;
     margin: 0 auto;
-    padding: 212px $spacing-md $spacing-md $spacing-md;
+    padding: 225px $spacing-md $spacing-md $spacing-md;
     border-radius: 20px;
 
     background: url('../img/Careers/grey-people/grey-people.png') 15px 15px /
@@ -49,10 +49,10 @@
     padding-top: $spacing-x8l + 53px;
 
     &__container {
-      max-width: 1279px;
-      padding: $spacing-x4l 581px 200px $spacing-x4l;
+      max-width: 1280px;
+      padding: $spacing-x4l 581px $spacing-x8l * 2 $spacing-x4l;
 
-      background: url('../img/Careers/grey-people/grey-people-1440.png') 520px
+      background: url('../img/Careers/grey-people/grey-people-1440.png') 525px
           42px / auto no-repeat,
         url('../img/About/abstract-img/abstract-img-1440.png') top right / auto
           no-repeat;
@@ -82,17 +82,17 @@
     padding-top: $spacing-x8l + $spacing-x8l;
 
     &__container {
-      max-width: 1599px;
-      padding: 50px 758px 271px 50px;
+      max-width: 1596px;
+      padding: $spacing-x5l 758px 271px $spacing-x5l;
 
-      background: url('../img/Careers/grey-people/grey-people-1920.png') 581px
+      background: url('../img/Careers/grey-people/grey-people-1920.png') 579px
           50px / auto no-repeat,
         url('../img/About/abstract-img/abstract-img-1920.png') top right / auto
           no-repeat;
       background-color: var(--Grey-11);
 
       .welcome__wrapper-info {
-        padding: 80px;
+        padding: $spacing-x7l;
         border-radius: 20px 0px 80px 20px;
 
         .welcome__title {

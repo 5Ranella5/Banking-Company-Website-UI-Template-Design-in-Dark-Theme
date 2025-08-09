@@ -44,7 +44,6 @@ $spacing-x8l: 100px;
 
 // Base Colors
 $white: #ffffff;
-$bg-body: #1a1a1a;
 $text-color: #333;
 $background-color: #f9f9f9;
 $white-90: #e4e4e7;
@@ -73,7 +72,7 @@ $grey-75: #bfbfbf;
 
   // Base colors
   --Absolute-White: #{$white};
-  --bg-body: #{$bg-body};
+  --bg-body: #{$grey-10};
   --text-color: #{$text-color};
   --background-color: #{$background-color};
 
@@ -85,5 +84,3 @@ $grey-75: #bfbfbf;
 
 // === TYPOGRAPHY ===
 $font-family-lexend: 'Lexend', sans-serif;
-
-$bg-img-modal-login: '../../img/Login/modal-login/modal-login.png';

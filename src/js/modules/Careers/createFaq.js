@@ -5,7 +5,7 @@ export async function createFaq(question, answer) {
 
   try {
     await axios.post(
-      'https://duriki-bd.onrender.com/faqs',
+      'https://duriki-bd-elfh.onrender.com/faqs',
       {
         question: question,
         answer: answer,

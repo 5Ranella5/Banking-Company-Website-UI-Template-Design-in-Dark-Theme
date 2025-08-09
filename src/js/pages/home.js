@@ -1,5 +1,5 @@
 import { initTestimonialSwiper } from '../components/swiper/swiper.js';
-import { initCases } from '../modules/functionCases';
+import { initCases } from '../modules/functionCases.js';
 import { initFaqs } from '../modules/functionFaqs.js';
 import { initHero } from '../modules/functionHome.js';
 import { initProducts } from '../modules/functionProducts.js';

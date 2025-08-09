@@ -49,4 +49,9 @@ export const ref = {
   container_individuals: document.querySelector('.sub-box__container-1'),
   button_learn_more_business: document.querySelector('.sub-box__btn-2'),
   container_business: document.querySelector('.sub-box__container-2'),
+
+  button_404: document.querySelector('.page-404__button'),
+
+  loader: document.querySelector('.loader'),
+  page: document.querySelector('.page'),
 };

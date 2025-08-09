@@ -21,7 +21,7 @@ svg {
       font-size: $font-x2l;
       font-weight: 500;
       line-height: $lh-default;
-
+      margin-bottom: $spacing-sm;
       span {
         color: var(--Green-60);
       }
@@ -69,10 +69,56 @@ svg {
         gap: $spacing-sm;
         margin-bottom: $spacing-xl;
 
+        .our-benefits__icon-border {
+          padding: 8px;
+          border-radius: 70px;
+          background: linear-gradient(
+            180deg,
+            rgba(202, 255, 51, 0.05) 0%,
+            rgba(202, 255, 51, 0) 100%
+          );
+          .our-benefits__icon {
+            position: relative;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            border-radius: 50px;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            justify-content: center;
+            align-items: center;
+            .our-benefits__icon-svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+          .our-benefits__icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+              180deg,
+              rgba(202, 255, 51, 0.1) -66.22%,
+              rgba(202, 255, 51, 0) 85.46%
+            );
+            border-radius: 50px;
+            pointer-events: none;
+            padding: 1px;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box,
+              linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+          }
+        }
+
         .our-benefits__item-title {
           color: var(--Absolute-White);
           font-size: $font-md;
-          font-weight: 400;
           line-height: $lh-default;
         }
       }
@@ -89,7 +135,7 @@ svg {
 
 @include respond(md) {
   .our-benefits {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
 
     &__container {
       max-width: 1280px;
@@ -110,7 +156,7 @@ svg {
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: $spacing-x5l + 10px;
+      gap: $spacing-x5l + $spacing-sm;
       position: relative;
 
       &::after {
@@ -146,9 +192,21 @@ svg {
 
         .our-benefits__item-wrapper-title {
           margin-bottom: $spacing-x2l;
+          gap: $spacing-md;
+
+          .our-benefits__icon-border {
+            .our-benefits__icon {
+              width: 60px;
+              height: 60px;
+              .our-benefits__icon-svg {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
 
           .our-benefits__item-title {
-            font-size: $font-md;
+            font-size: $font-lg;
           }
         }
 
@@ -162,14 +220,14 @@ svg {
 
 @include respond(lg) {
   .our-benefits {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
 
     &__container {
       max-width: 1596px;
     }
 
     &__wrapper-title {
-      margin-bottom: $spacing-x5l + 30px;
+      margin-bottom: $spacing-x5l + $spacing-x3l;
       padding-right: 300px;
 
       .our-benefits__title {
@@ -185,9 +243,16 @@ svg {
     &__list {
       gap: $spacing-x8l;
 
-      .our-benefits__list-item:nth-of-type(2)::after,
-      .our-benefits__list-item:last-child::after {
-        left: -50px;
+      &::after {
+        background-image: url('../img/Careers/line/line-1920-horizontal.png');
+      }
+
+      .our-benefits__list-item {
+        &:nth-of-type(2)::after,
+        &:last-child::after {
+          background-image: url('../img/Careers/line/line-1920.png');
+          left: -50px;
+        }
       }
 
       &-item {
@@ -197,6 +262,18 @@ svg {
         .our-benefits__item-wrapper-title {
           margin-bottom: $spacing-x3l;
           gap: $spacing-lg;
+
+          .our-benefits__icon-border {
+            padding: 12px;
+            .our-benefits__icon {
+              width: 74px;
+              height: 74px;
+              .our-benefits__icon-svg {
+                width: 34px;
+                height: 34px;
+              }
+            }
+          }
 
           .our-benefits__item-title {
             font-size: $font-xl;

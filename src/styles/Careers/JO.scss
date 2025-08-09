@@ -41,7 +41,7 @@
 
       .job-openings__item-title {
         color: var(--Absolute-White);
-        font-size: $font-md;
+        font-size: $font-lg;
         font-weight: 600;
         line-height: $lh-default;
         margin-bottom: $spacing-sm;
@@ -71,7 +71,7 @@
         font-size: $font-md;
         font-weight: 600;
         line-height: $lh-default;
-        margin-bottom: 8px;
+        margin-bottom: $spacing-sm;
       }
 
       .job-openings__item-text {
@@ -98,7 +98,7 @@
           }
 
           &::before {
-            content: url('../img/Careers/briefcase.svg');
+            content: url('../../img/Careers/briefcase.svg');
             position: absolute;
             left: 0;
             top: 50%;
@@ -110,7 +110,7 @@
       .job-openings__item-btn {
         border-radius: 82px;
         background: var(--Green-60);
-        padding: 12px 20px;
+        padding: 12px $spacing-xl;
         color: var(--Grey-11);
         font-size: $font-xs;
         font-weight: 500;
@@ -122,14 +122,14 @@
 
 @include respond(md) {
   .job-openings {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
 
     &__container {
       max-width: 1280px;
     }
 
     &__wrapper-title {
-      padding-right: 250px;
+      padding-right: $spacing-x8l * 2 + $spacing-x5l;
 
       .job-openings__title {
         font-size: $font-x4l;
@@ -158,14 +158,16 @@
         .job-openings__sub-wrapper {
           flex-direction: row;
           margin-bottom: $spacing-x4l;
+          gap: 8px;
 
           p {
             font-size: $font-sm;
+            padding: $spacing-xs $spacing-md;
           }
         }
 
         .job-openings__item-block-title {
-          font-size: $font-md;
+          font-size: $font-lg;
           margin-bottom: $spacing-lg;
         }
 
@@ -184,7 +186,7 @@
 
 @include respond(lg) {
   .job-openings {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
 
     &__container {
       max-width: 1596px;
@@ -192,7 +194,7 @@
 
     &__wrapper-title {
       padding-right: 300px;
-      margin-bottom: $spacing-x5l + 30px;
+      margin-bottom: $spacing-x5l + $spacing-x3l;
 
       .job-openings__title {
         margin-bottom: $spacing-md;
@@ -221,7 +223,7 @@
           margin-bottom: $spacing-x5l;
 
           p {
-            padding: $spacing-sm $spacing-lg;
+            padding: 8px $spacing-lg;
             font-size: $font-md;
           }
         }

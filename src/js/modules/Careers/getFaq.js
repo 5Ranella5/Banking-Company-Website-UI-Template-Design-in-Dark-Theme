@@ -4,7 +4,7 @@ import { ref } from '../../components/settings.js';
 export async function getFaq() {
   try {
     const res = await axios.get(
-      `https://duriki-bd.onrender.com/faqs?page=${ref.page}`
+      `https://duriki-bd-elfh.onrender.com/faqs?page=${ref.page}`
     );
 
     if (res.data.length === 0) {

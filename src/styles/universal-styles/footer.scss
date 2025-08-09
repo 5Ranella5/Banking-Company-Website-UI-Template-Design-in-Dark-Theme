@@ -1,14 +1,14 @@
 @use '../constructor/variables.scss' as *;
 
 .footer {
-  padding-top: $spacing-x8l + 50px;
+  padding-top: $spacing-x7l;
 
   &__container {
     background: var(--Grey-11);
     display: flex;
     max-width: 390px;
     margin: 0 auto;
-    padding: $spacing-x2l $spacing-md $spacing-xl;
+    padding: $spacing-x5l $spacing-lg $spacing-x3l;
     flex-direction: column;
     align-items: center;
     gap: $spacing-x3l;
@@ -25,7 +25,7 @@
       width: 133px;
       justify-content: center;
       align-items: center;
-      gap: $spacing-xs;
+      gap: 4px;
 
       .footer__logo-icon {
         width: 34px;
@@ -35,7 +35,7 @@
       .footer__logo-text {
         color: var(--Absolute-White);
         text-align: center;
-        font-size: $font-xs;
+        font-size: $font-lg;
         line-height: $lh-default;
       }
     }
@@ -47,8 +47,15 @@
 
       .footer__nav-link {
         color: var(--White-90);
-        font-size: $font-sm;
+        font-size: $font-xs;
         line-height: $lh-default;
+        transition: color 0.3s ease;
+        &:hover,
+        &:focus {
+          color: var(--Green-60);
+          font-weight: 500;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -80,6 +87,13 @@
         color: var(--White-90);
         font-size: $font-xs;
         line-height: $lh-default;
+        transition: color 0.3s ease;
+        &:hover,
+        &:focus {
+          color: var(--Green-60);
+          font-weight: 500;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -91,13 +105,14 @@
     .footer__socials {
       display: flex;
       align-items: center;
-      gap: $spacing-xs;
+      gap: 8px;
       position: absolute;
-      bottom: 121px;
-      left: 89px;
+      top: 1px;
+      left: 87px;
 
       .footer__social-item {
-        padding: $spacing-md;
+        height: 44px;
+        padding: 12px;
         border-radius: 100px;
         background: var(--Green-60);
 
@@ -111,10 +126,10 @@
     .footer__legal {
       width: 322px;
       display: flex;
-      padding: $spacing-x5l $spacing-x2l $spacing-x3l $spacing-md;
+      padding: $spacing-x5l $spacing-x2l $spacing-x3l 12px;
       flex-direction: column;
       align-items: center;
-      gap: $spacing-lg;
+      gap: $spacing-xl;
       border-radius: 16px;
       border: 1px solid var(--Grey-15);
       background: var(--Grey-10);
@@ -126,11 +141,20 @@
         font-weight: 300;
         line-height: $lh-default;
       }
+      .footer__legal-link {
+        transition: color 0.3s ease;
+        &:hover,
+        &:focus {
+          color: var(--Green-60);
+          font-weight: 500;
+          text-decoration: underline;
+        }
+      }
 
       .footer__legal-links {
         display: flex;
         align-items: center;
-        gap: $spacing-xs;
+        gap: 8px;
       }
 
       .footer__legal-divider {
@@ -140,25 +164,39 @@
       }
     }
   }
+  &__nav-link,
+  &__legal-link,
+  &__contact-text {
+    color: $accent-color;
+    &:hover,
+    &:focus {
+      color: var(--Green-60);
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+  &__nav-link:hover,
+  &__nav-link:focus {
+    color: var(--Green-60);
+    font-weight: 500;
+    text-decoration: underline;
+  }
 }
 
 @include respond(md) {
   .footer {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
 
     &__container {
       max-width: 1440px;
-      padding: 60px 80px 30px;
+      padding: $spacing-x6l $spacing-x7l $spacing-x3l;
       gap: $spacing-x4l;
     }
 
     &__top {
-      gap: $spacing-x2l;
-
-      .footer__logo {
-        gap: $spacing-xs;
-
-        .footer__logo-text {
+      gap: $spacing-x4l;
+      .footer__nav {
+        .footer__nav-link {
           font-size: $font-sm;
         }
       }
@@ -169,8 +207,10 @@
     }
 
     &__contacts {
-      .footer__contact-text {
-        font-size: 16px;
+      .footer__contact-item {
+        .footer__contact-text {
+          font-size: $font-sm;
+        }
       }
     }
 
@@ -179,8 +219,8 @@
       border: 1px solid var(--Grey-15);
       background: var(--Grey-10);
       display: flex;
-      padding: $spacing-md $spacing-xl $spacing-md $spacing-md;
-      gap: 360px;
+      padding: 12px $spacing-x2l 12px 12px;
+      gap: $spacing-x8l * 2 + $spacing-x6l;
       position: relative;
 
       .footer__socials {
@@ -191,7 +231,7 @@
         width: unset;
         flex-direction: row;
         padding: 0;
-        gap: 360px;
+        gap: $spacing-x8l * 2 + $spacing-x6l;
         border: none;
         background: none;
 
@@ -209,7 +249,7 @@
 
 @include respond(lg) {
   .footer {
-    padding-top: $spacing-x8l + 30px;
+    padding-top: $spacing-x8l + $spacing-x5l;
 
     &__container {
       max-width: 1920px;
@@ -218,19 +258,17 @@
     }
 
     &__top {
-      gap: $spacing-x3l;
+      gap: $spacing-x5l;
 
       .footer__logo {
         width: 156px;
-        gap: $spacing-xs;
-
         .footer__logo-icon {
           width: 40px;
           height: 40px;
         }
 
         .footer__logo-text {
-          font-size: $font-md;
+          font-size: $font-xl;
         }
       }
 
@@ -262,15 +300,26 @@
 
     &__bottom {
       padding: $spacing-lg $spacing-x3l $spacing-lg $spacing-lg;
-      gap: 440px;
+      gap: 416px;
 
       .footer__socials {
         align-items: flex-start;
         gap: $spacing-md;
+        .footer__social-item {
+          height: 52px;
+          padding: $spacing-md;
+          border-radius: 100px;
+          background: var(--Green-60);
+
+          .footer__social-icon {
+            width: 24px;
+            height: 24px;
+          }
+        }
       }
 
       .footer__legal {
-        gap: 440px;
+        gap: 416px;
 
         .footer__legal-text {
           width: 250px;
@@ -284,7 +333,7 @@
 
         .footer__legal-links {
           width: 282px;
-          gap: $spacing-md;
+          gap: 12px;
         }
 
         .footer__legal-divider {

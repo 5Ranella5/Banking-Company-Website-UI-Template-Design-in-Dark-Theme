@@ -34,7 +34,7 @@
     .header__logo-text {
       color: var(--Absolute-White);
       text-align: center;
-      font-size: $font-xs;
+      font-size: $font-sm;
     }
   }
 
@@ -42,7 +42,7 @@
     display: none;
   }
 
-  &__auth-buttons {
+  &__buttons {
     display: none;
   }
 
@@ -82,7 +82,7 @@
       }
 
       .header__logo-text {
-        font-size: $font-sm;
+        font-size: $font-md;
       }
     }
 
@@ -98,9 +98,17 @@
         font-size: $font-xs;
         line-height: $lh-default;
       }
+
+      .header__nav-link:hover,
+      .header__nav-link:focus {
+        border-radius: 82px;
+        padding: $spacing-sm 18px;
+        color: var(--Grey-11);
+        background: var(--Green-60);
+      }
     }
 
-    &__auth-buttons {
+    &__buttons {
       display: flex;
       align-items: center;
       gap: $spacing-xl;
@@ -108,7 +116,7 @@
       .header__button {
         font-size: $font-xs;
         line-height: $lh-default;
-        padding: $spacing-lg $spacing-x2l;
+        padding: 12px $spacing-x2l;
         border-radius: 82px;
         transition: all 0.5s ease;
         background: var(--Grey-11);
@@ -129,7 +137,7 @@
 
     &__nav-link.active {
       border-radius: 82px;
-      padding: 10px 18px;
+      padding: $spacing-sm 18px;
       background: var(--Grey-15);
     }
 
@@ -157,7 +165,7 @@
       }
 
       .header__logo-text {
-        font-size: $font-md;
+        font-size: $font-xl;
       }
     }
 
@@ -167,9 +175,13 @@
       .header__nav-link {
         font-size: $font-md;
       }
+      .header__nav-link:hover,
+      .header__nav-link:focus {
+        padding: 12px $spacing-xl;
+      }
     }
 
-    &__auth-buttons {
+    &__buttons {
       gap: $spacing-x2l + 6px;
 
       .header__button {
@@ -179,7 +191,7 @@
     }
 
     &__nav-link.active {
-      padding: $spacing-lg $spacing-xl;
+      padding: 12px $spacing-xl;
     }
   }
 }

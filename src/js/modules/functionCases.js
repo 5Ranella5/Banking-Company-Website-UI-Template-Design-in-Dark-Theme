@@ -1,0 +1,33 @@
+import { clickLearnMore } from './Cases/ClickLearnMore.js';
+import { ref } from '../components/settings.js';
+import axios from 'axios';
+
+export const initCases = () => {
+  axios
+    .get('https://duriki-bd-elfh.onrender.com/cases')
+    .then((response) => {
+      const individuals = response.data[0];
+      const business = response.data[1];
+      clickLearnMore(
+        business,
+        ref.button_learn_more_individuals,
+        ref.container_individuals
+      );
+      clickLearnMore(
+        individuals,
+        ref.button_learn_more_business,
+        ref.container_business
+      );
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.error(
+          'Помилка входу:',
+          error.response.status,
+          error.response.data
+        );
+      } else {
+        console.error('Помилка:', error.message);
+      }
+    });
+};

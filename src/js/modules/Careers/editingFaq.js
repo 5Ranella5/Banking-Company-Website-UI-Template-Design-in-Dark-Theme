@@ -4,7 +4,7 @@ export async function editingFaq(id, question, answer) {
   const token = localStorage.getItem('token');
   try {
     await axios.put(
-      `https://duriki-bd.onrender.com/faqs/${id}`,
+      `https://duriki-bd-elfh.onrender.com/faqs/${id}`,
       {
         question: question,
         answer: answer,

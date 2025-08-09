@@ -1,59 +1,57 @@
 <section class="signup">
   <div class="signup__container">
     <svg class="signup__container--points" aria-label="Points">
-      <use href="../../img/Login/modal-login/points.svg#points"></use>
+      <use href="../../img/symbol.svg#points1"></use>
     </svg>
     <div class="signup__header">
-      <h2 class="signup__title">Sign Up</h2>
-      <p class="signup__text">
+      <h2 class="signup__header-title">Sign Up</h2>
+      <p class="signup__header-text">
         Join our community today! Create an account to unlock exclusive features
         and personalized experiences.
       </p>
     </div>
     <form class="signup__form">
       <div class="signup__fields">
-        <div class="signup__field-group">
-          <label class="signup__label"
-            ><input
-              type="text"
-              name="firstName"
-              placeholder="Enter First Name"
-              class="first__name signup__input"
-              required
-          /></label>
-          <label class="signup__label"
-            ><input
-              type="text"
-              name="secondName"
-              placeholder="Enter Second Name"
-              class="second__name signup__input"
-              required
-          /></label>
-        </div>
-        <div class="signup__field-group">
-          <label class="signup__label">
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your Email"
-              class="email signup__input"
-              required
-            />
-          </label>
-          <label class="signup__label signup__label--password">
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your Password"
-              class="password signup__input"
-              required
-              minlength="6"
-            />
-            <svg class="signup__label--eye" aria-label="See in password">
-              <use href="../../img/Login/modal-login/eye.svg#eye"></use>
-            </svg>
-          </label>
-        </div>
+        <label class="signup__label"
+          ><input
+            type="text"
+            name="firstName"
+            placeholder="Enter First Name"
+            class="first__name signup__input"
+            required
+        /></label>
+        <label class="signup__label"
+          ><input
+            type="text"
+            name="secondName"
+            placeholder="Enter Second Name"
+            class="second__name signup__input"
+            required
+        /></label>
+        <label class="signup__label">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your Email"
+            class="email signup__input"
+            pattern="(admin@example\.com|user@gmail\.com)"
+            required
+          />
+        </label>
+        <label class="signup__label signup__label--password">
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your Password"
+            class="password signup__input"
+            required
+            minlength="6"
+            autocomplete="current-password"
+          />
+          <svg class="signup__label--eye" aria-label="See in password">
+            <use href="../../img/symbol.svg#eye"></use>
+          </svg>
+        </label>
       </div>
       <div class="signup__actions">
         <button type="button" class="signup__button signup__button--login">
@@ -71,21 +69,25 @@
 
         <ul class="signup__social">
           <li class="signup__social-item">
-            <svg class="signup__icon" aria-label="Sign up with Google">
-              <use href="../../img/Login/modal-login/google.svg#google"></use>
-            </svg>
+            <div class="signup__icon">
+              <svg class="signup__icon-svg" aria-label="Sign up with Google">
+                <use href="../../img/symbol.svg#google"></use>
+              </svg>
+            </div>
           </li>
           <li class="signup__social-item">
-            <svg class="signup__icon" aria-label="Sign up with Facebook">
-              <use
-                href="../../img/Login/modal-login/facebook.svg#facebook"
-              ></use>
-            </svg>
+            <div class="signup__icon">
+              <svg class="signup__icon-svg" aria-label="Sign up with Facebook">
+                <use href="../../img/symbol.svg#facebook"></use>
+              </svg>
+            </div>
           </li>
           <li class="signup__social-item">
-            <svg class="signup__icon" aria-label="Sign up with Apple">
-              <use href="../../img/Login/modal-login/apple.svg#apple"></use>
-            </svg>
+            <div class="signup__icon">
+              <svg class="signup__icon-svg" aria-label="Sign up with Apple">
+                <use href="../../img/symbol.svg#apple"></use>
+              </svg>
+            </div>
           </li>
         </ul>
       </div>

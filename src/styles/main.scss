@@ -5,10 +5,12 @@
 // === UNIVERSAL ===
 @use './universal-styles/header.scss';
 @use './universal-styles/footer.scss';
+@use './universal-styles/page-404.scss';
 @use './universal-styles/testimonial.scss';
 @use './universal-styles/modal-burger.scss';
 @use './universal-styles/faqs.scss';
 @use './universal-styles/start.scss';
+@use './universal-styles/loader.scss';
 
 // === HOME ===
 @use './Home/hero.scss';
@@ -43,7 +45,7 @@ body {
 }
 
 body {
-  background: var(--Grey-10, vars.$bg-body);
+  background: var(--bg-body);
   font-family: vars.$font-family-lexend;
 }
 

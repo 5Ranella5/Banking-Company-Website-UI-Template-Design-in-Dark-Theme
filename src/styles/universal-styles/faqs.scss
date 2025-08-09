@@ -18,7 +18,7 @@
     top: 25%;
     left: 4%;
     background-color: var(--Grey-15);
-    width: 357px;
+    max-width: 358px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
   padding-top: $spacing-x7l;
 
   &__container {
-    max-width: 357px;
+    max-width: 358px;
     margin: 0 auto;
   }
 
@@ -65,7 +65,7 @@
       font-size: $font-x2l;
       font-weight: 500;
       line-height: $lh-default;
-      margin-bottom: 10px;
+      margin-bottom: $spacing-sm;
 
       span {
         color: var(--Green-60);
@@ -114,9 +114,9 @@
       border: 1px solid var(--Grey-15);
       .faqs__item-title {
         color: var(--Absolute-White);
-        font-size: 18px;
+        font-size: $font-md;
         font-weight: 500;
-        padding-bottom: 20px;
+        padding-bottom: $spacing-xl;
       }
 
       .faqs__item-text {
@@ -131,12 +131,7 @@
 
       .faqs__wrapper-btn {
         display: flex;
-        gap: $spacing-sm;
-
-        .faqs__btn {
-          width: 100px;
-          padding: $spacing-sm;
-        }
+        gap: $spacing-md;
       }
     }
   }
@@ -144,13 +139,16 @@
   &__buttons {
     display: flex;
     gap: 12px;
-
-    .faqs__btn {
-      padding: 14px $spacing-xl;
+    .faq__btn {
+      width: 172px;
     }
   }
-
   &__btn {
+    width: 130px;
+  }
+  &__btn,
+  .faq__btn {
+    padding: $spacing-md;
     color: var(--Absolute-White);
     font-size: $font-xs;
     font-weight: 400;
@@ -158,7 +156,6 @@
     border-radius: 100px;
     border: 1px solid var(--Grey-15, #262626);
     background: var(--Grey-11, #1c1c1c);
-    padding: 14px $spacing-xl;
   }
   .deleteModal {
     display: flex;
@@ -220,15 +217,15 @@
 
 @include respond(md) {
   .faqs {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
     .modal {
       form,
       .deleteModal {
-        width: 500px;
-        padding: 40px;
+        max-width: 500px;
+        padding: $spacing-x4l;
         top: 20%;
         left: 35%;
-        gap: 40px;
+        gap: $spacing-x4l;
       }
       .deleteModal {
         top: 35%;
@@ -236,15 +233,15 @@
     }
 
     &__container {
-      max-width: 1279px;
+      max-width: 1280px;
     }
 
     &__wrapper-title {
-      margin-bottom: 60px;
-      padding-right: 300px;
+      margin-bottom: $spacing-x6l;
+      padding-right: $spacing-x8l * 3;
 
       .faqs__title {
-        font-size: 38px;
+        font-size: $font-x4l;
         text-align: start;
       }
 
@@ -260,10 +257,12 @@
 
       &-item {
         width: calc(50% - 10px);
-        padding: 40px;
+        padding: $spacing-x4l;
+        .faqs__wrapper-btn {
+          gap: $spacing-xl;
+        }
 
         .faqs__item-title {
-          font-size: $font-md;
           padding-bottom: $spacing-x2l;
         }
 
@@ -273,8 +272,11 @@
         }
       }
     }
+    &__btn {
+      font-size: $font-sm;
+      width: 180px;
+    }
     .deleteModal {
-      gap: $font-x4l;
       .faqs__delete-text {
         font-size: $font-sm;
       }
@@ -282,7 +284,7 @@
         .deleteSubmit,
         .deleteClose {
           width: unset;
-          padding: 12px 70px;
+          padding: 12px $spacing-x6l + $spacing-sm;
         }
       }
     }
@@ -296,15 +298,16 @@
     }
     &__button {
       width: 300px;
+      font-size: $font-sm;
     }
   }
 }
 
 @include respond(lg) {
   .faqs {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
     &__container {
-      max-width: 1595px;
+      max-width: 1596px;
     }
 
     &__wrapper-title {
@@ -312,6 +315,7 @@
 
       .faqs__title {
         font-size: $font-x5l;
+        margin-bottom: $spacing-md;
       }
 
       .faqs__subtitle {
@@ -325,9 +329,12 @@
       &-item {
         width: calc(50% - 15px);
         padding: $spacing-x5l;
+        .faqs__wrapper-btn {
+          gap: $spacing-x3l;
+        }
 
         .faqs__item-title {
-          font-size: $font-md;
+          font-size: $font-lg;
           padding-bottom: $spacing-x3l;
         }
 
@@ -337,14 +344,25 @@
         }
       }
     }
+    &__buttons {
+      gap: $spacing-xl;
+      .faqs__btn {
+        padding: 18px $spacing-x2l;
+      }
+    }
     .modal {
       form,
       .deleteModal {
-        width: 750px;
+        max-width: 750px;
         padding: $spacing-x6l;
         left: 32%;
         gap: $spacing-x5l;
       }
+    }
+
+    &__btn {
+      font-size: $font-md;
+      padding: 18px $spacing-xl;
     }
 
     .deleteModal {
@@ -356,7 +374,7 @@
         .deleteSubmit,
         .deleteClose {
           width: unset;
-          padding: 18px 110px;
+          padding: 18px $spacing-x8l + $spacing-sm;
         }
       }
     }
@@ -371,7 +389,7 @@
 
     &__button {
       width: 400px;
-      padding: 18px 20px;
+      padding: 18px $spacing-xl;
       font-size: $font-md;
       line-height: $lh-default;
     }

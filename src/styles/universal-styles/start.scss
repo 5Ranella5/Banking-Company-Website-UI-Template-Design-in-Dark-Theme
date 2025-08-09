@@ -4,7 +4,7 @@
   padding-top: $spacing-x7l;
   margin: 0 auto;
   &__container {
-    max-width: 357px;
+    max-width: 358px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@
         )
         border-box;
   }
-  .start__container--points {
+  &__container--points {
     position: absolute;
     left: -8px;
     top: 0px;
@@ -42,19 +42,19 @@
     .start__title {
       text-align: center;
       font-size: $font-xl;
-      line-height: 1.5;
+      line-height: $lh-default;
     }
 
     .start__title--accent {
-      color: #caff33;
+      color: var(--Green-60);
     }
 
     .start__text {
-      color: #b3b3b3;
+      color: var(--Grey-70);
       text-align: center;
       font-size: $font-xs;
       font-weight: 300;
-      line-height: 1.5;
+      line-height: $lh-default;
     }
   }
   &__btn {
@@ -62,33 +62,34 @@
     padding: $spacing-md $spacing-x2l;
     align-items: center;
     border-radius: 82px;
-    background: #caff33;
+    background: var(--Green-60);
     transition: all 0.5s ease;
     white-space: nowrap;
   }
 
-  &__btn:hover {
-    color: #caff33;
-    background-color: #1a1a1a;
-    border: 1px solid #caff33;
-  }
+  &__btn:hover,
   &__btn:focus {
-    color: #caff33;
-    background-color: #1a1a1a;
-    border: 1px solid #caff33;
+    color: var(--Green-60);
+    background-color: var(--Grey-10);
+    border: 1px solid var(--Green-60);
   }
 }
 
-@media (min-width: 1440px) {
+@include respond(md) {
   .start {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
     &__container {
-      max-width: 1279px;
+      max-width: 1280px;
       flex-direction: row;
       padding: $spacing-x6l;
-      gap: $spacing-x8l + 50px;
+      gap: $spacing-x8l + $spacing-x5l;
+    }
+    &__container--points {
+      width: 202px;
+      height: 192px;
     }
     &__text-box {
+      gap: $spacing-sm;
       .start__title {
         text-align: left;
         font-size: $font-x3l;
@@ -106,12 +107,16 @@
   }
 }
 
-@media (min-width: 1920px) {
+@include respond(lg) {
   .start {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
     &__container {
-      max-width: 1599px;
+      max-width: 1596px;
       padding: $spacing-x7l;
+    }
+    &__container--points {
+      width: 298px;
+      height: 283px;
     }
     &__text-box {
       .start__title {

@@ -7,7 +7,7 @@ export const initSignUpButtonSignUp = () => {
     e.preventDefault();
 
     axios
-      .post('https://duriki-bd.onrender.com/auth/signup', {
+      .post('https://duriki-bd-elfh.onrender.com/auth/signup', {
         firstName: ref.first_name.value,
         secondName: ref.second_name.value,
         email: ref.email.value,
@@ -17,6 +17,7 @@ export const initSignUpButtonSignUp = () => {
         const token = response.data.token;
         const email = ref.email.value;
         SaveToken(response.data, token, email);
+        window.location.href = '/';
       })
       .catch((error) => {
         if (error.response) {
@@ -34,6 +35,6 @@ export const initSignUpButtonSignUp = () => {
 
 export const initSignUpButtonLogin = () => {
   ref.login_button_signup.addEventListener('click', () => {
-    window.location.href = './login.html';
+    window.location.href = '/login.html';
   });
 };

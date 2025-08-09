@@ -81,15 +81,15 @@
     &::after {
       content: '';
       position: absolute;
-      top: 0;
-      width: 30%;
-      height: 100%;
+      top: 10%;
+      width: 25%;
+      height: 80%;
       z-index: 2;
       pointer-events: none;
     }
 
     &::before {
-      left: 0;
+      left: 1%;
       background: linear-gradient(
         to right,
         var(--Grey-10) 10%,
@@ -98,7 +98,7 @@
     }
 
     &::after {
-      right: 0;
+      right: 1%;
       background: linear-gradient(
         to left,
         var(--Grey-10) 10%,
@@ -137,7 +137,7 @@
         }
 
         .testimonial__text--review {
-          height: 85px;
+          height: 105px;
           text-align: center;
           color: var(--Absolute-White);
           font-size: $font-xs;
@@ -161,6 +161,10 @@
       z-index: 10;
       width: 52px;
       height: 52px;
+      border-radius: 100px;
+      border: 1px solid var(--Grey-15, #262626);
+      background: var(--Grey-11, #1c1c1c);
+      padding: 12px;
     }
 
     .testimonial__button--next {
@@ -175,7 +179,7 @@
 
 @include respond(md) {
   .testimonial {
-    padding-top: $spacing-x7l + 40px;
+    padding-top: $spacing-x7l + $spacing-x4l;
 
     &__container {
       max-width: 1280px;
@@ -184,7 +188,7 @@
 
     &__header {
       flex-direction: row;
-      gap: 150px;
+      gap: $spacing-x8l + $spacing-x5l;
       align-items: flex-end;
 
       .testimonial__info {
@@ -210,8 +214,28 @@
       overflow-x: hidden;
       padding: 0 92px;
 
+      &::before,
+      &::after {
+        width: 40%;
+        height: 100%;
+      }
+      &::before {
+        left: -2px;
+        background: linear-gradient(
+          to right,
+          var(--Grey-10) 10%,
+          transparent 100%
+        );
+      }
+
+      &::after {
+        right: -2px;
+      }
+
       .testimonial__swiper-wrapper {
         .testimonial__swiper-slide {
+          gap: $spacing-x4l;
+          padding: 0 $spacing-xl;
           border: 0;
 
           .testimonial__quotes {
@@ -220,16 +244,11 @@
             .testimonial__line {
               width: 121px;
             }
-
-            .testimonial__quote-icon {
-              width: 44px;
-              height: 44px;
-            }
           }
 
           .testimonial__text--review {
             font-size: $font-sm;
-            height: 120px;
+            height: $spacing-x8l + 44px;
             line-height: $lh-default;
           }
 
@@ -243,9 +262,6 @@
       .testimonial__button--next,
       .testimonial__button--prev {
         top: 50%;
-        width: 52px;
-        height: 52px;
-        z-index: 100;
       }
 
       .testimonial__button--next {
@@ -261,7 +277,7 @@
 
 @include respond(lg) {
   .testimonial {
-    padding-top: $spacing-x8l + 50px;
+    padding-top: $spacing-x8l + $spacing-x5l;
 
     &__container {
       max-width: 1596px;
@@ -269,7 +285,7 @@
     }
 
     &__header {
-      gap: 300px;
+      gap: $spacing-x8l * 3;
 
       .testimonial__info {
         gap: $spacing-md;
@@ -297,11 +313,11 @@
     }
 
     &__swiper {
-      padding: 0 112px;
+      padding: 0 $spacing-x8l + 12px;
 
       .testimonial__swiper-wrapper {
         .testimonial__swiper-slide {
-          padding: $spacing-x3l;
+          padding: 0 $spacing-x3l;
           gap: $spacing-x5l;
 
           .testimonial__quotes {
@@ -317,8 +333,9 @@
             }
           }
 
-          .testimonial__text {
+          .testimonial__text--review {
             font-size: $font-md;
+            height: 158px;
           }
 
           .testimonial__author {

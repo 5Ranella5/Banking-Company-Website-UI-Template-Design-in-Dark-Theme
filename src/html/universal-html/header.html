@@ -1,13 +1,15 @@
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      <svg class="header__logo-icon">
-        <use href="../../img/header/icon-bank.svg#icon-bank"></use>
-      </svg>
+      <a href="/" aria-label="Go to Home">
+        <svg class="header__logo-icon">
+          <use href="../../img/symbol.svg#icon-bank"></use>
+        </svg>
+      </a>
       <h3 class="header__logo-text">YourBanK</h3>
     </div>
 
-    <nav class="header__nav">
+    <nav class="header__nav" aria-label="Main navigation">
       <a class="header__nav-link header__link" href="/">Home</a>
       <a class="header__nav-link header__link" href="/careers.html">Careers</a>
       <a class="header__nav-link header__link" href="/about.html">About</a>
@@ -17,9 +19,9 @@
     </nav>
 
     <div class="header__actions">
-      <div class="header__auth-buttons">
+      <div class="header__buttons">
         <a
-          href="/sign-up.html"
+          href="/signup.html"
           class="header__button header__button--signup header__link"
           >Sign up</a
         >
@@ -31,9 +33,13 @@
       </div>
 
       <div class="header__burger">
-        <button type="button" class="header__burger-button">
+        <button
+          type="button"
+          class="header__burger-button"
+          aria-label="Open menu"
+        >
           <svg class="header__burger-icon">
-            <use href="../../img/header/burger.svg#burger"></use>
+            <use href="../../img/symbol.svg#burger"></use>
           </svg>
         </button>
       </div>
