@@ -16,15 +16,15 @@ export default defineConfig({
     outDir: '../dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/html/Home/index.html'),
-        nestedTwo: resolve(__dirname, 'src/html/Careers/careers.html'),
-        nestedFour: resolve(__dirname, 'src/html/About/about.html'),
-        nestedFive: resolve(__dirname, 'src/html/Security/security.html'),
-        nestedSix: resolve(__dirname, 'src/html/SignUp/signup.html'),
-        nestedSeven: resolve(__dirname, 'src/html/Login/login.html'),
+        main: resolve(__dirname, 'src/index.html'),
+        nestedTwo: resolve(__dirname, 'src/careers.html'),
+        nestedFour: resolve(__dirname, 'src/about.html'),
+        nestedFive: resolve(__dirname, 'src/security.html'),
+        nestedSix: resolve(__dirname, 'src/signup.html'),
+        nestedSeven: resolve(__dirname, 'src/login.html'),
       },
     },
   },
 
-  plugins: [injectHTML(), FullReload(['src/**/*.html'])],
+  plugins: [injectHTML(), FullReload(['src/*.html'])],
 });
